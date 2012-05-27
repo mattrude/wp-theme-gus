@@ -474,6 +474,15 @@ a.about {
   color: #bfbfbf;
 }
 
+/* Image Pages */
+
+#exif { overflow: hidden; max-width: 450px; text-align: left; }
+#exif-lable { margin: 0 0 0 15px; max-width: 110px; }
+#exif-lable p { margin: 0; }
+#exif-lable span { font-weight:bold; }
+#exif-data { overflow: hidden; margin: 0; float: right; width: 300px; }
+#exif-data p { margin: 0 10px; }
+
 /* social sprites */
 #icons a {
   background-image: url("images/socialmedia_sprite.png");
