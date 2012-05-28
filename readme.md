@@ -5,11 +5,15 @@ The Gus theme will be the future theme for http://mattrude.com.
 ## Features
 
 * Photo Gallery Support
+
 ** Gallery index page
 ** EXIF Support for images
 ** Ability to tag people in images
+
 * Custom taxonomy (people, place, event)
+
 ** Custom people gallery page
+
 * Threaded comments
 
 ## Wanted Features
