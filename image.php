@@ -35,6 +35,7 @@
 						</div>
 					<?php endif; ?>
 					<?php the_content(); ?>
+					<p><?php echo get_the_term_list( $post->ID, 'people', '<br />' .__('People Already Tagged', 'gus'). ': ', ', ', '' ); ?></p>
 					<?php mdr_exif(); ?>
 					<hr>
 				</div>

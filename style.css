@@ -357,14 +357,14 @@ kbd {
   border-color: #ccc #aaa #888 #bbb;
 }
 
-pre code {
-  font-family: Verdana, sans-serif;
-  font-size: 13px;
-  padding: 1em !important;
-  border-radius: 1em;
-  background: #272727;
-  display: block;
-  color: #bfbfbf;
+pre, code {
+	font-size: 12px;
+	overflow: auto;
+	padding: 5px;
+	color: black;
+	background: #E7E7DE;
+	border: 1px solid #e2e2e2;
+	line-height:16px;
 }
 
 code {
@@ -561,6 +561,199 @@ a.about {
     margin-left: auto;
     margin-right: auto;
 }
+
+
+/**
+* Comments template
+************************************************/
+#comments-number {
+	overflow: hidden;
+	margin: 0 0 20px 0;
+	padding: 19px;
+	background: #fff;
+	border: 1px solid #e7e7e7;
+	font: normal normal bold arial, verdana, sans-serif;
+	}
+#comments ol {
+	list-style: none;
+	margin-left: 0;
+	padding: 0;
+	}
+p.comments-closed {
+	padding: 19px;
+	}
+#comments-template p.comments-closed {
+	border: none;
+	padding: 0;
+	}
+#comments li.depth-1 {
+	overflow: hidden;
+	margin: 20px 0;
+	padding: 19px;
+	border-bottom: 1px solid #e2e2e2;
+	}
+#comments li.depth-3, li.depth-5, li.depth-7, li.depth-9 {
+	margin: 15px 0 0 15px;
+	padding: 5px;
+	background: #fff;
+	}
+#comments li.depth-2, li.depth-4, li.depth-6, li.depth-8, li.depth-10 {
+	margin: 15px 0 0 15px;
+	padding: 5px;
+	background: #e7e7de;
+	}
+
+/* Comment avatars */
+#comments .avatar {
+	float: left;
+	margin: 0 10px 0 0;
+	padding: 4px;
+	border: 1px solid #e2e2e2;
+	}
+li.depth-1 img {
+	background: #e7e7de;
+	}
+li.depth-2 img {
+	background: #FFF;
+	}
+li.depth-3 img {
+	background: #e7e7de;
+	background: #e7e7de;
+	}
+li.depth-4 img {
+	background: #FFF;
+	}
+li.depth-5 img {
+	background: #e7e7de;
+	}
+li.depth-6 img {
+	background: #FFF;
+	}
+li.depth-7 img {
+	background: #e7e7de;
+	}
+li.depth-8 img {
+	background: #FFF;
+	}
+li.depth-9 img {
+	background: #e7e7de;
+	}
+li.depth-10 img {
+	background: #FFF;
+	}
+
+.rsswidget img {
+	background: #FFF !important;
+	}
+
+/* Comment meta data */
+#comments .comment-meta {
+	margin-bottom: 25px;
+	}
+#comments .comment-meta-data cite {
+	font-size: 15px;
+	font-weight: bold;
+	font-style: normal;
+	}
+#comments .comment-meta-data a {
+	color: #486472 !important;
+	}
+
+/* Comment text */
+#comments .comment-text {
+	clear: both;
+	margin: 0 15px;
+	}
+a.comment-link, a.comment-link:visited {
+	color: #222;
+	text-decoration: none;
+	font-style: italic;
+	font-weight: bold;
+	}
+
+a.comment-link:hover {
+	color: #222;
+	text-decoration: underline;
+	}
+.comment-left,
+.comment-right {
+	width: 49%;
+	float: left;
+	}
+.comment-left input,
+.comment-right textarea {
+	margin: 0 0 15px 4%;
+        padding: 8px;
+        width: 90%;
+	}
+.comment-submit input {
+	width: 141px;
+	}
+
+.comment-submit {
+	height: 60px;
+	width: 330px;
+	}
+
+#alt-login-methods {
+	padding: 15px;
+}
+
+/* Comment form */
+#respond {
+	overflow: hidden;
+	margin: 0 0 20px 0;
+	background: #fff;
+	}
+#reply {
+	margin: 0 0 10px 0;
+	padding: 0 6px 9px 6px;
+	font: normal normal bold;
+	border-bottom: 1px solid #e2e2e2;
+	}
+.trackback {
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	background:#FFFFFF none repeat scroll 0 0;
+	margin:0 0 20px;
+	overflow:hidden;
+	}
+#trackback ol {
+	list-style: none;
+	list-style-type: clear;
+	}
+#trackback li {
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	}
+.attr {
+        margin: -5px 0 10px 0;
+	}
+.related-entries h3 {
+	padding: 15px 0 0 0;
+	border-bottom: 1px solid #e2e2e2
+	}
+.related-entries p {
+	margin: 0;
+	}
+.related-entries li {
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	background:transparent url(images/bullet.png) no-repeat scroll 5px 6px;
+	padding:0 0 6px 20px;
+	list-style-type: none;
+	}
+.txtalignleft {
+	float: left;
+        text-align: left;
+	}
+.txtalignright {
+	float: right; 
+        text-align: right;
+	}
 
 
 /* Smartphones (portrait) */
