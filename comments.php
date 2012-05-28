@@ -57,7 +57,9 @@ if($comments) {
   <form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
   <?php if ( $user_ID ) : ?>
     <p>Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a> | <a href="<?php echo wp_logout_url( get_permalink() ); ?>" title="Logout">Logout</a></p>
-    <textarea id="comment" tabindex="4" cols="20" rows="10" onfocus="if ( value == 'Your comment please...' ) { this.value='' }" name="comment">Your comment please...</textarea>
+	<div class="comment-logged-in">
+    	<textarea id="comment" tabindex="4" cols="20" rows="10" onfocus="if ( value == 'Your comment please...' ) { this.value='' }" name="comment">Your comment please...</textarea>
+	</div>
 
     <input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
     <input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />

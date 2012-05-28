@@ -589,15 +589,20 @@ p.comments-closed {
 #comments li.depth-1 {
 	overflow: hidden;
 	margin: 20px 0;
-	padding: 19px;
+	padding: 0 0 20px 0;
 	border-bottom: 1px solid #e2e2e2;
+	}
+#comments li.depth-2 {
+    margin: 15px 0 0 40px;
+    padding: 5px;
+    background: #e7e7de;
 	}
 #comments li.depth-3, li.depth-5, li.depth-7, li.depth-9 {
 	margin: 15px 0 0 15px;
 	padding: 5px;
 	background: #fff;
 	}
-#comments li.depth-2, li.depth-4, li.depth-6, li.depth-8, li.depth-10 {
+#comments li.depth-4, li.depth-6, li.depth-8, li.depth-10 {
 	margin: 15px 0 0 15px;
 	padding: 5px;
 	background: #e7e7de;
@@ -700,6 +705,9 @@ a.comment-link:hover {
 }
 
 /* Comment form */
+.comment-logged-in textarea {
+	width: 98%;
+	}
 #respond {
 	overflow: hidden;
 	margin: 0 0 20px 0;
