@@ -4,6 +4,8 @@
   Random Settings Changes
 */
 function gus_setup() {
+	// Start out by added the Theme's Options page
+	require_once('theme-options.php');
 
     // This theme has some pretty cool theme options
     //require_once ( get_template_directory() . '/theme-options.php' );
@@ -12,7 +14,7 @@ function gus_setup() {
 	//add_theme_support( 'custom-background', $args );
 
 	// This theme allows users to use custom header images
-	add_theme_support( 'custom-header', $args );
+	//add_theme_support( 'custom-header', $args );
 
 	// Add Post Thumbnails for WordPress 2.9
 	add_theme_support('post-thumbnails');

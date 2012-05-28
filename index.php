@@ -4,19 +4,20 @@
 		<div id=personal itemscope itemtype="http://data-vocabulary.org/Person">
 			<h2 itemprop=name>Matt Rude</h2>
 		    	<ul>
-					<li>Trying his hand in <a href="/category/gallery/">photography</a></li>
-					<li>Open-source <a href="https://github.com/mattrude" ref="me">geek</a>
-					<li>Dables in <a href="http://technology.mattrude.com" ref="me">code</a></li>
-					<li>Builds all kinds of <a href="/projects/">Plugins</a></li>
-					<li></li>
+					<?php if (get_option('line_1')) { ?><li><?php echo get_option('line_1'); ?></li><?php } ?>
+					<?php if (get_option('line_2')) { ?><li><?php echo get_option('line_2'); ?></li><?php } ?>
+					<?php if (get_option('line_3')) { ?><li><?php echo get_option('line_3'); ?></li><?php } ?>
+					<?php if (get_option('line_4')) { ?><li><?php echo get_option('line_4'); ?></li><?php } ?>
+					<?php if (get_option('line_5')) { ?><li><?php echo get_option('line_5'); ?></li><?php } ?>
+					<?php if (get_option('line_6')) { ?><li><?php echo get_option('line_6'); ?></li><?php } ?>
 		    	</ul>
 		    	<p id=icons>
-					<a class=linkedin rel=me href="http://www.linkedin.com/in/mrude"></a>
-					<a class=twitter rel=me href="http://twitter.com/mdrude"></a>
-					<a class=google rel=me href="https://plus.google.com/112621058996703559018"></a>
-					<a class=github rel=me href="http://github.com/mattrude"></a>
-					<a class=flickr rel=me href="http://flickr.com/photos/mattrude/"></a>
-					<a class=email rel=me href="mailto:matt@mattrude.com"></a>
+					<?php if (get_option('gus_linkedin')) { ?><a class=linkedin rel=me href="<?php echo get_option('gus_linkedin'); ?>"></a><?php } ?>
+					<?php if (get_option('gus_twitter')) { ?><a class=twitter rel=me href="<?php echo get_option('gus_twitter'); ?>"></a><?php } ?>
+					<?php if (get_option('gus_google')) { ?><a class=google rel=me href="<?php echo get_option('gus_google'); ?>"></a><?php } ?>
+					<?php if (get_option('gus_github')) { ?><a class=github rel=me href="<?php echo get_option('gus_github'); ?>"></a><?php } ?>
+					<?php if (get_option('gus_flickr')) { ?><a class=flickr rel=me href="<?php echo get_option('gus_flickr'); ?>"></a><?php } ?>
+					<?php if (get_option('gus_email')) { ?><a class=email rel=me href="<?php echo get_option('gus_email'); ?>"></a><?php } ?>
 				</p>
 			</div>
 	    </div>
@@ -24,7 +25,7 @@
 	<div id=main role=main>
 	  	<div id=page class=content>
 			<div id=home>
-		    	<p class=about>Matt Rude is a a 31 year old guy, living in the Twin Cities, Minnesota. He has worked in Information Technology for over 15 years. During that time he has worked for business sectors as diverse as Public Schools to Auto Part to Health Care.</p>
+		    	<p class=about><?php if (get_option('gus_home_textarea')) { echo get_option('gus_home_textarea'); } ?></p>
 				<?php if (have_posts()) : ?>
 					<h3 style=padding-top:0.75em>Recent Posts <a href="/archives" class=more>view all posts</a></h3>
 					<ul class=posts>
