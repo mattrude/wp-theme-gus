@@ -243,6 +243,18 @@ h1 {
   padding-top: 0.5em;
 }
 
+h1 a,h1 a:visited {
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
 .byline {
   font-size:13px;
   color: #999;
@@ -269,7 +281,7 @@ h1 {
 
 #meta a { color: #bfbfbf; }
 #meta a.postlink { font-size:13px; }
-#meta a:hover { color: #fff; }
+#meta a:hover { color: #fff;  text-decoration: underline;}
 
 #meta a.archive {
   font-size:13px;
@@ -486,7 +498,7 @@ a.about {
 /* Gallery Items */
 .gallery-item {margin: auto;float: left;margin-top: 10px;text-align: center;width: 33%;}
 .gallery-caption {margin-left: 0;}
-.gallerypost {background-color:#fff;display: block;margin: 0px 0px 20px 0px;padding: 20px 10px 10px 10px;overflow: hidden;}
+.gallerypost {display: block;border-bottom:1px solid #CCC;margin: 0px 0px 20px 0px;padding: 20px 10px 10px 10px;overflow: hidden;}
 .gallerypost_body {float: right;width: 430px;margin: 0 20px 0 0;}
 .gallerypost_body .entry p {margin: 0px 0px 0px 0px;}
 .gallerypost_body .entry {margin: 0px 0px 0px 0px;}
