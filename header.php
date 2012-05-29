@@ -71,6 +71,6 @@
     <div id=container>
         <header>
             <div class=content>
-		        <a href="/"><?php bloginfo( 'name' ); ?></a> <b>&nbsp;|&nbsp;</b> <span><?php bloginfo( 'description' ); ?></span>
+			<a href="/"><?php bloginfo( 'name' ); ?></a> <b>&nbsp;|&nbsp;</b> <span><?php bloginfo( 'description' ); ?></span>
 	        </div>
 	    </header>

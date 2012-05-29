@@ -509,12 +509,13 @@ a.about {
   margin-right: 0.5em;
 }
 
-#icons a.linkedin {background-position:0px 0px}
-#icons a.twitter  {background-position:0px -32px}
-#icons a.google   {background-position:0px -64px}
-#icons a.github   {background-position:0px -96px}
-#icons a.flickr   {background-position:0px -128px}
-#icons a.email    {background-position:0px -160px}
+#icons a.facebook {background-position:0px 0px}
+#icons a.linkedin {background-position:0px -32px}
+#icons a.twitter  {background-position:0px -64px}
+#icons a.google   {background-position:0px -96px}
+#icons a.github   {background-position:0px -128px}
+#icons a.flickr   {background-position:0px -160px}
+#icons a.email    {background-position:0px -192px}
 
 /* =============================================================================
    Non-semantic helper classes

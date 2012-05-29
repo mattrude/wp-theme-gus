@@ -56,6 +56,25 @@ function create_gus_taxonomies() {
 }
 add_action( 'init', 'create_gus_taxonomies', 0 );
 
+
+function add_gus_contactmethod( $contactmethods ) {
+	// Add Facebook, Google+, Google Talk, & Twitter
+	$contactmethods['facebook'] = 'Facebook ID';
+	$contactmethods['linkedin'] = 'Linkedin ID';
+	$contactmethods['twitter'] = 'Twitter ID';
+	$contactmethods['google'] = 'Google+ ID';
+	$contactmethods['github'] = 'Github ID';
+	$contactmethods['flickr'] = 'Flickr ID';
+
+	// Remove Jabber, & Yahoo IM
+	unset($contactmethods['aim']);
+	unset($contactmethods['jabber']);
+	unset($contactmethods['yim']);
+
+	return $contactmethods;
+}
+add_filter('user_contactmethods','add_gus_contactmethod',10,1);
+
 /*********************************************************************************
    This shortcode displays the years since the date provided.
    To use this shortcode, add some text to a post or page simmiler to:
