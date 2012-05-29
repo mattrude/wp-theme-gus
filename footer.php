@@ -1,7 +1,7 @@
 		<footer>
 			<div id=copyright>
 				<div class=group>
-					<span>Copyright &copy; 1980 - <?php echo date("Y") ?> by <?php
+					<span>Copyright &copy; <?php echo get_option('gus_copy_year'); ?> - <?php echo date("Y") ?> by <?php
 						$siteowner=get_userdata(get_option('gus_siteowner'));
 						if ( is_home() ) {
 							if (get_option('gus_use_siteowner')) {

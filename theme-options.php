@@ -14,6 +14,7 @@ function gus_create_menu() {
 
 function register_gus_settings() {
 	register_setting( 'gus-settings-group', 'gus_use_siteowner' );
+	register_setting( 'gus-settings-group', 'gus_copy_year' );
 	register_setting( 'gus-settings-group', 'line_1' );
 	register_setting( 'gus-settings-group', 'line_2' );
 	register_setting( 'gus-settings-group', 'line_3' );
@@ -44,6 +45,10 @@ function gus_settings_page() {
     <table class="form-table">
 		<?php wp_dropdown_users(array('name' => 'gus_siteowner')); ?>
 		<p>Use Site Owner? <input type="checkbox" name="gus_use_siteowner" value="checked" <?php echo get_option('gus_use_siteowner'); ?> /></p>
+		<tr valign="top">
+			<th scope="row">Copyright starting year</th>
+			<td><input type="text" name="gus_copy_year" value="<?php echo get_option('gus_copy_year'); ?>" /></td>
+		</tr>
 	</table>
 
 	<h3>Opening Bullet Points</h3>
