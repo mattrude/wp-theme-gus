@@ -499,15 +499,15 @@ a.about {
 .gallery-item {margin: auto;float: left;margin-top: 10px;text-align: center;width: 33%;}
 .gallery-caption {margin-left: 0;}
 .gallerypost {display: block;border-bottom:1px solid #CCC;margin: 0px 0px 20px 0px;padding: 20px 10px 10px 10px;overflow: hidden;}
-.gallerypost_body {float: right;width: 430px;margin: 0 20px 0 0;}
+.gallerypost h1 {padding: 0;}
 .gallerypost_body .entry p {margin: 0px 0px 0px 0px;}
 .gallerypost_body .entry {margin: 0px 0px 0px 0px;}
-.gallerypost_main {width: 690px;overflow: hidden;}
+.gallerypost_main {overflow: hidden;}
 .gallerypost_sub {overflow: hidden;margin: 20px 0 0 0;padding: 0px 0px 10px 10px;}
 .gallerypost_sub p {margin: 0;}
 .gallerypost_sub_left {float: left;}
 .gallerypost_sub_right {width: 220px;float: right;}
-.gallerypost_thumbnail {float: left;}
+.gallerypost_thumbnail {float: left;padding-right: 20px;}
 .gallerypost_thumbnail img {margin: 0 0 0 10px;color: #000;}
 
 /* social sprites */
