@@ -509,6 +509,8 @@ a.about {
 .gallerypost_sub_right {width: 220px;float: right;}
 .gallerypost_thumbnail {float: left;padding-right: 20px;}
 .gallerypost_thumbnail img {margin: 0 0 0 10px;color: #000;}
+.taxonomy-people img {margin: 10px;}
+.taxonomy-people-gallery {width: 700px; margin: 0 auto;}
 
 /* social sprites */
 #icons a {

@@ -10,7 +10,7 @@ if ( $term->description == "" ) {
 	  $person_description = $term->description;
 } ?>
 <div id=main role=main>
-   	<div id=page class=content>
+   	<div id=page class="content index taxonomy-people">
 		<div id=home>
 			<?php if (have_posts()) : ?>
 				<h3 style=padding-top:0.75em>Posts about <?php echo $person_description; ?>:</h3>
@@ -19,7 +19,7 @@ if ( $term->description == "" ) {
 					<?php while (have_posts()) : the_post(); ?>
 						<li>
 							<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-							<time datetime="<?php the_date('M d y'); ?>" pubdate="pubdate"><?php the_date('Y-m-d'); ?></time>
+							<time datetime="<?php the_time('c'); ?>" pubdate="pubdate"><?php the_date('Y M d'); ?></time>
 						</li>
 					<?php endwhile; ?>
 				</ul>
@@ -45,7 +45,7 @@ if ( $term->description == "" ) {
 			if ($attachments) { ?>
 				<br />
 				<h3 style=padding-top:0.75em>Pictures of <?php echo $person_description; ?>:</h3>
-				<div class="post"><center><?php
+				<div class="post taxonomy-people-gallery"><center><?php
 				foreach ( $attachments as $attachment ) {
 					setup_postdata($attachment);
 					the_attachment_link($attachment->ID, false, null, 1);

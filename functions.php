@@ -75,6 +75,9 @@ function add_gus_contactmethod( $contactmethods ) {
 }
 add_filter('user_contactmethods','add_gus_contactmethod',10,1);
 
+function gus_post_list() { ?>
+}
+
 /*********************************************************************************
    This shortcode displays the years since the date provided.
    To use this shortcode, add some text to a post or page simmiler to:
