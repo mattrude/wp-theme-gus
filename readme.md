@@ -1,6 +1,6 @@
 # The Gus Theme
 
-The Gus theme will be the future theme for http://mattrude.com.
+The Gus theme for (WordPress)[http://wordpress.org] will be the future theme for http://mattrude.com.
 
 ## Features
 
