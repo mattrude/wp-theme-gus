@@ -585,7 +585,7 @@ a.about {
 
 /* Image Pages */
 #image-left { overflow: hidden; text-align: left; }
-#image-right { overflow: hidden; float: right; border-left: 1px;}
+#image-right { overflow: hidden; float: right; border-left: 1px solid #CCC; padding-left: 15px;}
 #exif { overflow: hidden; max-width: 450px; text-align: left; }
 #exif-lable { margin: 0 0 0 15px; max-width: 110px; }
 #exif-lable p { margin: 0; }
