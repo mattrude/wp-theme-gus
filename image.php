@@ -35,21 +35,50 @@
 						</div>
 					<?php endif; ?>
 					<?php the_content(); ?>
-					<!-- Adding matt's cumnity tags: http://wordpress.org/extend/plugins/matts-community-tags/ -->
-					<div id="community-tags">
-						<h3 class="comment-title exif-title">Who is this?</h3>	
-						<div id="tagthis"></div>
+					<div id=image-right>
+						<?php $attachments = array_values(get_children( 
+							array(
+								'post_parent' => $post->post_parent,
+								'post_status' => 'inherit',
+								'post_type' => 'attachment',
+								'post_mime_type' => 'image',
+								'order' => 'ASC',
+								'orderby' => 'menu_order ID'
+							)
+						));
+						$next_url =  isset($attachments[$k+1]) ? get_permalink($attachments[$k+1]->ID) : get_permalink($attachments[0]->ID);
+						$previous_url =  isset($attachments[$k-1]) ? get_permalink($attachments[$k-1]->ID) : get_permalink($attachments[0]->ID);
+						if ( wp_get_attachment_image( $post->ID+1 ) != null ) { ?>
+							<p class="attachment">
+								<?php _e('Next Image', 'milly') ?><br />
+								<a href="<?php echo $next_url; ?>"><?php echo wp_get_attachment_image( $post->ID+1, 'thumbnail' ); ?></a>
+							</p> <?php
+						}
+	
+						if ( wp_get_attachment_image( $post->ID-1 ) != null ) { ?>
+							<p class="attachment">
+								<?php _e('Previous Image', 'milly') ?><br />
+								<a href="<?php echo $previous_url; ?>"><?php echo wp_get_attachment_image( $post->ID-1, 'thumbnail' ); ?></a>
+							</p> <?php
+						} ?>
 					</div>
-					<!-- Closing matt's cumnity tags -->
-					<div id=taxonomy-meta>
-						<h3>Image Meta Data</h3>
-						<ul>
-							<?php echo get_the_term_list( $post->post_parent, 'places', '<li>' .__('Location', 'gus'). ': ', ', ', '</li>' ); ?>
-							<?php echo get_the_term_list( $post->post_parent, 'events', '<li>' .__('Event', 'gus'). ': ', ', ', '</li>' ); ?>
-							<?php echo get_the_term_list( $post->ID, 'people', '<li>' .__('People Already Tagged', 'gus'). ': ', ', ', '</li>' ); ?>
-						</ul>
+					<div id=image-left>
+						<div id=taxonomy-meta>
+							<h3>Image Meta Data</h3>
+							<ul>
+								<?php echo get_the_term_list( $post->post_parent, 'places', '<li>' .__('Location', 'gus'). ': ', ', ', '</li>' ); ?>
+								<?php echo get_the_term_list( $post->post_parent, 'events', '<li>' .__('Event', 'gus'). ': ', ', ', '</li>' ); ?>
+								<?php echo get_the_term_list( $post->ID, 'people', '<li>' .__('People Already Tagged', 'gus'). ': ', ', ', '</li>' ); ?>
+							</ul>
+						</div>
+						<!-- Adding matt's cumnity tags: http://wordpress.org/extend/plugins/matts-community-tags/ -->
+						<div id="community-tags">
+							<h3 class="comment-title exif-title">Who is this?</h3>	
+							<div id="tagthis"></div>
+						</div>
+						<!-- Closing matt's cumnity tags -->
+						<?php mdr_exif(); ?>
 					</div>
-					<?php mdr_exif(); ?>
 					<hr>
 				</div>
 				<?php comments_template( '', true ); ?>

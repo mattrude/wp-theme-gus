@@ -344,7 +344,15 @@ a, a:visited {
 #home h3 {
   margin: 0.5em 0;
 }
-
+#home-gallery {
+	height: 150px;
+	overflow: hidden;
+}
+#home-gallery img {
+	margin-bottom: 10px;
+	vertical-align: middle;
+	text-align: center;
+}
 ul.posts {
   list-style-type:circle;
 }
@@ -576,6 +584,8 @@ a.about {
 }
 
 /* Image Pages */
+#image-left { overflow: hidden; text-align: left; }
+#image-right { overflow: hidden; float: right; border-left: 1px;}
 #exif { overflow: hidden; max-width: 450px; text-align: left; }
 #exif-lable { margin: 0 0 0 15px; max-width: 110px; }
 #exif-lable p { margin: 0; }
