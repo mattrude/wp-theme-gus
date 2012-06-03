@@ -47,7 +47,9 @@
 	?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+<!--
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600"/>
+-->
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
@@ -64,6 +66,8 @@
 	 * generally use this hook to add elements to <head> such
 	 * as styles, scripts, and meta tags.
 	 */
+	if ( is_attachment() ) { add_action( 'wp_head', 'mct_script' ); }
+
 	wp_head();
 ?>
 </head>
