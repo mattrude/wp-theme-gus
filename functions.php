@@ -7,8 +7,8 @@ function gus_setup() {
 	// Start out by added the Theme's Options page
 	require_once('theme-options.php');
 
-    // This theme has some pretty cool theme options
-    //require_once ( get_template_directory() . '/theme-options.php' );
+	// Add Twitter post type
+	require_once('twitter-functions.php');
 
 	// This theme allows users to set a custom background
 	//add_theme_support( 'custom-background', $args );
@@ -57,7 +57,6 @@ function create_gus_taxonomies() {
 	register_taxonomy( 'events', 'post', array( 'hierarchical' => false, 'label' => __('Events'), 'query_var' => true, 'rewrite' => true ) );
 }
 add_action( 'init', 'create_gus_taxonomies', 0 );
-
 
 function add_gus_contactmethod( $contactmethods ) {
 	// Add Facebook, Google+, Google Talk, & Twitter
