@@ -75,6 +75,23 @@ function add_gus_contactmethod( $contactmethods ) {
 }
 add_filter('user_contactmethods','add_gus_contactmethod',10,1);
 
+if ( ! function_exists( 'gus_content_nav' ) ) :
+/**
+ * Display navigation to next/previous pages when applicable
+ */
+function gus_content_nav( $nav_id ) {
+    global $wp_query;
+
+    if ( $wp_query->max_num_pages > 1 ) : ?>
+        <nav id="<?php echo $nav_id; ?>">
+            <div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'gus' ) ); ?></div>
+            <div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'gus' ) ); ?></div>
+        </nav><!-- #nav-above -->
+    <?php endif;
+}
+endif; // gus_content_nav
+
+
 /*********************************************************************************
    This shortcode displays the years since the date provided.
    To use this shortcode, add some text to a post or page simmiler to:

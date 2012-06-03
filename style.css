@@ -486,6 +486,17 @@ a.about {
   color: #bfbfbf;
 }
 
+#nav-below {
+	padding: 0 0 20px 0;
+}
+.nav-previous {
+	float:left;
+	width:auto;
+}
+.nav-next {
+	float:right;
+	width:auto;
+}
 /* Image Pages */
 
 #exif { overflow: hidden; max-width: 450px; text-align: left; }

@@ -46,6 +46,7 @@
 					<?php endwhile; ?>
 				</ul>
 			<?php endif; ?>
+			<?php gus_content_nav( 'nav-below' ); ?>
 		</div>
 	</div>
 </div>
