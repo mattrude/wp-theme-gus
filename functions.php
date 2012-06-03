@@ -10,6 +10,9 @@ function gus_setup() {
 	// Add Twitter post type
 	require_once('twitter-functions.php');
 
+	// Add Community Tags Plugin
+	require_once('components/community-tags.php');
+
 	// This theme allows users to set a custom background
 	//add_theme_support( 'custom-background', $args );
 

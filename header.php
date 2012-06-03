@@ -66,7 +66,11 @@
 	 * generally use this hook to add elements to <head> such
 	 * as styles, scripts, and meta tags.
 	 */
-	if ( is_attachment() ) { add_action( 'wp_head', 'mct_script' ); wp_enqueue_script( 'jquery' ); }
+	if ( is_attachment() ) {
+		add_action( 'wp_head', 'mct_script' );
+		echo "<script type='text/javascript' src='http://s.ma.tt/photos/suggest.js'></script>";
+		wp_enqueue_script( 'jquery' );
+	}
 
 	wp_head();
 ?>
