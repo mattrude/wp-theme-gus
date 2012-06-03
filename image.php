@@ -35,6 +35,12 @@
 						</div>
 					<?php endif; ?>
 					<?php the_content(); ?>
+					<!-- Adding matt's cumnity tags: http://wordpress.org/extend/plugins/matts-community-tags/ -->
+					<div id="community-tags">
+						<h3 class="comment-title exif-title">Who is this?</h3>	
+						<div id="tagthis"></div>
+					</div>
+					<!-- Closing matt's cumnity tags -->
 					<div id=taxonomy-meta>
 						<h3>Image Meta Data</h3>
 						<ul>
