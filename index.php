@@ -38,6 +38,7 @@
 			<div id=home>
 				<p class=about><?php echo $siteowner->user_description; ?></p>
 		    	<p class=about><?php if (get_option('gus_home_textarea')) { echo get_option('gus_home_textarea'); } ?></p>
+				<?php query_posts("posts_per_page=10"); ?>
 				<?php if (have_posts()) : ?>
 					<h3 style=padding-top:0.75em>Recent Posts <a href="/archives" class=more>view all posts</a></h3>
 					<ul class=posts>
