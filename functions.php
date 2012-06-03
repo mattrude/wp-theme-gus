@@ -8,7 +8,7 @@ function gus_setup() {
 	require_once('theme-options.php');
 
 	// Add Twitter post type
-	require_once('twitter-functions.php');
+	require_once('components/twitter-functions.php');
 
 	// Add Community Tags Plugin
 	require_once('components/community-tags.php');
