@@ -570,6 +570,12 @@ a.about {
 	margin: 4px 10px 2px 0;
     padding: 0;
 }
+.format-status .entry-content {
+	min-height: 69px;
+}
+.format-status hr {
+	margin-bottom: 0.4em;
+}
 
 /* Image Pages */
 #exif { overflow: hidden; max-width: 450px; text-align: left; }
