@@ -3,7 +3,9 @@
    	<div id=page class=content>
 		<div id=home>
 			<?php if (have_posts()) : ?>
-				<h3 style=padding-top:0.75em>Gallery Albums</h3>
+				<?php $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
+				$location_name = $term->name; ?>
+				<h3 style=padding-top:0.75em>Gallery taking place at: <?php echo $location_name; ?></h3>
 				<ul class=posts>
 					<!--Starting "The Loop"-->
 					<?php while (have_posts()) : the_post(); ?>

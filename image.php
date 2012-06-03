@@ -35,7 +35,14 @@
 						</div>
 					<?php endif; ?>
 					<?php the_content(); ?>
-					<p><?php echo get_the_term_list( $post->ID, 'people', '<br />' .__('People Already Tagged', 'gus'). ': ', ', ', '' ); ?></p>
+					<div id=taxonomy-meta>
+						<h3>Image Meta Data</h3>
+						<ul>
+							<?php echo get_the_term_list( $post->post_parent, 'places', '<li>' .__('Location', 'gus'). ': ', ', ', '</li>' ); ?>
+							<?php echo get_the_term_list( $post->post_parent, 'events', '<li>' .__('Event', 'gus'). ': ', ', ', '</li>' ); ?>
+							<?php echo get_the_term_list( $post->ID, 'people', '<li>' .__('People Already Tagged', 'gus'). ': ', ', ', '</li>' ); ?>
+						</ul>
+					</div>
 					<?php mdr_exif(); ?>
 					<hr>
 				</div>

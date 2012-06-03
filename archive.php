@@ -4,6 +4,16 @@
 				<div id=home>
 					<?php if (have_posts()) : ?>
 						<h3 style=padding-top:0.75em>Archive Posts</a></h3>
+						<?php if ( is_day() ) : ?>
+							<?php printf( __( 'Daily Archives: %s', 'twentyeleven' ), '<span>' . get_the_date() . '</span>' ); ?>
+						<?php elseif ( is_month() ) : ?>
+							<?php printf( __( 'Monthly Archives: %s', 'twentyeleven' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'twentyeleven' ) ) . '</span>' ); ?>
+						<?php elseif ( is_year() ) : ?>
+							<?php printf( __( 'Yearly Archives: %s', 'twentyeleven' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'twentyeleven' ) ) . '</span>' ); ?>
+						<?php else : ?>
+							<?php _e( 'Blog Archives', 'twentyeleven' ); ?>
+						<?php endif; ?>
+
 						<ul class=posts>
 							<!--Starting "The Loop"-->
 							<?php while (have_posts()) : the_post(); ?>
