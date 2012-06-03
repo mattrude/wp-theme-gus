@@ -45,12 +45,6 @@ audio[controls], canvas, video { display: inline-block; *display: inline; *zoom:
   src: local('Open Sans Bold'), local('Open Sans Bold'), url('fonts/open-sans/OpenSans-Semibold.ttf') format('woff');
 }
 
-@font-face {
-  font-family: 'Open Sans';
-  font-style: Bold, Italic;
-  font-weight: 700;
-  src: local('Open Sans Bold Italic'), local('Open Sans Bold Italic'), url('fonts/open-sans/OpenSans-SemiboldItalic.ttf') format('woff');
-}
 /* =============================================================================
    Base
    ========================================================================== */
