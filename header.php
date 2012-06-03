@@ -67,7 +67,7 @@
 	wp_head();
 ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
     <div id=container>
         <header>
             <div class=content>

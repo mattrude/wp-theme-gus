@@ -498,6 +498,67 @@ a.about {
 	width:auto;
 }
 
+/* =error404
+----------------------------------------------- */
+
+.error404 #primary {
+    float: none;
+}
+.error404 #primary #content {
+    margin: 0 7.6%;
+    width: auto;
+}
+.error404 #main h2 {
+	margin: 0;
+}
+.error404 #main #searchform {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-width: 1px 0;
+    overflow: hidden;
+    padding: 1.625em 8.9%;
+}
+.error404 #main #s {
+    width: 95%;
+}
+.error404 #main .widget_recent_entries {
+    clear: none;
+    float: left;
+    margin-right: 3.7%;
+    width: 30.85%;
+}
+.error404 #main .widget-middle {
+    clear: none;
+    float: left;
+}
+.error404 #main .widget-center {
+	clear: none;
+	float: left;
+	width: 65%;
+	margin-bottom: 10px;
+}
+.error404 #main .widget-center .widget {
+	clear: none;
+    float: left;
+    margin-right: 3.7%;
+    width: 46%;
+}
+.error404 #main .widget_archive {
+    margin-right: 0;
+}
+.error404 #main .widget_tag_cloud {
+    float: none;
+    margin-right: 0;
+    width: 100%;
+}
+.error404 .widgettitle {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    line-height: 2.6em;
+    text-transform: uppercase;
+}
+
+
 /* Post Formats */
 .format-status {
 	min-height: 80px;
