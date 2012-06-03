@@ -4,11 +4,10 @@
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 				<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 					<h1 itemprop=name><?php single_post_title(); ?></h1>
-					<p class="byline">
-						By <a href="/" rel="author" itemprop="author"><?php the_author_meta( 'display_name' ) ?></a>
-						on <b itemprop="datePublished" datetime="<?php the_date('Y-m-d'); ?>"><?php echo get_the_date(); ?></b>
-					</p>
 					<?php the_content(); ?>
+					<p class="byline-bottom">
+						Updated: <time itemprop="datePublished" datetime="<?php the_date('Y-m-d'); ?>" updated="<?php echo the_modified_time('Y-m-d'); ?>"><?php echo the_modified_time('Y-m-d'); ?></time>
+					</p>
 					<hr>
 				</div>
 				<?php comments_template( '', true ); ?>

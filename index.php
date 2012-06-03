@@ -37,20 +37,37 @@
 	  	<div id=page class=content>
 			<div id=home>
 				<p class=about><?php echo $siteowner->user_description; ?></p>
-		    	<p class=about><?php if (get_option('gus_home_textarea')) { echo get_option('gus_home_textarea'); } ?></p>
-				<?php query_posts("posts_per_page=10"); ?>
-				<?php if (have_posts()) : ?>
-					<h3 style=padding-top:0.75em>Recent Posts <a href="/archives" class=more>view all posts</a></h3>
-					<ul class=posts>
-						<?php while (have_posts()) : the_post(); ?>
-							<!--Starting "The Loop"-->
-							<li>
-								<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-								<time datetime="<?php the_time('c'); ?>" pubdate="pubdate"><?php the_date('Y M d'); ?></time>
-							</li>
-						<?php endwhile; ?>
-					</ul>
-				<?php endif; ?>
+				<div id=home-center>
+		    		<?php if (get_option('gus_home_textarea')) { echo "<p class=about>".get_option('gus_home_textarea')."</p>"; } ?>
+					<?php query_posts("posts_per_page=10"); ?>
+					<?php if (have_posts()) : ?>
+						<div id=home-recent-posts>
+							<h3 style=padding-top:0.75em>Recent Posts <a href="/archives" class=more>view all posts</a></h3>
+							<ul class=posts>
+								<?php while (have_posts()) : the_post(); ?>
+									<!--Starting "The Loop"-->
+									<li>
+										<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+										<time datetime="<?php the_time('c'); ?>" pubdate="pubdate"><?php the_date('Y M d'); ?></time>
+									</li>
+								<?php endwhile; ?>
+							</ul>
+						</div>
+					<?php endif; ?>
+					<div id=home-gallery>
+					<?php $home_gallery_id = get_category_by_slug( 'gallery' );
+					query_posts("posts_per_page=2&cat=$home_gallery_id->term_id");
+					if (have_posts()) : ?>
+						<h3 style=padding-top:0.75em>Recent Gallery Posts</h3>
+						<center>
+							<?php while (have_posts()) : the_post(); ?>
+								<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_post_thumbnail() ?></a>
+							<?php endwhile; ?>
+						</center>
+					 <?php endif; ?>
+					</div>
+				<div style=text-align:right;><p><a href=/category/gallery>Site Gallery</a></p></div>
+				</div>
 			</div>
 		</div>
 	</div>
