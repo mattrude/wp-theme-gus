@@ -325,8 +325,6 @@ a, a:visited {
 
 #home ul.posts li .extra, #home ul.posts li time { float:right; }
 
-time { margin-left: 1em; }
-
 #home .featured {
   padding: 1px 1em;
   background: #eee;

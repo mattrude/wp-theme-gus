@@ -9,11 +9,13 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<h1 itemprop=name><?php single_post_title(); ?></h1>
-	<p class="byline">
-		By <a href="/" rel="author" itemprop="author"><?php the_author_meta( 'display_name' ) ?></a>
-		on <b itemprop="datePublished" datetime="<?php the_date('Y-m-d'); ?>"><?php echo get_the_date(); ?></b>
-	</p>
+	<h1 itemprop=name><span class="entry-title"><?php single_post_title(); ?></span></h1>
+	<div class="vcard">
+		<p class="byline">
+			By <span itemprop="name"><a href="/" rel="author" class="url fn" itemprop="author"><?php the_author_meta( 'display_name' ) ?></a></span>
+			on <b><time itemprop="datePublished" datetime="<?php the_date('Y-m-d'); ?>" updated="<?php the_date('Y-m-d'); ?>"><?php echo get_the_date(); ?></time></b>
+		</p>
+	</div>
 	<?php the_content(); ?>
 	<?php $show_sep = false; ?>
 	<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search
