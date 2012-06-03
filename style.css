@@ -416,14 +416,19 @@ kbd {
   border-color: #ccc #aaa #888 #bbb;
 }
 
-pre, code {
-	font-size: 12px;
-	overflow: auto;
-	padding: 5px;
-	color: black;
-	background: #E7E7DE;
-	border: 1px solid #e2e2e2;
-	line-height:16px;
+pre {
+	background:none repeat scroll 0 0 #333333;
+	color:#FFFFFF;
+	font-family:'Luxi Mono',Monospace,'Courier New',Courier,Fixed;
+	line-height:1.5em;
+	overflow:auto;
+	text-align:left;
+	text-decoration:none;
+	border-color:#BDBEC5;
+	border-style:solid;
+	border-width:1px 1px 1px 4px;
+	margin:0 0 1.7em 6px;
+	padding:5px;
 }
 
 code {
