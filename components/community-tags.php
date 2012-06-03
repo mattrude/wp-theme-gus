@@ -37,14 +37,14 @@ var $j = jQuery.noConflict();
 $j( document ).ready( function(){
 	$j( '#tagthis' ).html('<p>Recognize someone in this photo? Tag them.</p><form action="/index.php?addtag=go" method="post" id="tagthisform"><p>Separate multiple people with commas, example: Elvis Presley, Britney Spears.</p><p><input type="text" id="mct_people" name="mct_people" size="30" /> <input type="hidden" value="<?php echo $posts[0]->ID; ?>" name="post_id" id="post_id" /><input type="button" value="Tag People &raquo;" id="tagthisbutt" /></p></form>');
 	$j( '#tagthisbutt' ).click( mct_process_form );
-	$j( '#mct_people' ).suggest( '<?php bloginfo('home'); ?>/index.php?suggesttag=go', { onSelect: function() { mct_process_form(); } } );
+	$j( '#mct_people' ).suggest( '<?php bloginfo('url'); ?>/index.php?suggesttag=go', { onSelect: function() { mct_process_form(); } } );
 
 } );
 
 function mct_process_form() {
 	var mct_people = $j( '#mct_people' ).value;
 	var mct_people = $j( '#post_id' ).value;
-	$j.post( '<?php bloginfo('home'); ?>/index.php?addtag=go', $j("#tagthis :input").serializeArray(), function(data){ $j('#tagthis').html('<p>Thank you for your submission, it is in moderation and should appear shortly.'); } );
+	$j.post( '<?php bloginfo('url'); ?>/index.php?addtag=go', $j("#tagthis :input").serializeArray(), function(data){ $j('#tagthis').html('<p>Thank you for your submission, it is in moderation and should appear shortly.'); } );
 }
 -->
 </script>
@@ -289,7 +289,7 @@ foreach ( $proposed as $p ) {
 		$tags = explode( ',', $tags );
 		foreach ( $tags as $tag ) {
 			++$i;
-			$tag_attr = trim( attribute_escape( $tag ) );
+			$tag_attr = trim( esc_attr( $tag ) );
 			$drop = ts_dropdown( 'post', "mct_{$i}", $tax );
 			$tag = strtolower( trim( $tag ) );
 			if ( is_array( $ps ) && in_array( $tag, $ps ) ) { // if it's already a tag
