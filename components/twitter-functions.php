@@ -41,11 +41,10 @@ function twitter_metabox() {
 
   // The actual fields for data entry
   global $post;
-  $post_id_var = get_post_meta($post->ID, 'ozh_ta_id', true);
-  if (isset($post_id_var)) {
-  	echo '<input type="text" name="ozh_ta_id" value="' . $post_id_var . '" size="25" />';
-  	echo '<label for="ozh_ta_id">' . __(" Tweet Post ID") . '</label><br />';
-  }
+  $post_id = $post->ID;
+  $post_id_var = $_POST['ozh_ta_id'];
+  echo '<input type="text" name="ozh_ta_id" value="' . $post_id_var . '" size="25" />';
+  echo '<label for="ozh_ta_id">' . __(" Tweet Post ID") . '</label><br />';
 }
 
 function twitter_save_metabox() {
