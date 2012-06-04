@@ -14,13 +14,17 @@ function gus_setup() {
 	require_once('components/community-tags.php');
 
 	// This theme allows users to set a custom background
-	//add_theme_support( 'custom-background', $args );
+	add_theme_support( 'custom-background' );
 
 	// This theme allows users to use custom header images
-	//add_theme_support( 'custom-header', $args );
+	add_theme_support( 'custom-header' );
+
+	// Remove Widget support
+	remove_theme_support( 'widgets' );
 
     // Add Post Formats
 	add_theme_support( 'post-formats', array( 'aside', 'gallery', 'image', 'link', 'status', 'video' ) );
+
 	// Add Post Thumbnails for WordPress 2.9
 	add_theme_support('post-thumbnails');
 	set_post_thumbnail_size(200, 200);
