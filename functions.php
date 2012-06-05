@@ -151,9 +151,8 @@ add_shortcode('ts', 'mdr_timesince');
 function mdr_exif() { ?>
   <div id="exif">
     <h3 class='comment-title exif-title'><?php _e('Images EXIF Data', 'millytheme'); ?></h3>
-    <div id="exif-data">
-      <?php
-      $imgmeta = wp_get_attachment_metadata( $id );
+    <div id="exif-data"> <?php
+      $imgmeta = wp_get_attachment_metadata();
       // Convert the shutter speed retrieve from database to fraction
       $image_shutter_speed = $imgmeta['image_meta']['shutter_speed'];
       if ($image_shutter_speed > 0) {
