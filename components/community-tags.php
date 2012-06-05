@@ -27,8 +27,7 @@ function mct_init() {
 add_action( 'init', 'mct_init' );
 
 function mct_script() {
-	global $posts;
-?>
+	global $posts; ?>
 <script type='text/javascript' src='<?php echo get_bloginfo( 'template_directory' ); ?>/components/suggest.js'></script>
 <script type="text/javascript">
 <!--
