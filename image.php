@@ -8,23 +8,6 @@
 						By <a href="/" rel="author" itemprop="author"><?php the_author_meta( 'display_name' ) ?></a>
 						on <b itemprop="datePublished" datetime="<?php the_date('Y-m-d'); ?>"><?php echo get_the_date(); ?></b>
 					</p>
-    				<?php foreach ( $attachments as $k => $attachment ) {
-		        		if ( $attachment->ID == $post->ID )
-							break;
-					}
-					$k++;
-					// If there is more than 1 attachment in a gallery
-					if ( count( $attachments ) > 1 ) {
-						if ( isset( $attachments[ $k ] ) )
-							// get the URL of the next image attachment
-							$next_attachment_url = get_attachment_link( $attachments[ $k ]->ID );
-						else
-							// or get the URL of the first image attachment
-							$next_attachment_url = get_attachment_link( $attachments[ 0 ]->ID );
-					} else {
-						// or, if there's only 1 image, get the URL of the image
-						$next_attachment_url = wp_get_attachment_url();
-					} ?>
 					<a href="<?php echo esc_url( $next_attachment_url ); ?>" title="<?php the_title_attribute(); ?>" rel="attachment"><?php
 						$attachment_size = apply_filters( 'twentyeleven_attachment_size', 770 );
 						echo wp_get_attachment_image( $post->ID, array( $attachment_size, 1024 ) ); // filterable image width with 1024px limit for image height.
@@ -46,6 +29,9 @@
 								'orderby' => 'menu_order ID'
 							)
 						));
+						foreach ( $attachments as $k => $attachment )
+							if ( $attachment->ID == $post->ID )
+								break;
 						$next_url =  isset($attachments[$k+1]) ? get_permalink($attachments[$k+1]->ID) : get_permalink($attachments[0]->ID);
 						$previous_url =  isset($attachments[$k-1]) ? get_permalink($attachments[$k-1]->ID) : get_permalink($attachments[0]->ID);
 						if ( wp_get_attachment_image( $post->ID+1 ) != null ) { ?>
