@@ -8,7 +8,7 @@
 						By <a href="/" rel="author" itemprop="author"><?php the_author_meta( 'display_name' ) ?></a>
 						on <b itemprop="datePublished" datetime="<?php the_date('Y-m-d'); ?>"><?php echo get_the_date(); ?></b>
 					</p>
-					<a href="<?php echo esc_url( $next_attachment_url ); ?>" title="<?php the_title_attribute(); ?>" rel="attachment"><?php
+					<a href="<?php echo wp_get_attachment_url( $post->ID ); ?>" title="<?php the_title_attribute(); ?>" rel="attachment"><?php
 						$attachment_size = apply_filters( 'twentyeleven_attachment_size', 770 );
 						echo wp_get_attachment_image( $post->ID, array( $attachment_size, 1024 ) ); // filterable image width with 1024px limit for image height.
 					?></a>
