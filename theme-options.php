@@ -1,7 +1,10 @@
 <?php
-// create custom plugin settings menu
-add_action('admin_menu', 'gus_create_menu');
 
+/** 
+ * Create the Theme Options menus on the WordPress Dashboard
+ *
+ * @since Gus 0.1
+ */
 function gus_create_menu() {
 
 	//create new top-level menu
@@ -10,18 +13,66 @@ function gus_create_menu() {
 	//call register settings function
 	add_action( 'admin_init', 'register_gus_settings' );
 }
+// create custom plugin settings menu
+add_action('admin_menu', 'gus_create_menu');
 
 
+/**
+ * Register the form setting for our gus_options array.
+ *
+ * This function is attached to the admin_init action hook.
+ *
+ * This call to register_setting() registers a validation callback, gus_theme_options_validate(),
+ * which is used when the option is saved, to ensure that our option values are complete, properly
+ * formatted, and safe.
+ *
+ * @since Gus 0.1
+ */
+function gus_theme_options_init() {
+
+    register_setting(
+        'gus_options',       // Options group, see settings_fields() call in gus_theme_options_render_page()
+        'gus_theme_options', // Database option, see gus_get_theme_options()
+        'gus_theme_options_validate' // The sanitization callback, see gus_theme_options_validate()
+    );
+
+    // Register our settings field group
+    add_settings_section(
+        'general', // Unique identifier for the settings section
+        '', // Section title (we don't want one)
+        '__return_false', // Section callback (we don't want anything)
+        'theme_options' // Menu slug, used to uniquely identify the page; see gus_theme_options_add_page()
+    );
+
+    // Register our individual settings fields
+    add_settings_field(
+        'color_scheme',  // Unique identifier for the field for this section
+        __( 'Color Scheme', 'gus' ), // Setting field label
+        'gus_settings_field_color_scheme', // Function that renders the settings field
+        'theme_options', // Menu slug, used to uniquely identify the page; see gus_theme_options_add_page()
+        'general' // Settings section. Same as the first argument in the add_settings_section() above
+    );
+
+    add_settings_field( 'link_color', __( 'Link Color',     'gus' ), 'gus_settings_field_link_color', 'theme_options', 'general' );
+    add_settings_field( 'layout',     __( 'Default Layout', 'gus' ), 'gus_settings_field_layout',     'theme_options', 'general' );
+}
+add_action( 'admin_init', 'gus_theme_options_init' );
+
+/**
+ * Built the main Settings for the theme.
+ *
+ * @since Gus 0.1
+ */
 function register_gus_settings() {
 	register_setting( 'gus-settings-group', 'gus_use_siteowner' );
 	register_setting( 'gus-settings-group', 'gus_copy_year' );
+	register_setting( 'gus-settings-group', 'gus_siteowner' );
 	register_setting( 'gus-settings-group', 'line_1' );
 	register_setting( 'gus-settings-group', 'line_2' );
 	register_setting( 'gus-settings-group', 'line_3' );
 	register_setting( 'gus-settings-group', 'line_4' );
 	register_setting( 'gus-settings-group', 'line_5' );
 	register_setting( 'gus-settings-group', 'line_6' );
-	register_setting( 'gus-settings-group', 'gus_siteowner' );
 	register_setting( 'gus-settings-group', 'gus_home_textarea' );
 	register_setting( 'gus-settings-group', 'gus_facebook' );
 	register_setting( 'gus-settings-group', 'gus_linkedin' );

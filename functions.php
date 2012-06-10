@@ -1,8 +1,8 @@
 <?php
 
-/********************************************************************************
-  Random Settings Changes
-*/
+/**
+ * Random Settings Changes
+ */
 function gus_setup() {
 	// Start out by added the Theme's Options page
 	require_once('theme-options.php');
@@ -18,9 +18,6 @@ function gus_setup() {
 
 	// This theme allows users to use custom header images
 	add_theme_support( 'custom-header' );
-
-	// Remove Widget support
-	remove_theme_support( 'widgets' );
 
     // Add Post Formats
 	add_theme_support( 'post-formats', array( 'aside', 'gallery', 'image', 'link', 'status', 'video' ) );
@@ -50,14 +47,15 @@ function gus_setup() {
 	);
 }
 
-/** Tell WordPress to run milly_setup() when the 'after_setup_theme' hook is run. */
+/**
+ * Tell WordPress to run milly_setup() when the 'after_setup_theme' hook is run.
+ */
 add_action( 'after_setup_theme', 'gus_setup' );
 
 
-/********************************************************************************
-Add Custom Taxonomiesi: people, places, & events
-*/
-
+/**
+ * Add Custom Taxonomiesi: people, places, & events
+ */
 function create_gus_taxonomies() {
 	register_taxonomy( 'people', array( 'post', 'attachment' ), array( 'hierarchical' => false, 'label' => __('People'), 'query_var' => true, 'rewrite' => true ) );
 	register_taxonomy( 'places', 'post', array( 'hierarchical' => false, 'label' => __('Places'), 'query_var' => true, 'rewrite' => true ) );
@@ -65,8 +63,35 @@ function create_gus_taxonomies() {
 }
 add_action( 'init', 'create_gus_taxonomies', 0 );
 
-function add_gus_contactmethod( $contactmethods ) {
-	// Add Facebook, Google+, Google Talk, & Twitter
+/**
+ * Add Widget sidebar to Theme
+ *
+ * @since 0.1
+ */
+add_action( 'widgets_init', 'gus_register_sidebars' );
+function gus_register_sidebars() {
+	register_sidebar(array (
+	    'id' => 'sidebar-widget-area',
+	    'name' => __('Single Post Widget Area', 'gustheme'),
+	    'description' => __('This is the top Main Right Hand Sidebar', 'gustheme'),
+	    'before_widget' => '<div class="widget bookmarks widget-bookmarks">',
+	    'after_widget' => '</div>',
+	    'before_title' => '<h3 class="widget-title">',
+	    'after_title' => '</h3>',
+	));
+}
+
+/**
+ * Custom Contact methods
+ *
+ * Adds: facebook, linkedin, twitter, google, github, & flickr
+ * to the users profile page, and removes: aim, jabber, & yahoo IM
+ * 
+ * 
+ * @since 0.1
+ */
+function gus_contactmethod( $contactmethods ) {
+	// Adds facebook, linkedin, twitter, google, github, & flickr
 	$contactmethods['facebook'] = 'Facebook ID';
 	$contactmethods['linkedin'] = 'Linkedin ID';
 	$contactmethods['twitter'] = 'Twitter ID';
@@ -74,14 +99,14 @@ function add_gus_contactmethod( $contactmethods ) {
 	$contactmethods['github'] = 'Github ID';
 	$contactmethods['flickr'] = 'Flickr ID';
 
-	// Remove Jabber, & Yahoo IM
+	// Remove AIM, Jabber, & Yahoo IM
 	unset($contactmethods['aim']);
 	unset($contactmethods['jabber']);
 	unset($contactmethods['yim']);
 
 	return $contactmethods;
 }
-add_filter('user_contactmethods','add_gus_contactmethod',10,1);
+add_filter('user_contactmethods','gus_contactmethod',10,1);
 
 if ( ! function_exists( 'gus_content_nav' ) ) :
 /**
