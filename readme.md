@@ -23,6 +23,15 @@ After activating the theme, you must go to the `Theme Options` page from the `Ap
 ## Prerequisites
 * [WordPress](http://wordpress.org) 3.3+
 
+## Download
+Download the zip version to be uploaded into your WordPress site.
+
+* [Development version](https://github.com/mattrude/wp-theme-gus/zipball/master)
+
+You may also download the theme directly via git:
+
+    git clone https://github.com/mattrude/wp-theme-gus.git gus
+
 ## Support
 If you are having issues using the Gus theme, please file a bug on this projects github [Issues](https://github.com/mattrude/wp-theme-gus/issues) page.
 
