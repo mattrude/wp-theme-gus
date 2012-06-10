@@ -36,10 +36,15 @@
 	<div id=main role=main>
 	  	<div id=page class=content>
 			<div id=home>
-				<p class=about><?php echo $siteowner->user_description; ?></p>
+		    	<div id=about>
+					<?php if (get_option('gus_home_textarea')) {
+						echo "<p class=about>".get_option('gus_home_textarea')."</p>";
+					} else {
+						echo "<p class=about>$siteowner->user_description</p>";
+					} ?>
+				</div>
 				<?php if (have_posts()) : ?>
 					<div id=home-center>
-		    			<?php if (get_option('gus_home_textarea')) { echo "<p class=about>".get_option('gus_home_textarea')."</p>"; } ?>
 						<?php query_posts("posts_per_page=10"); ?>
 						<?php if (have_posts()) : ?>
 							<div id=home-recent-posts>
@@ -57,7 +62,7 @@
 						<?php endif; ?>
 						<?php $home_gallery_id = get_category_by_slug( 'gallery' );
 						query_posts("posts_per_page=2&cat=$home_gallery_id->term_id");
-						if (have_posts()) : ?>
+						if (have_posts()) { ?>
 							<div id=home-gallery>
 								<h3 style=padding-top:0.75em>Recent Gallery Posts</h3>
 								<center>
@@ -67,7 +72,9 @@
 								</center>
 							</div>
 							<div style=text-align:right;><p><a href=/category/gallery>Site Gallery</a></p></div>
-						 <?php endif; ?>
+						<?php } else { ?>
+							<div style=text-align:right;><p> </p></div> 
+						<?php } ?>
 					</div>
 				<?php endif; ?>
 			</div><!-- End Home -->

@@ -301,6 +301,7 @@ a, a:visited {
 
 #home-center {
   width: 100%;
+  min-height: 340px;
   padding-bottom: 10px;
 }
 #home-recent-posts {
@@ -318,7 +319,7 @@ a, a:visited {
   display: none;
 }
 
-#meta, #about {
+#meta {
   background: #272727;
   color: #858585;
   max-height: 275px;

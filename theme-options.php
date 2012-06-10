@@ -162,6 +162,8 @@ function gus_settings_page() {
 
 	</table>
 
+	<?php } ?>
+
 	<h3>About Text</h3>
 	<table class="form-table">
 		<tr valign="top">
@@ -169,8 +171,6 @@ function gus_settings_page() {
 			<td><textarea id="gus_home_textarea" name="gus_home_textarea" rows="10" cols="120"><?php echo get_option('gus_home_textarea'); ?></textarea></td>
 		</tr>
     </table>
-
-	<?php } ?>
 
 	<h3>CDN Options</h3>
 	<table class="form-table">
