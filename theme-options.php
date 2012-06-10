@@ -67,6 +67,8 @@ function register_gus_settings() {
 	register_setting( 'gus-settings-group', 'gus_use_siteowner' );
 	register_setting( 'gus-settings-group', 'gus_copy_year' );
 	register_setting( 'gus-settings-group', 'gus_siteowner' );
+	register_setting( 'gus-settings-group', 'gus_use_cdn' );
+	register_setting( 'gus-settings-group', 'gus_cdn_address' );
 	register_setting( 'gus-settings-group', 'line_1' );
 	register_setting( 'gus-settings-group', 'line_2' );
 	register_setting( 'gus-settings-group', 'line_3' );
@@ -167,8 +169,20 @@ function gus_settings_page() {
 			<td><textarea id="gus_home_textarea" name="gus_home_textarea" rows="10" cols="120"><?php echo get_option('gus_home_textarea'); ?></textarea></td>
 		</tr>
     </table>
-    
+
 	<?php } ?>
+
+	<h3>CDN Options</h3>
+	<table class="form-table">
+		<tr valign="top">
+			<th scope="row">Use a CDN on this site?</th>
+			<td><input type="checkbox" name="gus_use_cdn" value="checked" <?php echo get_option('gus_use_cdn'); ?> /></td>
+			<?php if ( get_option('gus_use_cdn') ) { ?>
+				<th scope="row">The CDN's URL</th>
+				<td><input type="text" name="gus_cdn_address" class="regular-text" value="<?php echo get_option('gus_cdn_address'); ?>" /></td>
+			<?php } ?>
+		</tr>
+	</table>
 
     <p class="submit">
     <input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" />

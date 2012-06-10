@@ -46,10 +46,11 @@
 
 	?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-<!--
-<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600"/>
--->
+<?php if ( get_option('gus_use_cdn') ) { ?>
+	<link rel="stylesheet" type="text/css" media="all" href="<?php echo get_option('gus_cdn_address'); ?>/wp-content/themes/gus/style.css" />
+<?php } else { ?>
+	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+<?php } ?>
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
