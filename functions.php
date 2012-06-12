@@ -17,7 +17,13 @@ function gus_setup() {
 	add_theme_support( 'custom-background' );
 
 	// This theme allows users to use custom header images
-	add_theme_support( 'custom-header' );
+	$args = array(
+		'width'         => 450,
+		'height'        => 250,
+		'header-text'   => false,
+		'default-image' => get_template_directory_uri() . '/images/header.jpg',
+	);
+	add_theme_support( 'custom-header', $args );
 
     // Add Post Formats
 	add_theme_support( 'post-formats', array( 'aside', 'gallery', 'image', 'link', 'status', 'video' ) );

@@ -258,6 +258,7 @@ header a, header a:visited, footer a, footer a:visited, #about a, #about a:visit
 
 header a:hover, footer a:hover, #about a:hover, #about a:active { color: #bfbfbf; text-decoration: none; }
 
+#header-image { float: right; }
 #main {
   background: #fff;
   padding-top: 1em;
