@@ -180,6 +180,8 @@ function gus_settings_page() {
 			<?php if ( get_option('gus_use_cdn') ) { ?>
 				<th scope="row">The CDN's URL</th>
 				<td><input type="text" name="gus_cdn_address" class="regular-text" value="<?php echo get_option('gus_cdn_address'); ?>" /></td>
+			<?php } else { ?>
+				<input type="hidden" name="gus_cdn_address" class="regular-text" value="<?php echo get_option('gus_cdn_address'); ?>" />
 			<?php } ?>
 		</tr>
 	</table>

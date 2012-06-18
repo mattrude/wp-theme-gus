@@ -228,8 +228,6 @@ table { border-collapse: collapse; border-spacing: 0; }
    Author: Matt Rude
    ========================================================================== */
 
-body { background: #000; }
-
 #container {
     /*min-width: 40em;*/
 }
@@ -238,7 +236,7 @@ body { background: #000; }
   margin: 0 auto;
 }
 
-header, #copyright {
+header {
   background: #000;
   color: #fff;
 }
@@ -258,7 +256,7 @@ header a, header a:visited, footer a, footer a:visited, #about a, #about a:visit
 
 header a:hover, footer a:hover, #about a:hover, #about a:active { color: #bfbfbf; text-decoration: none; }
 
-#header-image { float: right; }
+#header-image { float: right; margin: 10px 0;}
 #main {
   background: #fff;
   padding-top: 1em;
@@ -343,8 +341,8 @@ a, a:visited {
   color: #bfbfbf;
 }
 
-#meta .group, #about .group {
-  background: url('head.jpg') no-repeat right top;
+#about {
+  background: none repeat scroll 0 0 #272727;
   min-height: 275px;
 }
 
@@ -492,6 +490,58 @@ blockquote footer a, blockquote footer a:visited, blockquote footer a:hover {
   text-decoration: underline;
 }
 
+footer {
+	background: none repeat scroll 0 0 #272727;
+}
+#footer {
+	display: block;
+	color: #BFBFBF;
+    font-size: 11px;
+    min-width: 500px;color: #BFBFBF;
+    font-size: 11px;
+    min-width: 500px;
+	max-width: 900px;
+	margin: auto;
+	padding: 20px auto;
+}
+
+.footer-widget {
+	float: left;
+	width: 32%;
+}
+
+#right-widget {
+	float: right;
+}
+
+.random-image p {
+	margin: 0;
+}
+
+.footer-index {
+	margin: 20px 0;
+}
+
+#lower-footer {
+	background-color: #000;
+}
+
+#copyright {
+	color: #bfbfbf;
+	margin: auto;
+	padding: 10px 0;
+	min-width: 700px;
+	max-width: 900px;
+}
+
+.random-image {
+	line-height: 1em;
+}
+
+.tagcloud {
+	line-height: 2em;
+	margin-bottom: 20px;
+}
 img.left {
   float: left;
   margin-right: 1em;
@@ -528,17 +578,6 @@ a.about {
   float:right;
   font-size:13px;
   padding-left:3em;
-}
-
-#copyright {
-  background: #000;
-  padding: 1em 2em;
-}
-
-#copyright span {
-  min-width: 500px;
-  font-size: 11px;
-  color: #bfbfbf;
 }
 
 #nav-below {

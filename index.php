@@ -39,7 +39,7 @@
 	<div id=main role=main>
 	  	<div id=page class=content>
 			<div id=home>
-		    	<div id=about>
+		    	<div id=home-about>
 					<?php if (get_option('gus_home_textarea')) {
 						echo "<p class=about>".get_option('gus_home_textarea')."</p>";
 					} else {
@@ -83,4 +83,4 @@
 			</div><!-- End Home -->
 		</div>
 	</div>
-<?php get_footer(); ?>
+<?php get_footer('index'); ?>

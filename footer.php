@@ -1,6 +1,30 @@
 		<footer>
-			<div id=copyright>
-				<div class=group>
+			<div id=footer>
+			<?php if ( ! is_home() ) { ?>
+				<div id=left-widget class=footer-widget>
+					<?php if ( is_active_sidebar( 'left-widget-area' ) ) {
+						dynamic_sidebar( 'left-widget-area' );
+					} ?>
+				</div>
+				<div id=center-widget class=footer-widget>
+					<?php if ( is_active_sidebar( 'center-widget-area' ) ) {
+						dynamic_sidebar( 'center-widget-area' );
+					} ?>
+				</div>
+				<div id=right-widget class=footer-widget>
+					<?php if ( is_active_sidebar( 'right-widget-area' ) ) {
+						dynamic_sidebar( 'right-widget-area' );
+					} ?>
+				</div>
+				<div id=bottom-widget class=top-footer-widget>
+					<?php if ( is_active_sidebar( 'bottom-widget-area' ) ) {
+						dynamic_sidebar( 'bottom-widget-area' );
+					} ?>
+				</div>
+			<?php } ?>
+			</div>
+			<div id=lower-footer>
+				<div id=copyright >
 					<span>Copyright &copy; <?php echo get_option('gus_copy_year'); ?> - <?php echo date("Y") ?> by <?php
 						$siteowner=get_userdata(get_option('gus_siteowner'));
 						if ( is_home() ) {
@@ -16,9 +40,8 @@
 						} 
 						echo $siteowner->display_name;?></a>
 					</span>
-					<a href="<?php bloginfo('rss2_url'); ?>" class="about rss">subscribe via rss</a>
-				</div>
-			</div>
+				</div> <!-- closing id copyright -->
+			</div> <!-- closing id lower-footer -->
 		<?php wp_footer(); ?>
 		</footer>
 	</div>

@@ -13,6 +13,9 @@ function gus_setup() {
 	// Add Community Tags Plugin
 	require_once('components/community-tags.php');
 
+	// Add Random Image Block plugin to theme
+	require_once('components/random-image-block.php');
+
 	// This theme allows users to set a custom background
 	add_theme_support( 'custom-background' );
 
@@ -70,16 +73,52 @@ function create_gus_taxonomies() {
 add_action( 'init', 'create_gus_taxonomies', 0 );
 
 /**
- * Add Widget sidebar to Theme
+ * Add Widgets to Theme
  *
  * @since 0.1
  */
-add_action( 'widgets_init', 'gus_register_sidebars' );
-function gus_register_sidebars() {
+add_action( 'widgets_init', 'gus_register_widgets' );
+function gus_register_widgets() {
 	register_sidebar(array (
-	    'id' => 'sidebar-widget-area',
-	    'name' => __('Single Post Widget Area', 'gustheme'),
-	    'description' => __('This is the top Main Right Hand Sidebar', 'gustheme'),
+	    'id' => 'top-widget-area',
+	    'name' => __('Top Footer Widget Area', 'gustheme'),
+	    'description' => __('This is the Footer\'s Top Widget Area', 'gustheme'),
+	    'before_widget' => '<div class="widget bookmarks widget-bookmarks">',
+	    'after_widget' => '</div>',
+	    'before_title' => '<h3 class="widget-title">',
+	    'after_title' => '</h3>',
+	));
+	register_sidebar(array (
+	    'id' => 'left-widget-area',
+	    'name' => __('Left Footer Widget Area', 'gustheme'),
+	    'description' => __('This is the Footer\'s left hand side Widget Area', 'gustheme'),
+	    'before_widget' => '<div class="widget bookmarks widget-bookmarks">',
+	    'after_widget' => '</div>',
+	    'before_title' => '<h3 class="widget-title">',
+	    'after_title' => '</h3>',
+	));
+	register_sidebar(array (
+	    'id' => 'center-widget-area',
+	    'name' => __('Center Footer Widget Area', 'gustheme'),
+	    'description' => __('This is the Footer\'s center Widget Area', 'gustheme'),
+	    'before_widget' => '<div class="widget bookmarks widget-bookmarks">',
+	    'after_widget' => '</div>',
+	    'before_title' => '<h3 class="widget-title">',
+	    'after_title' => '</h3>',
+	));
+	register_sidebar(array (
+	    'id' => 'right-widget-area',
+	    'name' => __('Right Footer Widget Area', 'gustheme'),
+	    'description' => __('This is the Footer\'s right hand side Widget Area', 'gustheme'),
+	    'before_widget' => '<div class="widget bookmarks widget-bookmarks">',
+	    'after_widget' => '</div>',
+	    'before_title' => '<h3 class="widget-title">',
+	    'after_title' => '</h3>',
+	));
+	register_sidebar(array (
+	    'id' => 'bottom-widget-area',
+	    'name' => __('Bottom Footer Widget Area', 'gustheme'),
+	    'description' => __('This is the Footer\'s Bottom Widget Area', 'gustheme'),
 	    'before_widget' => '<div class="widget bookmarks widget-bookmarks">',
 	    'after_widget' => '</div>',
 	    'before_title' => '<h3 class="widget-title">',

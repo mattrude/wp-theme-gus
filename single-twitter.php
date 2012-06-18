@@ -16,6 +16,4 @@
   <?php milly_pre_next_post(); ?>
 </div><!--close content class-->
 
-<?php get_sidebar(); ?>
-
 <?php get_footer(); ?>
