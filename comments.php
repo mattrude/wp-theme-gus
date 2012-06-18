@@ -1,110 +1,76 @@
-<?php // Do not delete these lines
-if (!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
-  die ('Please do not load this page directly. Thanks!');
-if ( post_password_required() ) {
-  echo 'This post is password protected. Enter the password to view comments.';
-  return;
-}
-
-/* This variable is for alternating comment background */
-$oddcomment = 'alt'; ?>
-
-<?php //count comments, trackbacks, and pingbacks
-if($comments) {
-  $trackping_count = 0; $comment_count = 0;
-  foreach($comments as $comment) {
-    $comment_type = get_comment_type();
-    if($comment_type == 'comment') {
-      $comment_count++;
-    }else{
-      $trackping_count++;
-    }
-  }
-}
+<?php
+/**
+ * The template for displaying Comments.
+ *
+ * The area of the page that contains both current comments
+ * and the comment form. The actual display of comments is
+ * handled by a callback to gustheme_comment() which is
+ * located in the functions.php file.
+ *
+ * @package Gus Theme
+ * @since Version 0.1
+ */
 ?>
+	<div id="comments">
+	<?php if ( post_password_required() ) : ?>
+		<p class="nopassword"><?php _e( 'This post is password protected. Enter the password to view any comments.', 'gustheme' ); ?></p>
+	</div><!-- #comments -->
+	<?php
+			/* Stop the rest of comments.php from being processed,
+			 * but don't kill the script entirely -- we still have
+			 * to fully load the template.
+			 */
+			return;
+		endif;
+	?>
 
-<?php if (have_comments($comment_type = 'comment')) : ?>
-  <div id="comments" class="post">			
-    <h2 class="comment-title"><?php echo $comment_count . " Comments"; ?></h2>
-  </div>
-  <div id="comments">			
-    <ol class="comment-list">
-      <?php wp_list_comments('avatar_size=50&style=ol&type=comment'); ?>
-    </ol>
-  </div>
+	<?php // You can start editing here -- including this comment! ?>
 
-<?php else : // this is displayed if there are no comments so far ?>
-  <?php if ('open' == $post->comment_status) : ?>
-    <!-- If comments are open, but there are no comments. -->
-  <?php else : // comments are closed ?>
-    <!-- If comments are closed. -->
-    <p class="nocomments"></p>
-  <?php endif; ?>
-<?php endif; ?>
+	<?php if ( have_comments() ) : ?>
+		<h2 id="comments-title">
+			<?php
+				printf( _n( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'gustheme' ),
+					number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
+			?>
+		</h2>
 
-<?php paginate_comments_links(); ?>
+		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
+		<nav id="comment-nav-above">
+			<h1 class="assistive-text"><?php _e( 'Comment navigation', 'gustheme' ); ?></h1>
+			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'gustheme' ) ); ?></div>
+			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'gustheme' ) ); ?></div>
+		</nav>
+		<?php endif; // check for comment navigation ?>
 
-<?php if ('open' == $post->comment_status) : ?>
+		<ol class="commentlist">
+			<?php
+				/* Loop through and list the comments. Tell wp_list_comments()
+				 * to use gustheme_comment() to format the comments.
+				 * If you want to overload this in a child theme then you can
+				 * define gustheme_comment() and that will be used instead.
+				 * See gustheme_comment() in gustheme/functions.php for more.
+				 */
+				wp_list_comments( array( 'callback' => 'gus_comment' ) );
+			?>
+		</ol>
 
-<?php if ( get_option('comment_registration') && !$user_ID ) : ?>
-  <p>You must be <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php echo urlencode(get_permalink()); ?>">logged in</a> to post a comment.</p>
-<?php else : ?>
-  <div id="respond">
-    <h2 class='comment-title'><?php comment_form_title( 'Leave a Comment', 'Reply to %s' ); ?></h2>
-    <div id="cancel-comment-reply">
-    <small><?php cancel_comment_reply_link() ?></small>
-  </div>
-  <form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
-  <?php if ( $user_ID ) : ?>
-    <p>Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a> | <a href="<?php echo wp_logout_url( get_permalink() ); ?>" title="Logout">Logout</a></p>
-	<div class="comment-logged-in">
-    	<textarea id="comment" tabindex="4" cols="20" rows="10" onfocus="if ( value == 'Your comment please...' ) { this.value='' }" name="comment">Your comment please...</textarea>
-	</div>
+		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
+		<nav id="comment-nav-below">
+			<h1 class="assistive-text"><?php _e( 'Comment navigation', 'gustheme' ); ?></h1>
+			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'gustheme' ) ); ?></div>
+			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'gustheme' ) ); ?></div>
+		</nav>
+		<?php endif; // check for comment navigation ?>
 
-    <input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
-    <input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
+	<?php
+		/* If there are no comments and comments are closed, let's leave a little note, shall we?
+		 * But we don't want the note on pages or post types that do not support comments.
+		 */
+		elseif ( ! comments_open() && ! is_page() && post_type_supports( get_post_type(), 'comments' ) ) :
+	?>
+		<p class="nocomments"><?php _e( 'Comments are closed.', 'gustheme' ); ?></p>
+	<?php endif; ?>
 
-<?php else : ?>
+	<?php comment_form(); ?>
 
-  <div id="comment-user-details" class="comment-left">
-  <?php do_action('alt_comment_login'); ?>
-  <input id="author" type="text" onblur="if ( value == '' ) { this.value='Your name (Required)' }" onfocus="if ( value == 'Your name (Required)' ) { this.value='' }" tabindex="1" size="22" value="Your name (Required)" name="author"/>
-  <input id="email" type="text" onblur="if ( value == '' ) { this.value='Your email (Required)' }" onfocus="if ( value == 'Your email (Required)' ) { this.value='' }" tabindex="2" size="22" value="Your email (Required)" name="email"/>
-  <input id="url" type="text" tabindex="3" size="22" value="http://" name="url"/>
-  <div class="comment-submit">
-    <input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
-    <input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
-  </div>
-</div>
-<div class="comment-right">
-  <textarea id="comment" tabindex="4" cols="20" rows="9" onfocus="if ( value == 'Your comment...' ) { this.value='' }" name="comment">Your comment...</textarea>
-</div>
-<?php endif; ?>
-
-<?php do_action('comment_form', $post->ID); ?>
-<?php comment_id_fields(); ?>
-</form>
-</div><!-- close respond id -->
-
-<!-- Display trackbacks/pingbacks at bottom of post
-	If you do not want trackbacks/pingbacks visible, delete this section -->
-<?php if($comments && ($trackping_count != 0)) : ?>
-<div id="trackback">
-  <div class="trackback">
-    <h2 id="trackbacks" class="comment-title"><?php echo $trackping_count; ?> Trackbacks / Pingbacks</h2>
-    <ul class="trackback-list">
-      <?php foreach ($comments as $comment) :
-        $comment_type = get_comment_type();
-        if($comment_type != 'comment') {
-         ?><li><?php comment_author_link() ?></li><?php
-        }
-      endforeach; ?>
-    </ol>
-  </div>
-</div>
-<?php endif; ?>
-<!--End of trackbacks / pingbacks section -->
-
-<?php endif; // If registration required and not logged in ?>
-
-<?php endif; // if you delete this the sky will fall on your head ?>
+</div><!-- #comments -->

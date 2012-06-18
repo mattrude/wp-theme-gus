@@ -1,4 +1,4 @@
-		<footer>
+		<footer id=page-footer>
 			<div id=lower-footer>
 				<div id=copyright>
 					<span>Copyright &copy; <?php echo get_option('gus_copy_year'); ?> - <?php echo date("Y") ?> by <?php

@@ -250,7 +250,7 @@ header span {
   color: #bfbfbf;
 }
 
-header a, header a:visited, footer a, footer a:visited, #about a, #about a:visited {
+header a, header a:visited, #about a, #about a:visited {
   color: #fff; text-decoration: none;
 }
 
@@ -490,8 +490,11 @@ blockquote footer a, blockquote footer a:visited, blockquote footer a:hover {
   text-decoration: underline;
 }
 
-footer {
+#page-footer {
 	background: none repeat scroll 0 0 #272727;
+}
+#page-footer a, #page-footer a:visited {
+	color: #fff; text-decoration: none;
 }
 #footer {
 	display: block;
@@ -814,23 +817,29 @@ p.comments-closed {
 	margin: 20px 0;
 	padding: 0 0 20px 0;
 	border-bottom: 1px solid #e2e2e2;
+	list-style: none outside none;
 	}
 #comments li.depth-2 {
     margin: 15px 0 0 40px;
     padding: 5px;
     background: #e7e7de;
+	list-style: none outside none;
 	}
 #comments li.depth-3, li.depth-5, li.depth-7, li.depth-9 {
 	margin: 15px 0 0 15px;
 	padding: 5px;
 	background: #fff;
+	list-style: none outside none;
 	}
 #comments li.depth-4, li.depth-6, li.depth-8, li.depth-10 {
 	margin: 15px 0 0 15px;
 	padding: 5px;
 	background: #e7e7de;
+	list-style: none outside none;
 	}
-
+.comment ul {
+	padding: 0px;
+}
 /* Comment avatars */
 #comments .avatar {
 	float: left;
@@ -888,7 +897,7 @@ li.depth-10 img {
 	}
 
 /* Comment text */
-#comments .comment-text {
+#comment .comment-text {
 	clear: both;
 	margin: 0 15px;
 	}

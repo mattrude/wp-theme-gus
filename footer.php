@@ -1,4 +1,4 @@
-		<footer>
+		<footer id=page-footer>
 			<div id=footer>
 				<?php if ( is_active_sidebar( 'top-widget-area' ) ) {
 					echo "<div id=top-widget class=footer-widget>";
