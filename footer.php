@@ -1,41 +1,30 @@
 		<footer>
 			<div id=footer>
-				<div id=top-widget class=footer-widget>
-					<?php if ( is_active_sidebar( 'top-widget-area' ) ) {
+				<?php if ( is_active_sidebar( 'top-widget-area' ) ) {
+					echo "<div id=top-widget class=footer-widget>";
 						dynamic_sidebar( 'top-widget-area' );
-					} ?>
-				</div>
-				<div id=left-widget class=footer-widget>
-					<?php if ( is_active_sidebar( 'left-widget-area' ) ) {
+					echo "</div>";
+				} 
+				if ( is_active_sidebar( 'left-widget-area' ) ) {
+					echo "<div id=left-widget class=footer-widget>";
 						dynamic_sidebar( 'left-widget-area' );
-					} else {
-						the_widget( 'random_image_widget' );
-					} ?>
-				</div>
-				<div id=center-widget class=footer-widget>
-					<?php if ( is_active_sidebar( 'center-widget-area' ) ) {
+					echo "</div>";
+				}
+				if ( is_active_sidebar( 'center-widget-area' ) ) {
+					echo "<div id=center-widget class=footer-widget>";
 						dynamic_sidebar( 'center-widget-area' );
-					} else {
-						the_widget( 'Jetpack_RSS_Links_Widget' );
-						the_widget( 'WP_Widget_Recent_Posts', array( 'number' => 8 ), array( 'widget_id' => 'footer' ) );
-					} ?>
-				</div>
-				<div id=right-widget class=footer-widget>
-					<?php if ( is_active_sidebar( 'right-widget-area' ) ) {
+					echo "</div>";
+				}
+				if ( is_active_sidebar( 'right-widget-area' ) ) {
+					echo "<div id=right-widget class=footer-widget>";
 						dynamic_sidebar( 'right-widget-area' );
-					} else {
-						$archive_content = '<p>' . __( 'Try looking in the monthly archives.', 'twentyeleven' ) . '</p>';
-						the_widget( 'WP_Widget_Archives', array('count' => 0 , 'dropdown' => 1 ), array( 'after_title' => '</h2>'.$archive_content ) );
-					} ?>
-				</div>
-				<div id=bottom-widget class=top-footer-widget>
-					<?php if ( is_active_sidebar( 'bottom-widget-area' ) ) {
+					echo "</div>";
+				}
+				if ( is_active_sidebar( 'bottom-widget-area' ) ) {
+					echo "<div id=bottom-widget class=top-footer-widget>";
 						dynamic_sidebar( 'bottom-widget-area' );
-					} else {
-						the_widget( 'WP_Widget_Tag_Cloud', 'taxonomy=people' );
-					} ?>
-				</div>
-				&nbsp;
+					echo "</div>";
+				} ?>
 			</div>
 			<div id=lower-footer>
 				<div id=copyright >
