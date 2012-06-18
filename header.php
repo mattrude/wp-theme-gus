@@ -78,11 +78,10 @@
 <body <?php body_class(); ?>>
     <div id=container>
         <header>
-            <div class=content>
-			<?php
-			/* The navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assiged
-			to the primary position is the one used. If none is assigned, the menu with the lowest ID is used.  */
-			wp_nav_menu( array( 'sort_column' => 'menu_order', 'container_class' => 'menu-header', 'theme_location' => 'header', 'fallback_cb' => 'gus_nav_fallback' ) ); ?>
+            <div class=content> <?php
+				/* The navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assiged
+				to the primary position is the one used. If none is assigned, the menu with the lowest ID is used.  */
+				wp_nav_menu( array( 'sort_column' => 'menu_order', 'container_class' => 'menu-header', 'theme_location' => 'header', 'fallback_cb' => 'gus_nav_fallback' ) ); ?>
 				<a href="/"><?php bloginfo( 'name' ); ?></a> <b>&nbsp;|&nbsp;</b> <span><?php bloginfo( 'description' ); ?></span>
 	        </div>
 	    </header>
