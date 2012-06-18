@@ -790,6 +790,27 @@ a.about {
 
 
 /**
+ * Menus
+ *********************/
+header .content {
+	width: 770px;
+}
+.menu-header {
+	float: right;
+}
+
+.menu-header ul {
+	margin: 0px;
+	list-style: none;
+}
+
+.menu-header li {
+	position: relative;
+	float: left;
+	margin: 0 5px;
+}
+
+/**
 * Comments template
 ************************************************/
 #comments-number {

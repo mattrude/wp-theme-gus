@@ -16,6 +16,14 @@
 			on <b><time itemprop="datePublished" datetime="<?php the_date('Y-m-d'); ?>" updated="<?php the_date('Y-m-d'); ?>"><?php echo get_the_date(); ?></time></b>
 		</p>
 	</div>
+
+	<nav id="nav-top-right">
+		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'gustheme' ) ); ?></div>
+		<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'gustheme' ) ); ?></div>
+	</nav><!-- #nav-top-right -->
+
+	<?php gus_content_nav('nav-top-right'); ?>
+
 	<?php the_content(); ?>
 	<?php $show_sep = false; ?>
 	<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search
@@ -39,5 +47,6 @@
             </span>
 		<?php endif; // End if $tags_list ?>
 	<?php endif; // End if 'post' == get_post_type() ?>
+	<?php gus_content_nav('nav-bottom'); ?>
 	<hr>
 </article><!-- #post-<?php the_ID(); ?> -->

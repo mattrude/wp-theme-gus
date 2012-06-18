@@ -19,6 +19,15 @@ function gus_setup() {
 	// This theme allows users to set a custom background
 	add_theme_support( 'custom-background' );
 
+	// Add a top Menu to the page
+	add_theme_support( 'nav-menus' );
+	register_nav_menus( array(
+    	'header' => __( 'The Header Navigation Menu', 'millytheme' ),
+	) );
+	function gus_nav_fallback() {
+		    wp_page_menu( 'number=10&show_home=Home' );
+	}
+
 	// This theme allows users to use custom header images
 	$args = array(
 		'width'         => 450,
@@ -162,8 +171,8 @@ function gus_content_nav( $nav_id ) {
 
     if ( $wp_query->max_num_pages > 1 ) : ?>
         <nav id="<?php echo $nav_id; ?>">
-            <div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'gus' ) ); ?></div>
-            <div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'gus' ) ); ?></div>
+            <div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'gustheme' ) ); ?></div>
+            <div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'gustheme' ) ); ?></div>
         </nav><!-- #nav-above -->
     <?php endif;
 }
