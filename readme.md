@@ -4,7 +4,9 @@ The Gus theme for [WordPress](http://wordpress.org) will be the future theme for
 
 The Gus theme for [WordPress](http://wordpress.org) was designed to be used as a personal site, not as a site for an origination or group.  Gus a is clean, easy to read theme built to be quick but have all the needed functionality for [mattrude.com](http://mattrude.com).
 
-After activating the theme, you must go to the `Theme Options` page from the `Appearance` menu on your Dashboard.  Once there, you must select the `Site Owner` for the page from the drop-down menu at the top of the page.  After selecting the site owner, you may use that person's contact information, or add your own on that page.
+After activating the theme, you must go to the `Theme Options` page from the `Appearance` menu on your Dashboard.  Once there, you must select the `Site Owner` for the page from the drop-down menu at the top of the page.  After selecting the site owner, you may use that persons contact information, or add your own on that page.
+
+![Screenshot](https://github.com/mattrude/wp-theme-gus/raw/master/screenshot.png)
 
 ## Features
 
@@ -14,6 +16,7 @@ After activating the theme, you must go to the `Theme Options` page from the `Ap
 * Ability to tag people in images
 * Custom taxonomy (people, place, event)
 * Custom people gallery page
+* 5 widget footer section
 * Threaded comments
 
 ## Wanted Features
