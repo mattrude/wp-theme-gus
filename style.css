@@ -260,6 +260,7 @@ header a:hover, footer a:hover, #about a:hover, #about a:active { color: #bfbfbf
 #main {
   background: #fff;
   padding-top: 1em;
+  color: #000;
 }
 
 h1 {
@@ -492,6 +493,7 @@ blockquote footer a, blockquote footer a:visited, blockquote footer a:hover {
 
 #page-footer {
 	background: none repeat scroll 0 0 #272727;
+	margin-top: -20px;
 }
 #page-footer a, #page-footer a:visited {
 	color: #fff; text-decoration: none;
