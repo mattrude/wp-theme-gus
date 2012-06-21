@@ -2,7 +2,7 @@
 <div id=about>
 	<div class=group>
 		<div id=header-image>
-			<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+      		<img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
 		</div>
 		<div id=personal itemscope itemtype="http://data-vocabulary.org/Person">
 			<?php $siteowner=get_userdata(get_option('gus_siteowner')); ?>

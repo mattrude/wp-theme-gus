@@ -256,7 +256,7 @@ header a, header a:visited, #about a, #about a:visited {
 
 header a:hover, footer a:hover, #about a:hover, #about a:active { color: #bfbfbf; text-decoration: none; }
 
-#header-image { float: right; margin: 10px 0;}
+#header-image { float: right; margin: 10px 0; width: 60%;}
 #main {
   background: #fff;
   padding-top: 1em;
@@ -340,6 +340,7 @@ a, a:visited {
   font-size: 15px;
   font-weight: 400;
   color: #bfbfbf;
+  width: 33%;
 }
 
 #about {
@@ -795,7 +796,7 @@ a.about {
  * Menus
  *********************/
 header .content {
-	width: 770px;
+	width: 760px;
 }
 .menu-header {
 	float: right;
@@ -1018,10 +1019,63 @@ a.comment-link:hover {
         text-align: right;
 	}
 
+.entry-content img,
+.comment-content img,
+.widget img {
+	    max-width: 97.5%; /* Fluid images for posts, comments, and widgets */
+}
+img[class*="align"],
+img[class*="wp-image-"],
+img[class*="attachment-"] {
+	    height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+		max-width: 95%;
+}
 
+@media (max-width: 800px) {
+	#about {
+		padding-right: 1em;
+	}
+	#copyright {
+		width: 98%;
+	}
+	header .content {
+		width: 98%;
+	}
+	header .menu-header {
+		display:none;
+	}
+	#header-image img {
+		height: auto;
+		width: 100%;
+	}
+	#header-image {
+		width: 60%;
+	}
+	#personal {
+		width: 310px;
+	}
+	footer {
+		width: 100%;
+	}
+	#home-recent-posts {
+		padding: 0;
+	}
+}
+
+@media ( max-width: 685px ) {
+	#header-image, #home-gallery {
+		display: none;
+	}
+	#home-recent-posts {
+		width: 100%
+	}
+}
 /* Smartphones (portrait) */
 @media only screen and (max-width: 480px) and (min-width: 0px) {
   header span, header b, footer .rss { display: none; }
+  footer #footer {
+	  display: none;
+  }
   #meta .group, #about .group { background: #272727; }
   #meta { max-height:none; }
   #meta a.postlink { font-size:12px; }
