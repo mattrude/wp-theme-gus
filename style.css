@@ -596,6 +596,20 @@ a.about {
 	width:auto;
 }
 
+nav#nav-single {
+	margin-top: -60px;
+	float:right;
+}
+nav#nav-single h3 {
+	margin:0px;
+}
+nav#nav-single .nav-previous {
+	margin-right:5px;
+}
+nav#nav-single .nav-next {
+	margin-left:5px;
+}
+
 /* =error404
 ----------------------------------------------- */
 

@@ -41,9 +41,9 @@
 			<div id=home>
 		    	<div id=home-about>
 					<?php if (get_option('gus_home_textarea')) {
-						echo "<p class=about>".get_option('gus_home_textarea')."</p>";
+						echo "<p class=home-about>".get_option('gus_home_textarea')."</p>";
 					} else {
-						echo "<p class=about>$siteowner->user_description</p>";
+						echo "<p class=home-about>$siteowner->user_description</p>";
 					} ?>
 				</div>
 				<?php if (have_posts()) : ?>
