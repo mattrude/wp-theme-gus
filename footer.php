@@ -43,6 +43,9 @@
 						} 
 						echo $siteowner->display_name;?></a>
 					</span>
+					<?php if ( is_user_logged_in() ) { ?>
+						<div><small>This page took <?php timer_stop(1); ?> seconds of computer labor, and required <?php echo get_num_queries(); ?> questions to produce.</small></div>
+					<?php } ?>
 				</div> <!-- closing id copyright -->
 			</div> <!-- closing id lower-footer -->
 		<?php wp_footer(); ?>

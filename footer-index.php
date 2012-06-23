@@ -13,6 +13,9 @@
 						echo $siteowner->display_name;?></a>
 					</span>
 					<a href="<?php bloginfo('rss2_url'); ?>" class="about rss">subscribe via rss</a>
+					<?php if ( is_user_logged_in() ) { ?>
+						<div><small>This page took <?php timer_stop(1); ?> seconds of computer labor, and required <?php echo get_num_queries(); ?> questions to produce.</small></div>
+					<?php } ?>
 				</div>
 			</div>
 		<?php wp_footer(); ?>
