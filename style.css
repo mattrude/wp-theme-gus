@@ -61,8 +61,8 @@ audio[controls], canvas, video { display: inline-block; *display: inline; *zoom:
 
 html { font-size: 100%; overflow-y: scroll; -webkit-overflow-scrolling: touch; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 
-body { margin: 0; font-size: 14px; line-height: 1.61; font-weight: 400; }
-body, button, input, select, textarea { font-family: 'Open Sans', sans-serif; color: #fff; background: #000;}
+body { margin: 0; font-size: 14px; line-height: 1.61; font-weight: 400; color: #fff; background: #000; }
+body, button, input, select, textarea { font-family: 'Open Sans', sans-serif; }
 
 /*
  * These selection declarations have to be separate
@@ -494,8 +494,9 @@ blockquote footer a, blockquote footer a:visited, blockquote footer a:hover {
 
 #page-footer {
 	background: none repeat scroll 0 0 #272727;
-	margin-top: -20px;
+	margin-top: -25px;
 }
+#page-footer h3 { margin-top: 0; }
 #page-footer a, #page-footer a:visited {
 	color: #fff; text-decoration: none;
 }
@@ -1046,7 +1047,7 @@ img[class*="align"],
 img[class*="wp-image-"],
 img[class*="attachment-"] {
 	    height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
-		max-width: 95%;
+		max-width: 100%;
 }
 
 @media (max-width: 800px) {

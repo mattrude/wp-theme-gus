@@ -5,9 +5,12 @@
 				<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 					<?php gus_content_nav('nav-top-right'); ?>
 					<?php get_template_part( 'content', get_post_format() ); ?>
+					&nbsp;
 				</div>
 				<?php comments_template( '', true ); ?>
 			<?php endwhile; ?>
 		</div>
+		&nbsp;
 	</div>
+	&nbsp;
 <?php get_footer(); ?>

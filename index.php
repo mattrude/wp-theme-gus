@@ -34,53 +34,55 @@
 			} ?>
 			</p>
 		</div>
-	</div>
-</div>
-	<div id=main role=main>
-	  	<div id=page class=content>
-			<div id=home>
-		    	<div id=home-about>
-					<?php if (get_option('gus_home_textarea')) {
-						echo "<p class=home-about>".get_option('gus_home_textarea')."</p>";
-					} else {
-						echo "<p class=home-about>$siteowner->user_description</p>";
-					} ?>
-				</div>
-				<?php if (have_posts()) : ?>
-					<div id=home-center>
-						<?php query_posts("posts_per_page=10"); ?>
-						<?php if (have_posts()) : ?>
-							<div id=home-recent-posts>
-								<h3 style=padding-top:0.75em>Recent Posts <a href="/archives" class=more>view all posts</a></h3>
-								<ul class=posts>
-									<?php while (have_posts()) : the_post(); ?>
-										<!--Starting "The Loop"-->
-										<li>
-											<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-											<time datetime="<?php the_time('c'); ?>" pubdate="pubdate"><?php the_date('Y M d'); ?></time>
-										</li>
-									<?php endwhile; ?>
-								</ul>
-							</div>
-						<?php endif; ?>
-						<?php $home_gallery_id = get_category_by_slug( 'gallery' );
-						query_posts("posts_per_page=2&cat=$home_gallery_id->term_id");
-						if (have_posts()) { ?>
-							<div id=home-gallery>
-								<h3 style=padding-top:0.75em>Recent Gallery Posts</h3>
-								<center>
-									<?php while (have_posts()) : the_post(); ?>
-										<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_post_thumbnail() ?></a>
-									<?php endwhile; ?>
-								</center>
-							</div>
-							<div style=text-align:right;><p><a href=/category/gallery>Site Gallery</a></p></div>
-						<?php } else { ?>
-							<div style=text-align:right;><p> </p></div> 
-						<?php } ?>
-					</div>
-				<?php endif; ?>
-			</div><!-- End Home -->
-		</div>
-	</div>
+	</div><!-- End class=group -->
+</div><!-- End About -->
+<div id=main role=main>
+  	<div id=page class=content>
+		<div id=home>
+	    	<div id=home-about>
+				<?php if (get_option('gus_home_textarea')) {
+					echo "<p class=home-about>".get_option('gus_home_textarea')."</p>";
+				} else {
+					echo "<!-- Using Site Owners User Description -->";
+					echo "<p class=home-about>$siteowner->user_description</p>";
+				} ?>
+			</div>
+			<?php if (have_posts()) : ?>
+				<div id=home-center>
+					<?php query_posts("posts_per_page=10"); ?>
+					<?php if (have_posts()) : ?>
+						<div id=home-recent-posts>
+							<h3 style=padding-top:0.75em>Recent Posts <a href="/archives" class=more>view all posts</a></h3>
+							<ul class=posts>
+								<?php while (have_posts()) : the_post(); ?>
+									<!--Starting "The Loop"-->
+									<li>
+										<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+										<time datetime="<?php the_time('c'); ?>" pubdate="pubdate"><?php the_date('Y M d'); ?></time>
+									</li>
+								<?php endwhile; ?>
+							</ul>
+						</div>
+					<?php endif;
+
+					$home_gallery_id = get_category_by_slug( 'gallery' );
+					query_posts("posts_per_page=2&cat=$home_gallery_id->term_id");
+					if (have_posts()) { ?>
+						<div id=home-gallery>
+							<h3 style=padding-top:0.75em>Recent Gallery Posts</h3>
+							<center>
+								<?php while (have_posts()) : the_post(); ?>
+									<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_post_thumbnail() ?></a>
+								<?php endwhile; ?>
+							</center>
+						</div>
+						<div style=text-align:right;><p><a href=/category/gallery>Site Gallery</a></p></div>
+					<?php } else { ?>
+						<div style=text-align:right;><p> </p></div> 
+					<?php } ?>
+				</div><!-- End home-center -->
+			<?php endif; ?>
+		</div><!-- End Home -->
+	</div><!-- End Page -->
+</div><!-- End Main -->
 <?php get_footer('index'); ?>
