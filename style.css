@@ -492,12 +492,18 @@ blockquote footer a, blockquote footer a:visited, blockquote footer a:hover {
   text-decoration: underline;
 }
 
+.sharing {
+	margin: 0 0 10px;
+}
+
 #page-footer {
 	background: none repeat scroll 0 0 #272727;
 	margin-top: -25px;
+	padding-top: 25px;
 }
 #page-footer h3 { margin-top: 0; }
-#page-footer a, #page-footer a:visited {
+
+#page-footer a, #page-footer a:visited, #page-footer-index a, #page-footer-index a:visited {
 	color: #fff; text-decoration: none;
 }
 #footer {
