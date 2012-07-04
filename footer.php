@@ -1,5 +1,6 @@
 		<footer id=page-footer>
 			<div id=footer>
+			<div id=footer-top>
 				<?php if ( is_active_sidebar( 'top-widget-area' ) ) {
 					echo "<div id=top-widget class=footer-widget>";
 						dynamic_sidebar( 'top-widget-area' );
@@ -48,6 +49,7 @@
 					<?php } ?>
 				</div> <!-- closing id copyright -->
 			</div> <!-- closing id lower-footer -->
+			</div> <!-- closing id footer -->
 		<?php wp_footer(); ?>
 		</footer>
 	</div>

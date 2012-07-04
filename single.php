@@ -6,11 +6,9 @@
 					<?php gus_content_nav('nav-top-right'); ?>
 					<?php get_template_part( 'content', get_post_format() ); ?>
 					&nbsp;
-				</div>
+				</div><!-- Ending ID post-<?php the_ID(); ?> -->
 				<?php comments_template( '', true ); ?>
 			<?php endwhile; ?>
-		</div>
-		&nbsp;
-	</div>
-	&nbsp;
+		</div><!-- Ending ID post -->
+	</div><!-- Ending ID main -->
 <?php get_footer(); ?>

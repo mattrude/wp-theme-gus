@@ -8,7 +8,6 @@
 					<p class="byline-bottom">
 						Updated: <time itemprop="datePublished" datetime="<?php the_date('Y-m-d'); ?>" updated="<?php echo the_modified_time('Y-m-d'); ?>"><?php echo the_modified_time('Y-m-d'); ?></time>
 					</p>
-					<hr>
 				</div>
 				<?php comments_template( '', true ); ?>
 			<?php endwhile; ?>

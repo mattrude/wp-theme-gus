@@ -72,6 +72,14 @@
 		add_action( 'wp_head', 'mct_script' );
 	}
 
+	if ( is_home() ) {
+		add_action( 'wp_print_styles', 'sharedaddy_deregister_style', 100 );
+
+		function sharedaddy_deregister_style() {
+				wp_deregister_style( 'sharedaddy' );
+		}
+	}
+
 	wp_head();
 ?>
 </head>
