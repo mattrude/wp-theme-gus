@@ -5,7 +5,7 @@
  */
 function gus_setup() {
 	// Start out by added the Theme's Options page
-	require_once('theme-options.php');
+	require_once('inc/theme-options.php');
 
 	// Add Twitter post type
 	require_once('inc/twitter-functions.php');
