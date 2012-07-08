@@ -16,6 +16,9 @@ function gus_setup() {
 	// Add Random Image Block plugin to theme
 	require_once('inc/random-image-block.php');
 
+	// Add Footnote Support
+	require_once('inc/footnotes.php');
+
 	// This theme allows users to set a custom background
 	add_theme_support( 'custom-background' );
 
