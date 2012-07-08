@@ -8,13 +8,13 @@ function gus_setup() {
 	require_once('theme-options.php');
 
 	// Add Twitter post type
-	require_once('components/twitter-functions.php');
+	require_once('inc/twitter-functions.php');
 
 	// Add Community Tags Plugin
-	require_once('components/community-tags.php');
+	require_once('inc/community-tags.php');
 
 	// Add Random Image Block plugin to theme
-	require_once('components/random-image-block.php');
+	require_once('inc/random-image-block.php');
 
 	// This theme allows users to set a custom background
 	add_theme_support( 'custom-background' );
