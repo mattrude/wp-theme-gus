@@ -19,7 +19,7 @@
 			<?php if (get_option('gus_use_siteowner')) {
 				if ($siteowner->facebook) { ?><a class=facebook rel=me target="_blank" href="https://www.facebook.com/<?php echo $siteowner->facebook; ?>"></a><?php }
 				if ($siteowner->linkedin) { ?><a class=linkedin rel=me target="_blank" href="http://www.linkedin.com/in/<?php echo $siteowner->linkedin; ?>"></a><?php }
-				if ($siteowner->twitter) { ?><a class=twitter rel=me target="_blank" href="http://twitter.com/#!/<?php echo $siteowner->twitter; ?>"></a><?php }
+				if ($siteowner->twitter) { ?><a class=twitter rel=me target="_blank" href="http://twitter.com/<?php echo $siteowner->twitter; ?>"></a><?php }
 				if ($siteowner->google) { ?><a class=google rel=me target="_blank" href="https://plus.google.com/<?php echo $siteowner->google; ?>"></a><?php }
 				if ($siteowner->github) { ?><a class=github rel=me target="_blank" href="https://github.com/<?php echo $siteowner->github; ?>"></a><?php }
 				if ($siteowner->flickr) { ?><a class=flickr rel=me target="_blank" href="http://www.flickr.com/people/<?php echo $siteowner->flickr; ?>"></a><?php }
