@@ -28,7 +28,7 @@ add_action( 'init', 'mct_init' );
 
 function mct_script() {
 	global $posts; ?>
-<script type='text/javascript' src='<?php echo get_bloginfo( 'template_directory' ); ?>/inc/suggest.js'></script>
+<script type='text/javascript' src='<?php echo get_bloginfo( 'template_directory' ); ?>/inc/plugins/community-tags/suggest.js'></script>
 <script type="text/javascript">
 <!--
 var $j = jQuery.noConflict();

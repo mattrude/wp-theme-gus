@@ -10,15 +10,6 @@ function gus_setup() {
 	// Add Twitter post type
 	require_once('inc/twitter-functions.php');
 
-	// Add Community Tags Plugin
-	require_once('inc/community-tags.php');
-
-	// Add Random Image Block plugin to theme
-	require_once('inc/random-image-block.php');
-
-	// Add Footnote Support
-	require_once('inc/footnotes.php');
-
 	// This theme allows users to set a custom background
 	add_theme_support( 'custom-background' );
 
@@ -66,6 +57,47 @@ function gus_setup() {
 	    'return preg_replace("#<style type=\'text/css\'>(.*?)</style>#s", "", $css);'
 	  )
 	);
+
+}
+
+// Add Matt's Community Tags plugin to theme
+add_action('after_setup_theme', 'community_tags_init');
+function community_tags_init() {
+	if (!function_exists('mct_admin_init')) {
+		include_once(TEMPLATEPATH.'/inc/plugins/community-tags/community-tags.php');
+	}
+}
+
+// Add Random Image Block plugin to theme
+add_action('after_setup_theme', 'random_image_block_init');
+function random_image_block_init() {
+	if (!class_exists('random_image_widget')) {
+		include_once(TEMPLATEPATH.'/inc/plugins/random-image-block.php');
+	}
+}
+
+// Add the Foot Notes plugin to theme
+add_action('after_setup_theme', 'footnotes_init');
+function footnotes_init() {
+	if (!class_exists('gus_footnotes')) {
+		include_once(TEMPLATEPATH.'/inc/plugins/footnotes.php');
+	}
+}
+
+// Add the Time Since plugin to theme
+add_action('after_setup_theme', 'timesince_init');
+function timesince_init() {
+	if (!function_exists('mdr_timesince')) {
+		include_once(TEMPLATEPATH.'/inc/plugins/timesince.php');
+	}
+}
+
+// Add the Time Since plugin to theme
+add_action('after_setup_theme', 'feed_footer_init');
+function feed_footer_init() {
+	if (!function_exists('mdr_postrss')) {
+		include_once(TEMPLATEPATH.'/inc/plugins/feed-footer.php');
+	}
 }
 
 /**
@@ -136,53 +168,6 @@ function gus_register_widgets() {
 	    'before_title' => '<h3 class="widget-title">',
 	    'after_title' => '</h3>',
 	));
-}
-
-/**
- * Feed Footer
- *
- * Adds a link back to the origninal page on all RSS & ATOM feeds. 
- * This does not affect your normal posts & pages.
- *
- * @since 0.1
- */
-function mdr_postrss($content) {
-	    if(is_feed()){
-	        $site_name = get_bloginfo_rss('name');
-	        $post_title = get_the_title_rss();
-	        $home_url = home_url('/');
-	        $post_url = post_permalink();
-	        $content = $content.'<a href="'.$post_url.'">'.$post_title.'</a> is a post from; <a href="'.$home_url.'">'.$site_name.'</a> which is not allowed to be copied on other sites.';
-													    }
-		    return $content;
-}
-add_filter('the_excerpt_rss', 'mdr_postrss');
-add_filter('the_content', 'mdr_postrss');
-
-
-/**
- * This shortcode displays the years since the date provided.
- * To use this shortcode, add some text to a post or page simmiler to:
- *
- *    [ts date='1983-09-02']
- *
- * The date format is YYYY-MM-DD
- */
-if ( !function_exists('mdr_timesince') ) {
-  function mdr_timesince($atts, $content = null) {
-    extract(shortcode_atts(array("date" => ''), $atts));
-    if(empty($date)) {
-      return "<br /><br />************No date provided************<br /><br />";
-    }
-    $mdr_unix_date = strtotime($date);
-    $mdr_time_difference = time() - $mdr_unix_date ;
-    $years = floor($mdr_time_difference / 31556926 );
-    $num_years_since = $years;
-    return $num_years_since;
-  }
-
-  add_shortcode('ts', 'mdr_timesince');
-
 }
 
 
@@ -316,29 +301,6 @@ function gus_comment( $comment, $args, $depth ) {
     endswitch;
 }
 endif; // ends check for twentyeleven_comment()
-
-/*********************************************************************************
-   This shortcode displays the years since the date provided.
-   To use this shortcode, add some text to a post or page simmiler to:
-
-     [ts date='1980-06-19']
-
-   The date format is YYYY-MM-DD 
-*/
-if ( !function_exists('mdr_timesince') ) {
-  function mdr_timesince($atts, $content = null) {
-    extract(shortcode_atts(array("date" => ''), $atts));
-    if(empty($date)) {
-      return "<br /><br />************No date provided************<br /><br />";
-    }
-    $mdr_unix_date = strtotime($date);
-    $mdr_time_difference = time() - $mdr_unix_date ;
-    $years = floor($mdr_time_difference / 31556926 );
-    $num_years_since = $years;
-    return $num_years_since;
-  }
-add_shortcode('ts', 'mdr_timesince');
-}
 
 /*********************************************************************************
   Using WordPress functions to retrieve the extracted EXIF 
