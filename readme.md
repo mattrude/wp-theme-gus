@@ -6,7 +6,7 @@ After activating the theme, you must go to the `Theme Options` page from the `Ap
 
 ![Screenshot](https://github.com/mattrude/wp-theme-gus/raw/master/screenshot.png)
 
-Also, please see a the avalable [Screen Shots](http://gh.mattrude.com/wp-theme-gus/screenshots) for the Gus theme.
+Also, please see the avalable [Screen Shots](http://gh.mattrude.com/wp-theme-gus/screenshots) for the Gus theme.
 
 ## Features
 
@@ -24,7 +24,7 @@ Also, please see a the avalable [Screen Shots](http://gh.mattrude.com/wp-theme-g
 * Twiter Custom Post Type.
 
 ## Prerequisites
-* [WordPress](http://wordpress.org) 3.3+
+* [WordPress](http://wordpress.org) 3.4+
 
 ## Download
 Download the zip version to be uploaded into your WordPress site.
@@ -36,7 +36,7 @@ You may also download the theme directly via git:
     git clone https://github.com/mattrude/wp-theme-gus.git gus
 
 ## Support
-If you are having issues using the Gus theme, please file a bug on this projects github [Issues](https://github.com/mattrude/wp-theme-gus/issues) page.
+If you are having issues using the Gus theme, please file a bug by creating a [New Ticket](http://trac.mattrude.com/gus/newticket) on the projects trac site..
 
 ## License
 Gus is free software; you may redistribute it and/or modify it under the terms of the GNU General Public License version 2 as published by the Free Software Foundation (http://www.fsf.org/).
