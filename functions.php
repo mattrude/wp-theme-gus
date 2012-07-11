@@ -187,6 +187,7 @@ function gus_contactmethod( $contactmethods ) {
 	$contactmethods['google'] = 'Google+ ID';
 	$contactmethods['github'] = 'Github ID';
 	$contactmethods['flickr'] = 'Flickr ID';
+	$contactmethods['vimeo'] = 'Vimeo ID';
 
 	// Remove AIM, Jabber, & Yahoo IM
 	unset($contactmethods['aim']);
