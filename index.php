@@ -24,7 +24,7 @@
 				if ($siteowner->github) { ?><a class=github rel=me target="_blank" href="https://github.com/<?php echo $siteowner->github; ?>"></a><?php }
 				if ($siteowner->flickr) { ?><a class=flickr rel=me target="_blank" href="http://www.flickr.com/people/<?php echo $siteowner->flickr; ?>"></a><?php }
 				if ($siteowner->vimeo) { ?><a class=vimeo rel=me target="_blank" href="http://vimeo.com/<?php echo $siteowner->vimeo; ?>"></a><?php }
-				if ($siteowner->user_email) { ?><a class=email rel=me target="_blank" href="mailto:<?php echo $siteowner->user_email; ?>"></a><?php }
+			/*	if ($siteowner->user_email) { ?><a class=email rel=me target="_blank" href="mailto:<?php echo $siteowner->user_email; ?>"></a><?php } */
 			} else {
 				if (get_option('gus_linkedin')) { ?><a class=linkedin rel=me href="<?php echo get_option('gus_linkedin'); ?>"></a><?php }
 				if (get_option('gus_twitter')) { ?><a class=twitter rel=me href="<?php echo get_option('gus_twitter'); ?>"></a><?php }
