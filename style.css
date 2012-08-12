@@ -1135,3 +1135,10 @@ img[class*="attachment-"] {
   #meta {display:none;}
   #comments {display:none;}
 }
+
+div.sharedaddy .sd-content {
+  width: 750px !important;
+}
+div.sharedaddy h3, #content div.sharedaddy h3, #main div.sharedaddy h3, #primary div.sharedaddy h3 {
+  width: 0px !important;
+}
