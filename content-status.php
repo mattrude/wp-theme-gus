@@ -25,8 +25,8 @@
 			<?php endif; ?>
 			<?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
 		</div><!-- #entry-meta -->
+	</article><!-- #post-<?php the_ID(); ?> -->
 	<nav id="nav-single" class="status">
 		<span class="nav-previous"><?php previous_post_link( '%link', __( '<span class="meta-nav">&larr;</span> Previous', 'twentyeleven' ) ); ?></span>
 		<span class="nav-next"><?php next_post_link( '%link', __( 'Next <span class="meta-nav">&rarr;</span>', 'twentyeleven' ) ); ?></span>
 	</nav><!-- #nav-single -->
-	</article><!-- #post-<?php the_ID(); ?> -->
