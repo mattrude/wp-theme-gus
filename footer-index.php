@@ -3,6 +3,9 @@
 				<div id=copyright>
 					<span>Copyright &copy; <?php echo get_option('gus_copy_year'); ?> - <?php echo date("Y") ?> by <?php
 						$siteowner=get_userdata(get_option('gus_siteowner'));
+						if ( $siteowner == NULL ) {
+							$siteowner=get_userdata( "1" );
+						}
 						if (get_option('gus_use_siteowner')) {
 							?><a rel="me" href="https://plus.google.com/<?php echo $siteowner->google; ?>"><?php
 						} elseif (get_option('gus_google')) {

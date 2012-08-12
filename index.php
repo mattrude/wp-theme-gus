@@ -6,6 +6,9 @@
 		</div>
 		<div id=personal itemscope itemtype="http://data-vocabulary.org/Person">
 			<?php $siteowner=get_userdata(get_option('gus_siteowner')); ?>
+			<?php if ( $siteowner == NULL ) {
+				$siteowner=get_userdata( "1" );
+			} ?>
 			<h2 itemprop=name><?php echo $siteowner->display_name; ?></h2>
 		   	<ul>
 				<?php if (get_option('line_1')) { ?><li><?php echo get_option('line_1'); ?></li><?php } ?>
