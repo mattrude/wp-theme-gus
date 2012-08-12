@@ -19,7 +19,7 @@ function gus_setup() {
     	'header' => __( 'The Header Navigation Menu', 'millytheme' ),
 	) );
 	function gus_nav_fallback() {
-		    wp_page_menu( 'number=10&show_home=Home' );
+		echo "<!--No Header Navigation Menu selected-->";
 	}
 
 	// This theme allows users to use custom header images
