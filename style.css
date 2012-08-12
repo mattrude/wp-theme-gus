@@ -616,7 +616,9 @@ nav#nav-single .nav-previous {
 nav#nav-single .nav-next {
 	margin-left:5px;
 }
-
+nav#nav-single.status {
+	margin-top: -22px;
+}
 .entry-content {
 	background: #fff;
 }
