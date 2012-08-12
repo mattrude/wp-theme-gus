@@ -82,6 +82,7 @@ function register_gus_settings() {
 	register_setting( 'gus-settings-group', 'gus_google' );
 	register_setting( 'gus-settings-group', 'gus_github' );
 	register_setting( 'gus-settings-group', 'gus_flickr' );
+	register_setting( 'gus-settings-group', 'gus_vimeo' );
 	register_setting( 'gus-settings-group', 'gus_email' );
 }
 
@@ -158,6 +159,8 @@ function gus_settings_page() {
 		<tr valign="top">
 			<th scope="row">Email Address</th>
 			<td><input type="text" name="gus_email" class="regular-text" value="<?php echo get_option('gus_email'); ?>" /></td>
+			<th scope="row">Vimeo Link</th>
+			<td><input type="text" name="gus_vimeo" class="regular-text" value="<?php echo get_option('gus_vimeo'); ?>" /></td>
 		</tr>
 
 	</table>
