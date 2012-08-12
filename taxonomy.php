@@ -9,7 +9,7 @@
 				<ul class=posts>
 					<!--Starting "The Loop"-->
 					<?php while (have_posts()) : the_post(); ?>
-						<?php get_template_part( 'content', 'galleryindex' ); ?>
+						<?php get_template_part( 'inc/content', 'galleryindex' ); ?>
 					<?php endwhile; ?>
 				</ul>
 			<?php endif; ?>
