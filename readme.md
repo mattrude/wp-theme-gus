@@ -24,10 +24,12 @@ Also, please see the avalable [Screen Shots](http://gh.mattrude.com/wp-theme-gus
 * Twiter Custom Post Type.
 
 ## Prerequisites
+
 * [WordPress](http://wordpress.org) 3.4+
 
 ## Download
 Download the zip version to be uploaded into your WordPress site.
+
 * Current Stable version - 0.1.1: [zip](https://github.com/mattrude/wp-theme-gus/zipball/0.1.1) [tar.gz](https://github.com/mattrude/wp-theme-gus/tarball/0.1.1)
 * Old Stable version - 0.1: [zip](https://github.com/mattrude/wp-theme-gus/zipball/0.1) [tar.gz](https://github.com/mattrude/wp-theme-gus/tarball/0.1)
 * [Development version](https://github.com/mattrude/wp-theme-gus/zipball/master)
