@@ -21,7 +21,7 @@ Also, please see the avalable [Screen Shots](http://gh.mattrude.com/wp-theme-gus
 
 ## Wanted Features
 
-* Twiter Custom Post Type.
+* Twiter Custom Post Type Support.
 
 ## Prerequisites
 
