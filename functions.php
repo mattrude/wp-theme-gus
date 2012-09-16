@@ -79,7 +79,7 @@ function random_image_block_init() {
 // Add Webmaster Tools plugin to theme
 add_action('after_setup_theme', 'webmaster_tools_init');
 function webmaster_tools_init() {
-	if (!class_exists('add_mdr_webmaster_tools')) {
+	if (!function_exists('add_mdr_webmaster_tools')) {
 		include_once(TEMPLATEPATH.'/inc/plugins/webmaster-tools.php');
 	}
 }
