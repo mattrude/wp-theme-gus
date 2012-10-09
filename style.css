@@ -327,19 +327,20 @@ a, a:visited {
 
 #home-center {
   width: 100%;
-  min-height: 340px;
+  min-height: 400px;
   padding-bottom: 10px;
 }
 #home-recent-posts {
   float: left;
   width: 60%;
   padding: 0 60px 0 0;
-  height: 360px;
 }
 #home-gallery {
   float: right;
   width: 30%;
-  height: 360px;
+}
+#home-gallery-text {
+  text-align: right;
 }
 #dsq-global-toolbar, .dsq-trackback-url {
   display: none;
