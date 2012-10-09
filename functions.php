@@ -8,7 +8,7 @@ function gus_setup() {
 	require_once('inc/theme-options.php');
 
 	// Add Twitter post type
-	require_once('inc/twitter-functions.php');
+	//require_once('inc/twitter-functions.php');
 
 	// This theme allows users to set a custom background
 	add_theme_support( 'custom-background' );

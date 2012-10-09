@@ -23,5 +23,6 @@
 			</div>
 		<?php wp_footer(); ?>
 		</footer>
-	</div>
+	</div><!-- closing id container -->
+</body><!-- closing body -->
 </html>

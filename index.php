@@ -80,10 +80,9 @@
 									<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_post_thumbnail() ?></a>
 								<?php endwhile; ?>
 							</center>
+						    <div id="home-gallery-text"><p><a href=/category/gallery>Site Gallery</a></p></div> 
 						</div>
-						<div style=text-align:right;><p><a href=/category/gallery>Site Gallery</a></p></div>
 					<?php } else { ?>
-						<div style=text-align:right;><p> </p></div> 
 					<?php } ?>
 				</div><!-- End home-center -->
 			<?php endif; ?>

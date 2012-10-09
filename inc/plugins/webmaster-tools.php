@@ -156,7 +156,7 @@ add_filter( 'redirect_canonical', 'sitemap_no_trailing_slash' );
 
 
 function do_feed_sitemap() {
-    $template_dir = dirname(__FILE__) . '/templates';
+    $template_dir = dirname(__FILE__);
     load_template( $template_dir . '/feed-sitemap.php' );
 }
 
