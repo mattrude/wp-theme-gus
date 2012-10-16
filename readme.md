@@ -33,8 +33,8 @@ Please read this themes full documentation from within it's [Wiki Pages](https:/
 ## Download
 Download the zip version to be uploaded into your WordPress site.
 
-* Current Stable version - 0.1.1: [zip](https://github.com/mattrude/wp-theme-gus/zipball/0.1.1) [tar.gz](https://github.com/mattrude/wp-theme-gus/tarball/0.1.1)
-* Old Stable version - 0.1: [zip](https://github.com/mattrude/wp-theme-gus/zipball/0.1) [tar.gz](https://github.com/mattrude/wp-theme-gus/tarball/0.1)
+* Current Stable version - 0.1.2: [zip](https://github.com/mattrude/wp-theme-gus/zipball/0.1.2) [tar.gz](https://github.com/mattrude/wp-theme-gus/tarball/0.1.2)
+* Old Stable version - 0.1.1: [zip](https://github.com/mattrude/wp-theme-gus/zipball/0.1.1) [tar.gz](https://github.com/mattrude/wp-theme-gus/tarball/0.1.1)
 * [Development version](https://github.com/mattrude/wp-theme-gus/zipball/master)
 
 You may also download the theme directly via git:
