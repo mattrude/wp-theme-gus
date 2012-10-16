@@ -6,9 +6,9 @@ After activating the theme, you must go to the `Theme Options` page from the `Ap
 
 ![Screenshot](https://github.com/mattrude/wp-theme-gus/raw/master/screenshot.png)
 
-Besure to read the [Install Guide](wp-theme-gus/wiki/Installing) before downloading and installing Gus.
+Besure to read the [Install Guide](https://github.com/mattrude/wp-theme-gus/wiki/Installing) before downloading and installing Gus.
 
-Also, please see the avalable [Screen Shots](wp-theme-gus/wiki/Screen-Shots) for the Gus theme.
+Also, please see the avalable [Screen Shots](https://github.com/mattrude/wp-theme-gus/wiki/Screen-Shots) for the Gus theme.
 
 ## Features
 
