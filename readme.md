@@ -8,7 +8,7 @@ After activating the theme, you must go to the `Theme Options` page from the `Ap
 
 Besure to read the [Install Guide](wp-theme-gus/wiki/Installing) before downloading and installing Gus.
 
-Also, please see the avalable [Screen Shots](wiki/Screen-Shots) for the Gus theme.
+Also, please see the avalable [Screen Shots](wp-theme-gus/wiki/Screen-Shots) for the Gus theme.
 
 ## Features
 
