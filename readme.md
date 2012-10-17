@@ -45,7 +45,7 @@ You may also download the theme directly via git:
 For a more indepth walk threw of the install, see the [installation page](https://github.com/mattrude/wp-theme-gus/wiki/Installing).
 
 ## Support
-If you are having issues using the Gus theme, please file a bug report by creating a [New Issue](https://github.com/mattrude/wp-theme-gus/issues) on the projects github page.
+If you are having issues using the Gus theme, please file a bug report by creating a [New Issue](https://github.com/mattrude/wp-theme-gus/issues) on the projects github issues page.
 
 ## License
 Gus is free software; you may redistribute it and/or modify it under the terms of the GNU General Public License version 2 as published by the Free Software Foundation (http://www.fsf.org/).
