@@ -41,6 +41,9 @@ You may also download the theme directly via git:
 
     git clone https://github.com/mattrude/wp-theme-gus.git gus
 
+## Installing
+For a more indepth walk threw of the install, see the [installation page](https://github.com/mattrude/wp-theme-gus/wiki/Installing).
+
 ## Support
 If you are having issues using the Gus theme, please file a bug report by creating a [New Issue](https://github.com/mattrude/wp-theme-gus/issues) on the projects github page.
 
