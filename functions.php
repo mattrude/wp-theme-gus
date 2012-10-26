@@ -114,6 +114,13 @@ function feed_footer_init() {
 add_action( 'after_setup_theme', 'gus_setup' );
 
 
+// Deregister the JetPack Widgets css
+add_action( 'wp_print_styles', 'jetpack_deregister_styles', 100 );
+
+function jetpack_deregister_styles() {
+    wp_deregister_style( 'jetpack-widgets' );
+}
+
 /**
  * Add Custom Taxonomiesi: people, places, & events
  */
