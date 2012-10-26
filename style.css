@@ -1162,10 +1162,26 @@ img[class*="attachment-"] {
   #comments {display:none;}
 }
 
+/* Sharedaddy css changes */
+
 div.sharedaddy .sd-content {
   width: 780px !important;
   float: center !important;
 }
 div.sharedaddy h3, #content div.sharedaddy h3, #main div.sharedaddy h3, #primary div.sharedaddy h3 {
   width: 0px !important;
+}
+
+/*
+ * Widget styles for Jetpack
+ */
+
+/* Clear floats */
+.jetpack-image-container:after {
+	clear: both;
+}
+.jetpack-image-container:before,
+.jetpack-image-container:after {
+	display: table;
+	content: "";
 }
