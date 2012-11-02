@@ -49,7 +49,9 @@
 					</span>
 					<?php if ( is_user_logged_in() ) { ?>
 						<div><small>This page took <?php timer_stop(1); ?> seconds of computer labor, and required <?php echo get_num_queries(); ?> questions to produce.</small></div>
-					<?php } ?>
+                    <?php } else { ?>
+                        <div><small>Theme: <a href='https://github.com/mattrude/wp-theme-gus/#readme'>Gus</a> - Proudly powered by <a href="http://wordpress.org/" title="Semantic Personal Publishing Platform" rel="generator">WordPress</a>.</small></div>
+                    <?php } ?>
 				</div> <!-- closing id copyright -->
 			</div> <!-- closing id lower-footer -->
 			</div> <!-- closing id footer -->

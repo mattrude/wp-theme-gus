@@ -1178,10 +1178,10 @@ div.sharedaddy h3, #content div.sharedaddy h3, #main div.sharedaddy h3, #primary
 
 /* Clear floats */
 .jetpack-image-container:after {
-	clear: both;
+clear: both;
 }
 .jetpack-image-container:before,
 .jetpack-image-container:after {
-	display: table;
-	content: "";
+display: table;
+content: "";
 }
