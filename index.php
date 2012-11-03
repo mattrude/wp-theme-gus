@@ -70,8 +70,8 @@
 						</div>
 					<?php endif;
 
-					$home_gallery_id = get_category_by_slug( 'gallery' );
-					query_posts("posts_per_page=2&cat=$home_gallery_id->term_id");
+                    $home_gallery_id = get_option('gus_gallery_cat');
+					query_posts("posts_per_page=2&cat=$home_gallery_id");
 					if (have_posts()) { ?>
 						<div id=home-gallery>
 							<h3 style=padding-top:0.75em>Recent Gallery Posts</h3>
@@ -80,7 +80,7 @@
 									<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_post_thumbnail() ?></a>
 								<?php endwhile; ?>
 							</center>
-						    <div id="home-gallery-text"><p><a href=/category/gallery>Site Gallery</a></p></div> 
+						    <div id="home-gallery-text"><p><a href="<?php echo get_category_link( $home_gallery_id ); ?>">Site Gallery</a></p></div> 
 						</div>
 					<?php } else { ?>
 					<?php } ?>
