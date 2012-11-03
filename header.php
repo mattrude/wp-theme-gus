@@ -30,6 +30,12 @@
 	 */
 	global $page, $paged;
 
+    if ( is_tag() ) {
+        echo "Tag: ";
+    } elseif ( is_category() ) {
+        echo "Category: ";
+    }
+
 	wp_title( '|', true, 'right' );
 
 	// Add the blog name.
