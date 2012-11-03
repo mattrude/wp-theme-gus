@@ -2,17 +2,22 @@
 		<div id=main role=main>
 	    	<div id=page class=content>
 				<div id=home>
-					<?php if (have_posts()) : ?>
-						<h3 style=padding-top:0.75em>Archive Posts</a></h3>
-						<?php if ( is_day() ) : ?>
-							<?php printf( __( 'Daily Archives: %s', 'twentyeleven' ), '<span>' . get_the_date() . '</span>' ); ?>
-						<?php elseif ( is_month() ) : ?>
-							<?php printf( __( 'Monthly Archives: %s', 'twentyeleven' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'twentyeleven' ) ) . '</span>' ); ?>
-						<?php elseif ( is_year() ) : ?>
-							<?php printf( __( 'Yearly Archives: %s', 'twentyeleven' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'twentyeleven' ) ) . '</span>' ); ?>
-						<?php else : ?>
-							<?php _e( 'Blog Archives', 'twentyeleven' ); ?>
-						<?php endif; ?>
+					<?php if (have_posts()) :
+                        if ( is_day() ) {
+						    printf( __( 'Daily Archives: %s', 'twentyeleven' ), '<span>' . get_the_date() . '</span>' );
+						} elseif ( is_month() ) {
+							printf( __( 'Monthly Archives: %s', 'twentyeleven' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'twentyeleven' ) ) . '</span>' );
+						} elseif ( is_year() ) {
+							printf( __( 'Yearly Archives: %s', 'twentyeleven' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'twentyeleven' ) ) . '</span>' );
+                        } elseif ( is_category() ) {
+                            echo "<h3 style=padding-top:0.75em>Category ";
+                            echo single_cat_title();
+                            echo "</h3>";
+                            echo category_description();
+						} else {
+							 _e( 'Blog Archives', 'twentyeleven' );
+						    echo "<h3 style=padding-top:0.75em>Archive Posts</a></h3>";
+						} ?>
 
 						<ul class=posts>
 							<!--Starting "The Loop"-->
