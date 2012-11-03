@@ -66,6 +66,7 @@ add_action( 'admin_init', 'gus_theme_options_init' );
 function register_gus_settings() {
 	register_setting( 'gus-settings-group', 'gus_use_siteowner' );
 	register_setting( 'gus-settings-group', 'gus_copy_year' );
+	register_setting( 'gus-settings-group', 'gus_gallery_cat' );
 	register_setting( 'gus-settings-group', 'gus_siteowner' );
 	register_setting( 'gus-settings-group', 'gus_use_cdn' );
 	register_setting( 'gus-settings-group', 'gus_cdn_address' );
@@ -96,12 +97,27 @@ function gus_settings_page() {
     <?php settings_fields( 'gus-settings-group' ); ?>
 
 	<h3>Site Owner</h3>
-    <table class="form-table">
-		<?php wp_dropdown_users(array('name' => 'gus_siteowner')); ?>
-		<p>Use Site Owner? <input type="checkbox" name="gus_use_siteowner" value="checked" <?php echo get_option('gus_use_siteowner'); ?> /></p>
+    <table class="form-table"><?php
+        $siteowner = get_option('gus_siteowner');
+        $use_siteowner = get_option('gus_use_siteowner');
+        $gallery_cat = get_option('gus_gallery_cat');?>
+		<tr valign="top">
+            <th scope="row">Use Site Owner?</th>
+            <td><input type="checkbox" name="gus_use_siteowner" value="checked" <?php echo get_option('gus_use_siteowner'); ?> /></td>
+        </tr>
+        <?php if ($use_siteowner) { ?>
+            <tr valign="top">
+                <th scope="row">Site Owner</th>
+                <td><?php wp_dropdown_users(array('name' => 'gus_siteowner', 'selected' => $siteowner)); ?></td>
+            </tr>
+        <?php } ?>
 		<tr valign="top">
 			<th scope="row">Copyright starting year</th>
 			<td><input type="text" name="gus_copy_year" value="<?php echo get_option('gus_copy_year'); ?>" /></td>
+		</tr>
+        <tr valign="top">
+            <th scope="row">Gallery Category</th>
+            <td><?php wp_dropdown_categories("show_count=0&hierarchical=1&name=gus_gallery_cat&selected=$gallery_cat"); ?></td>
 		</tr>
 	</table>
 
