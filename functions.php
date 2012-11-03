@@ -138,6 +138,15 @@ add_action( 'init', 'create_gus_taxonomies', 0 );
  */
 add_action( 'widgets_init', 'gus_register_widgets' );
 function gus_register_widgets() {
+    register_sidebar(array (
+        'id' => 'post-widget-area',
+        'name' => __('Post/Page Widget Area', 'gustheme'),
+        'description' => __('This is the Post/Page Widget Area', 'gustheme'),
+        'before_widget' => '<div class="widget bookmarks widget-bookmarks">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ));
 	register_sidebar(array (
 	    'id' => 'top-widget-area',
 	    'name' => __('Top Footer Widget Area', 'gustheme'),
