@@ -27,6 +27,8 @@ Template Name: Archive Page
 										echo "<span class='gus-postformat-aside'>Status Update</span>";
 									} elseif ( $format == "aside" ) {
 										echo "<span class='gus-postformat-aside'>Aside</span>";
+									} elseif ( $format == "video" ) {
+										echo "<span class='gus-postformat-aside'>Video</span>";
 									} ?>
 									<time datetime="<?php the_time('c'); ?>" pubdate="pubdate"><?php the_date('Y M d'); ?></time>
 								</li>
