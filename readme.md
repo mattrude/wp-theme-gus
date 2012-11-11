@@ -21,6 +21,10 @@ Also, please see the avalable [Screen Shots](https://github.com/mattrude/wp-them
 * 5 widget footer section
 * Threaded comments
 
+## Documentation
+
+Please read this themes full documentation from within it's [Wiki Pages](https://github.com/mattrude/wp-theme-gus/wiki).
+
 ## Prerequisites
 
 * [WordPress](http://wordpress.org) 3.4+
