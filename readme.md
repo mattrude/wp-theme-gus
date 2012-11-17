@@ -12,6 +12,7 @@ Also, please see the avalable [Screen Shots](https://github.com/mattrude/wp-them
 
 ## Features
 
+* [Open Sans](http://www.google.com/webfonts/specimen/Open+Sans) font from [Google](http://www.google.com/webfonts)
 * Photo Gallery Support
 * Gallery index page
 * EXIF Support for images
