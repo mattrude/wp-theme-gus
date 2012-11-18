@@ -17,6 +17,8 @@
 @page-width: 770px;
 @about-box-height: 275px;
 @body-font-size: 14px;
+@byline-font-size: 13px;
+@meta-font-size: @byline-font-size;
 
 // Colors
 @page-color-sub: #272727;
@@ -319,13 +321,13 @@ a, a:visited {
   text-decoration: none;
 }
 .byline {
-  font-size:13px;
+  font-size: @byline-font-size;
   color: #999;
   margin: -1.5em 0 1.5em 0;
   font-style: italic;
 }
 .byline-bottom {
-  font-size:13px;
+  font-size: @byline-font-size;
   color: #999;
   font-style: italic;
   text-align: right;
@@ -365,11 +367,11 @@ a, a:visited {
 }
 
 #meta a { color: @font-color-header; }
-#meta a.postlink { font-size:13px; }
+#meta a.postlink { font-size: @meta-font-size; }
 #meta a:hover { color: #fff;  text-decoration: underline;}
 
 #meta a.archive {
-  font-size:13px;
+  font-size:@meta-font-size;
   text-decoration:none;
 }
 
