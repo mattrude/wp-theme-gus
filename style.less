@@ -6,19 +6,22 @@
  * Author URI: http://mattrude.com
  * License: GNU GENERAL PUBLIC LICENSE, Version 2, June 1991
  * Licence URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
- * Version: 0.2.0 alpha
+ * Version: 0.2.0
  */
 
-/*
- * HTML5 Boilerplate
- */
+//  =============================================================================
+//  Gus Less Meta Data
+//  ========================================================================== */
 
-/* =============================================================================
-   HTML5 element display
-   ========================================================================== */
+// Sizes
+@page-width: 770px;
 
-article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
-audio[controls], canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+// Colors
+@page-color-sub: #272727;
+@page-color-header: #000000;
+@font-color-header: #bfbfbf;
+@link-color: #12C;
+@link-color-visited: #61C;
 
 /* =============================================================================
    Fonts
@@ -49,6 +52,7 @@ audio[controls], canvas, video { display: inline-block; *display: inline; *zoom:
   src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
 }
 
+/*
 @font-face {
   font-family: 'Open Sans';
   font-style: Normal;
@@ -71,6 +75,13 @@ audio[controls], canvas, video { display: inline-block; *display: inline; *zoom:
 }
 
 /* =============================================================================
+   HTML5 element display
+   ========================================================================== */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio[controls], canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+
+/* =============================================================================
    Base
    ========================================================================== */
 
@@ -86,7 +97,7 @@ audio[controls], canvas, video { display: inline-block; *display: inline; *zoom:
 
 html { font-size: 100%; overflow-y: scroll; -webkit-overflow-scrolling: touch; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 
-body { margin: 0; font-size: 14px; line-height: 1.61; font-weight: 400; color: #fff; background: #000; }
+body { margin: 0; font-size: 14px; line-height: 1.61; font-weight: 400; color: #fff; background: @page-color-header; }
 body, button, input, select, textarea { font-family: 'Open Sans', sans-serif; }
 
 /*
@@ -257,13 +268,13 @@ table { border-collapse: collapse; border-spacing: 0; }
     /*min-width: 40em;*/
 }
 .content, #copyright .group, #meta .group, #about .group {
-  max-width: 55em;
+  max-width: @page-width;
   margin: 0 auto;
 }
 
 header {
-  background: #000;
-  color: #fff;
+  background: @page-color-header;
+  color: @font-color-header;
 }
 
 header, #main {
@@ -272,20 +283,20 @@ header, #main {
 
 header span {
   font-size: 13px;
-  color: #bfbfbf;
+  color: @font-color-header;
 }
 
 header a, header a:visited, #about a, #about a:visited {
   color: #fff; text-decoration: none;
 }
 
-header a:hover, footer a:hover, #about a:hover, #about a:active { color: #bfbfbf; text-decoration: none; }
+header a:hover, footer a:hover, #about a:hover, #about a:active { color: @font-color-header; text-decoration: none; }
 
 #header-image { float: right; margin: 10px 0; width: 60%;}
 #main {
   background: #fff;
   padding-top: 1em;
-  color: #000;
+  color: @page-color-header;
 }
 
 h1 {
@@ -346,12 +357,12 @@ a, a:visited {
 }
 
 #meta {
-  background: #272727;
+  background: @page-color-sub;
   color: #858585;
   max-height: 275px;
 }
 
-#meta a { color: #bfbfbf; }
+#meta a { color: @font-color-header; }
 #meta a.postlink { font-size:13px; }
 #meta a:hover { color: #fff;  text-decoration: underline;}
 
@@ -365,12 +376,12 @@ a, a:visited {
 #personal {
   font-size: 15px;
   font-weight: 400;
-  color: #bfbfbf;
+  color: @font-color-header;
   width: 33%;
 }
 
 #about {
-  background: none repeat scroll 0 0 #272727;
+  background: none repeat scroll 0 0 @page-color-sub;
   min-height: 275px;
 }
 
@@ -528,16 +539,16 @@ blockquote footer a, blockquote footer a:visited, blockquote footer a:hover {
 	color: #fff; text-decoration: none;
 }
 #footer {
-	background-color: #272727;
+	background-color: @page-color-sub;
 }
 
 #footer-top {
 	display: block;
-	color: #BFBFBF;
+	color: @font-color-header;
     font-size: 11px;
-    min-width: 500px;color: #BFBFBF;
+    min-width: 500px;
     font-size: 11px;
-	max-width: 770px;
+	max-width: @page-width;
 	margin: auto;
 	padding: 20px auto;
 }
@@ -560,14 +571,14 @@ blockquote footer a, blockquote footer a:visited, blockquote footer a:hover {
 }
 
 #lower-footer {
-	background-color: #000;
+	background-color: @page-color-header;
 }
 
 #copyright {
-	color: #bfbfbf;
+	color: @font-color-header;
 	margin: auto;
 	padding: 10px 0;
-	max-width: 770px;
+	max-width: @page-width;
 }
 
 .random-image {
@@ -849,7 +860,7 @@ nav#nav-single.status {
  * Menus
  *********************/
 header .content {
-	width: 760px;
+	width: @page-width;
 }
 .menu-header {
 	float: right;
@@ -1129,7 +1140,7 @@ img[class*="attachment-"] {
   footer #footer {
 	  display: none;
   }
-  #meta .group, #about .group { background: #272727; }
+  #meta .group, #about .group { background: @page-color-sub; }
   #meta { max-height:none; }
   #meta a.postlink { font-size:12px; }
 

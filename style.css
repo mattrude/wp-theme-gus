@@ -6,31 +6,8 @@
  * Author URI: http://mattrude.com
  * License: GNU GENERAL PUBLIC LICENSE, Version 2, June 1991
  * Licence URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
- * Version: 0.2.0 alpha
+ * Version: 0.2.0
  */
-/*
- * HTML5 Boilerplate
- */
-/* =============================================================================
-   HTML5 element display
-   ========================================================================== */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-nav,
-section {
-  display: block;
-}
-audio[controls], canvas, video {
-  display: inline-block;
-  *display: inline;
-  *zoom: 1;
-}
 /* =============================================================================
    Fonts
    ========================================================================== */
@@ -58,23 +35,47 @@ audio[controls], canvas, video {
   font-weight: 400;
   src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
 }
+/*
 @font-face {
   font-family: 'Open Sans';
   font-style: Normal;
   font-weight: 400;
   src: local('Open Sans Regular'), local('Open Sans Regular'), url('fonts/open-sans/OpenSans-Regular.ttf') format('truetype');
 }
+
 @font-face {
   font-family: 'Open Sans';
   font-style: Italic;
   font-weight: 400;
   src: local('Open Sans Italic'), local('Open Sans Italic'), url('fonts/open-sans/OpenSans-Italic.ttf') format('truetype');
 }
+
 @font-face {
   font-family: 'Open Sans';
   font-style: Bold;
   font-weight: 700;
   src: local('Open Sans Bold'), local('Open Sans Bold'), url('fonts/open-sans/OpenSans-Semibold.ttf') format('truetype');
+}
+
+/* =============================================================================
+   HTML5 element display
+   ========================================================================== */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+audio[controls], canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
 }
 /* =============================================================================
    Base
@@ -102,7 +103,7 @@ body {
   line-height: 1.61;
   font-weight: 400;
   color: #fff;
-  background: #000;
+  background: #000000;
 }
 body,
 button,
@@ -356,12 +357,12 @@ table {
 #copyright .group,
 #meta .group,
 #about .group {
-  max-width: 55em;
+  max-width: 770px;
   margin: 0 auto;
 }
 header {
-  background: #000;
-  color: #fff;
+  background: #000000;
+  color: #bfbfbf;
 }
 header, #main {
   padding: 1em 2em;
@@ -392,7 +393,7 @@ footer a:hover,
 #main {
   background: #fff;
   padding-top: 1em;
-  color: #000;
+  color: #000000;
 }
 h1 {
   margin-top: 0;
@@ -623,10 +624,9 @@ blockquote footer a, blockquote footer a:visited, blockquote footer a:hover {
 }
 #footer-top {
   display: block;
-  color: #BFBFBF;
+  color: #bfbfbf;
   font-size: 11px;
   min-width: 500px;
-  color: #BFBFBF;
   font-size: 11px;
   max-width: 770px;
   margin: auto;
@@ -646,7 +646,7 @@ blockquote footer a, blockquote footer a:visited, blockquote footer a:hover {
   margin: 20px 0;
 }
 #lower-footer {
-  background-color: #000;
+  background-color: #000000;
 }
 #copyright {
   color: #bfbfbf;
@@ -1028,7 +1028,7 @@ nav#nav-single.status {
  * Menus
  *********************/
 header .content {
-  width: 760px;
+  width: 770px;
 }
 .menu-header {
   float: right;
