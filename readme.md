@@ -12,6 +12,7 @@ Also, please see the avalable [Screen Shots](https://github.com/mattrude/wp-them
 
 ## Features
 
+* [Open Sans](http://www.google.com/webfonts/specimen/Open+Sans) font from [Google](http://www.google.com/webfonts)
 * Photo Gallery Support
 * Gallery index page
 * EXIF Support for images
@@ -20,6 +21,10 @@ Also, please see the avalable [Screen Shots](https://github.com/mattrude/wp-them
 * Custom people gallery page
 * 5 widget footer section
 * Threaded comments
+
+## Documentation
+
+Please read this themes full documentation from within it's [Wiki Pages](https://github.com/mattrude/wp-theme-gus/wiki).
 
 ## Prerequisites
 
