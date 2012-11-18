@@ -16,6 +16,7 @@
 // Sizes
 @page-width: 770px;
 @about-box-height: 275px;
+@body-font-size: 14px;
 
 // Colors
 @page-color-sub: #272727;
@@ -98,7 +99,7 @@ audio[controls], canvas, video { display: inline-block; *display: inline; *zoom:
 
 html { font-size: 100%; overflow-y: scroll; -webkit-overflow-scrolling: touch; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 
-body { margin: 0; font-size: 14px; line-height: 1.61; font-weight: 400; color: #fff; background: @page-color-header; }
+body { margin: 0; font-size: @body-font-size; line-height: 1.61; font-weight: 400; color: #fff; background: @page-color-header; }
 body, button, input, select, textarea { font-family: 'Open Sans', sans-serif; }
 
 /*
@@ -283,7 +284,7 @@ header, #main {
 }
 
 header span {
-  font-size: 13px;
+  font-size: @body-font-size;
   color: @font-color-header;
 }
 
