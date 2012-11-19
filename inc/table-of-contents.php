@@ -1,18 +1,19 @@
 <?php
 /**
- * This plugin will create a Table of Contents on a page or post with the use of a
- * shortcode of [table_of_contents].  There is no styling in the output.
- *
- * This code is taken from the wikeasi theme from WooThemems fround at:
- * http://www.woothemes.com/products/wikeasi/
+ * Plugin Name: Table of Contents
+ * Plugin URI: https://gist.github.com/4109124
+ * Description: This plugin will create a Table of Contents on a page or post with the use of the shortcode of [table_of_contents].  There is no styling in the output from within the plugin.
+ * Version: 0.1.0
+ * Author: Matt Rude
+ * Author URI: http://mattrude.com/
  */
 
 /*-----------------------------------------------------------------------------------*/
 /* Table of Contents - Shortcode */
 /*-----------------------------------------------------------------------------------*/
 
-if ( ! function_exists( 'woo_shortcode_table_of_contents' ) ) {
-        function woo_shortcode_table_of_contents ( $atts, $content = null ) {
+if ( ! function_exists( 'mdr_shortcode_table_of_contents' ) ) {
+        function mdr_shortcode_table_of_contents ( $atts, $content = null ) {
                 global $post;
                 $defaults = array();
 
@@ -20,61 +21,61 @@ if ( ! function_exists( 'woo_shortcode_table_of_contents' ) ) {
 
                 extract( $atts );
 
-                $table_of_contents = woo_get_table_of_contents( $post->post_content );
+                $table_of_contents = mdr_get_table_of_contents( $post->post_content );
 
                 $html = '';
                 if ( isset( $table_of_contents['list'] ) && $table_of_contents['list'] != '<ol></ol>' ) {
-                        $html = '<div class="table_of_contents fl">' . '<h4>' . __( 'Contents', 'woothemes' ) . '</h4>' . $table_of_contents['list'] . '</div>' . "\n";
+                        $html = '<div class="table_of_contents fl">' . '<h4>' . __( 'Contents', 'mdr-toc' ) . '</h4>' . $table_of_contents['list'] . '</div>' . "\n";
                 }
 
-                return apply_filters( 'woo_shortcode_table_of_contents', $html, $atts );
-        } // End woo_shortcode_table_of_contents()
+                return apply_filters( 'mdr_shortcode_table_of_contents', $html, $atts );
+        } // End mdr_shortcode_table_of_contents()
 }
 
-add_shortcode( 'table_of_contents', 'woo_shortcode_table_of_contents' );
+add_shortcode( 'table_of_contents', 'mdr_shortcode_table_of_contents' );
 
 /*-----------------------------------------------------------------------------------*/
 /* Table of Contents - Content Filter */
 /*-----------------------------------------------------------------------------------*/
 
-add_filter( 'the_content', 'woo_table_of_contents_section_anchors', 10 );
+add_filter( 'the_content', 'mdr_table_of_contents_section_anchors', 10 );
 
-if ( ! function_exists( 'woo_table_of_contents_section_anchors' ) ) {
-        function woo_table_of_contents_section_anchors ( $content ) {
-                $data = woo_get_table_of_contents( $content );
+if ( ! function_exists( 'mdr_table_of_contents_section_anchors' ) ) {
+        function mdr_table_of_contents_section_anchors ( $content ) {
+                $data = mdr_get_table_of_contents( $content );
 
                 foreach ( $data['sections_with_ids'] as $k => $v ) {
                         $content = str_replace( $data['sections'][$k], $v, $content );
                 }
 
                 return $content;
-        } // End woo_table_of_contents_section_anchors()
+        } // End mdr_table_of_contents_section_anchors()
 }
 
 /*-----------------------------------------------------------------------------------*/
 /* Table of Contents - Automation */
 /*-----------------------------------------------------------------------------------*/
 
-if ( isset( $woo_options['woo_auto_tableofcontents'] ) && ( apply_filters( 'woo_auto_tableofcontents', $woo_options['woo_auto_tableofcontents'] ) != 'false' ) ) {
-        add_filter( 'the_content', 'woo_table_of_contents_automation', 10 );
+if ( isset( $mdr_options['mdr_auto_tableofcontents'] ) && ( apply_filters( 'mdr_auto_tableofcontents', $mdr_options['mdr_auto_tableofcontents'] ) != 'false' ) ) {
+        add_filter( 'the_content', 'mdr_table_of_contents_automation', 10 );
 }
 
-if ( ! function_exists( 'woo_table_of_contents_automation' ) ) {
-        function woo_table_of_contents_automation ( $content ) {
+if ( ! function_exists( 'mdr_table_of_contents_automation' ) ) {
+        function mdr_table_of_contents_automation ( $content ) {
                 if ( is_singular() && in_the_loop() ) {
                         $content = '[table_of_contents] ' . $content;
                 }
 
                 return $content;
-        } // End woo_table_of_contents_automation()
+        } // End mdr_table_of_contents_automation()
 }
 
 /*-----------------------------------------------------------------------------------*/
 /* Table of Contents - Generator */
 /*-----------------------------------------------------------------------------------*/
 
-if ( ! function_exists( 'woo_get_table_of_contents' ) ) {
-        function woo_get_table_of_contents ( $content ) {
+if ( ! function_exists( 'mdr_get_table_of_contents' ) ) {
+        function mdr_get_table_of_contents ( $content ) {
           preg_match_all( "/(<h([0-6]{1})[^<>]*>)([^<>]+)(<\/h[0-6]{1}>)/", $content, $matches, PREG_SET_ORDER );
           $count = 0; // List Item Count
           $level = 1; // Heading Level
@@ -85,7 +86,7 @@ if ( ! function_exists( 'woo_get_table_of_contents' ) ) {
           foreach ( $matches as $val ) {
                 $count++;
 
-                if ( $val[2] == $level ) { // If the heading level didnâchange.
+                if ( $val[2] == $level ) { // If the heading level didnÃ¢change.
                         $list[$count] = '<li><a href="#section-' . $count . '">'. $val[3] . '</a>';
 
                 } else if ( $val[2] > $level ) { // If bigger then last heading level, create a nested list.
@@ -138,5 +139,6 @@ if ( ! function_exists( 'woo_get_table_of_contents' ) ) {
           }
 
           return array( 'list' => $html, 'sections' => $sections, 'sections_with_ids' => $sections_with_ids ); // Returns the content
-        } // End woo_get_table_of_contents()
+        } // End mdr_get_table_of_contents()
 }
+?>
