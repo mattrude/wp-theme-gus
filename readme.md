@@ -33,16 +33,19 @@ Please read this themes full documentation from within it's [Wiki Pages](https:/
 ## Download
 Download the zip version to be uploaded into your WordPress site.
 
-* Current Stable version - 0.1.1: [zip](https://github.com/mattrude/wp-theme-gus/zipball/0.1.1) [tar.gz](https://github.com/mattrude/wp-theme-gus/tarball/0.1.1)
-* Old Stable version - 0.1: [zip](https://github.com/mattrude/wp-theme-gus/zipball/0.1) [tar.gz](https://github.com/mattrude/wp-theme-gus/tarball/0.1)
+* Current Stable version - 0.1.2: [zip](https://github.com/mattrude/wp-theme-gus/zipball/0.1.2) [tar.gz](https://github.com/mattrude/wp-theme-gus/tarball/0.1.2)
+* Old Stable version - 0.1.1: [zip](https://github.com/mattrude/wp-theme-gus/zipball/0.1.1) [tar.gz](https://github.com/mattrude/wp-theme-gus/tarball/0.1.1)
 * [Development version](https://github.com/mattrude/wp-theme-gus/zipball/master)
 
 You may also download the theme directly via git:
 
     git clone https://github.com/mattrude/wp-theme-gus.git gus
 
+## Installing
+For a more indepth walk threw of the install, see the [installation page](https://github.com/mattrude/wp-theme-gus/wiki/Installing).
+
 ## Support
-If you are having issues using the Gus theme, please file a bug report by creating a [New Issue](https://github.com/mattrude/wp-theme-gus/issues) on the projects github page.
+If you are having issues using the Gus theme, please file a bug report by creating a [New Issue](https://github.com/mattrude/wp-theme-gus/issues) on the projects github issues page.
 
 ## License
 Gus is free software; you may redistribute it and/or modify it under the terms of the GNU General Public License version 2 as published by the Free Software Foundation (http://www.fsf.org/).
