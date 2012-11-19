@@ -7,9 +7,6 @@ function gus_setup() {
 	// Start out by added the Theme's Options page
 	require_once('inc/theme-options.php');
 
-    // Add Table of Contents to site
-	require_once('inc/table-of-contents.php');
-
 	// Add Twitter post type
 	//require_once('inc/twitter-functions.php');
 
@@ -109,6 +106,14 @@ function feed_footer_init() {
 	if (!function_exists('mdr_postrss')) {
 		include_once(TEMPLATEPATH.'/inc/plugins/feed-footer.php');
 	}
+}
+
+// Add the Table of Contents plugin to theme
+add_action('after_setup_theme', 'tableofcontents_init');
+function tableofcontents_init() {
+    if (!function_exists('mdr_table_of_contents')) {
+        include_once(TEMPLATEPATH.'/inc/plugins/table-of-contents.php');
+    }
 }
 
 /**

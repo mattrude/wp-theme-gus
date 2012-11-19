@@ -623,12 +623,6 @@ blockquote footer a, blockquote footer a:visited, blockquote footer a:hover {
   padding: 10px 0;
   max-width: 770px;
 }
-.table_of_contents.fl {
-  float: right;
-  margin: 0 0 15px 15px;
-  padding: 5px;
-  border: 1px solid #AAA;
-}
 .random-image {
   line-height: 1.5em;
 }
@@ -1365,4 +1359,12 @@ div.sharedaddy h3 {
 .jetpack-image-container:before, .jetpack-image-container:after {
   display: table;
   content: "";
+}
+/* Table of Contents plugin
+ * https://gist.github.com/4109124 */
+.table_of_contents.fl {
+  float: right;
+  margin: 0 0 15px 15px;
+  padding: 5px;
+  border: 1px solid #AAA;
 }
