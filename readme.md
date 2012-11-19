@@ -16,6 +16,7 @@ Also, please see the avalable [Screen Shots](https://github.com/mattrude/wp-them
 * Photo Gallery Support
 * Gallery index page
 * EXIF Support for images
+* Table of Content generator
 * Ability to tag people in images
 * Custom taxonomy (people, place, event)
 * Custom people gallery page
