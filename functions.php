@@ -7,6 +7,9 @@ function gus_setup() {
 	// Start out by added the Theme's Options page
 	require_once('inc/theme-options.php');
 
+    // Add Table of Contents to site
+	require_once('inc/table-of-contents.php');
+
 	// Add Twitter post type
 	//require_once('inc/twitter-functions.php');
 
