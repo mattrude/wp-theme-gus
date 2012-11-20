@@ -13,11 +13,11 @@ Also, please see the avalable [Screen Shots](https://github.com/mattrude/wp-them
 ## Features
 
 * [Open Sans](http://www.google.com/webfonts/specimen/Open+Sans) font from [Google](http://www.google.com/webfonts)
-* Photo Gallery Support
-* Gallery index page
-* EXIF Support for images
+* [Photo Gallery](https://github.com/mattrude/wp-theme-gus/wiki/Photo-gallery-support#head) Support
+* [Gallery index](https://github.com/mattrude/wp-theme-gus/wiki/Gallery-index-page#head) page
+* [EXIF Support](https://github.com/mattrude/wp-theme-gus/wiki/Exif-support-for-images#head) for images
 * Table of Content generator
-* Ability to tag people in images
+* [Ability to tag people](https://github.com/mattrude/wp-theme-gus/wiki/Ability-to-tag-people-in-images#head) in images
 * Custom taxonomy (people, place, event)
 * Custom people gallery page
 * 5 widget footer section
