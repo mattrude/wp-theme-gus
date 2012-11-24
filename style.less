@@ -27,6 +27,8 @@
 @page-color-sub: #272727;
 @page-color-header: #000000;
 @font-color-header: #bfbfbf;
+@font-color-footer: @font-color-header; 
+@page-footer-link: #fff;
 @link-color: #12C;
 @link-color-visited: #61C;
 
@@ -523,7 +525,10 @@ blockquote footer a, blockquote footer a:visited, blockquote footer a:hover {
 #page-footer h3 { margin-top: 0; padding-top: 20px; }
 
 #page-footer a, #page-footer a:visited, #page-footer-index a, #page-footer-index a:visited {
-	color: #fff; text-decoration: none;
+	color: @page-footer-link; text-decoration: none;
+}
+#page-footer a:hover, #page-footer-index a:hover {
+	color: @page-footer-link; text-decoration: underline;
 }
 #footer {
 	background-color: @page-color-sub;
@@ -547,6 +552,7 @@ blockquote footer a, blockquote footer a:visited, blockquote footer a:hover {
 
 #right-widget {
 	float: right;
+    margin-bottom: 35px;
 }
 
 .random-image p {
@@ -576,6 +582,7 @@ blockquote footer a, blockquote footer a:visited, blockquote footer a:hover {
 	line-height: 2em;
 	margin-bottom: 20px;
 }
+
 img.left {
   float: left;
   margin-right: 1em;
@@ -1192,9 +1199,25 @@ content: "";
     border: 1px solid #AAA;
 }
 
+/* Social footer */
 #social-footer {
+    color: @font-color-footer;
     float: right;
     font-size: 26px;
+}
+
+#social-footer a {
+    color: @font-color-footer !important;
+    display: inline-block;
+}
+
+#social-footer a:hover {
+    color: @page-footer-link !important;
+    text-decoration: none;
+}
+
+a i.icon-feed-2:hover {
+    color: orange !important;
 }
 
 #social-footer ul {
@@ -1205,3 +1228,4 @@ content: "";
 #social-footer li {
     display: inline;
 }
+

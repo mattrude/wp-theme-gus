@@ -665,8 +665,12 @@ blockquote footer a, blockquote footer a:visited, blockquote footer a:hover {
 #page-footer a:visited,
 #page-footer-index a,
 #page-footer-index a:visited {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
+}
+#page-footer a:hover, #page-footer-index a:hover {
+  color: #ffffff;
+  text-decoration: underline;
 }
 #footer {
   background-color: #272727;
@@ -687,6 +691,7 @@ blockquote footer a, blockquote footer a:visited, blockquote footer a:hover {
 }
 #right-widget {
   float: right;
+  margin-bottom: 35px;
 }
 .random-image p {
   margin: 0;
@@ -1460,9 +1465,22 @@ div.sharedaddy h3,
   padding: 5px;
   border: 1px solid #AAA;
 }
+/* Social footer */
 #social-footer {
+  color: #bfbfbf;
   float: right;
   font-size: 26px;
+}
+#social-footer a {
+  color: #bfbfbf !important;
+  display: inline-block;
+}
+#social-footer a:hover {
+  color: #ffffff !important;
+  text-decoration: none;
+}
+a i.icon-feed-2:hover {
+  color: orange !important;
 }
 #social-footer ul {
   margin: 0;

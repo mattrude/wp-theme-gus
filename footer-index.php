@@ -1,6 +1,11 @@
 		<footer id=page-footer-index>
 			<div id=lower-footer>
 				<div id=copyright>
+                <div id='social-footer' >
+                    <ul>
+                        <li><a href="/feed"><span class="icon-feed-2"></span></a></li>
+                    </ul>
+                </div> <!-- closing id social -->
 					<span>Copyright &copy; <?php echo get_option('gus_copy_year'); ?> - <?php echo date("Y") ?> by <?php
 						$siteowner=get_userdata(get_option('gus_siteowner'));
 						if ( $siteowner == NULL ) {
@@ -15,7 +20,6 @@
 						}
 						echo $siteowner->display_name;?></a>
 					</span>
-					<a href="<?php bloginfo('rss2_url'); ?>" class="about rss">subscribe via rss</a>
 					<?php if ( is_user_logged_in() ) { ?>
 						<div><small>This page took <?php timer_stop(1); ?> seconds of computer labor, and required <?php echo get_num_queries(); ?> questions to produce.</small></div>
 					<?php } else { ?>
