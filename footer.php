@@ -29,11 +29,19 @@
 			</div>
 			<div id=lower-footer>
 				<div id=copyright >
+				<?php $siteowner=get_userdata(get_option('gus_siteowner'));
+				if ( $siteowner == NULL ) {
+					$siteowner=get_userdata( "1" );
+				} ?>
+                <div id='social-footer' >
+                    <ul>
+                        <li><a rel=me target="_blank" href="http://twitter.com/<?php echo $siteowner->twitter; ?>"><i class="icon-twitter"></i></a></li>
+                        <li><a rel=me target="_blank" href="http://facebook.com/<?php echo $siteowner->facebook; ?>"><i class="icon-facebook"></i></a></li>
+                        <li><a rel=me target="_blank" href="https://plus.google.com/<?php echo $siteowner->google; ?>"><i class="icon-google-plus"></i></a></li>
+                        <li><a rel=me target="_blank" href="https://github.com/<?php echo $siteowner->github; ?>"><i class="icon-github"></i></a></li>
+                    </ul>
+                </div> <!-- closing id social -->
 					<span>Copyright &copy; <?php echo get_option('gus_copy_year'); ?> - <?php echo date("Y") ?> by <?php
-						$siteowner=get_userdata(get_option('gus_siteowner'));
-						if ( $siteowner == NULL ) {
-							$siteowner=get_userdata( "1" );
-						}
 						if ( is_home() ) {
 							if (get_option('gus_use_siteowner')) {
 								?><a rel="me" href="https://plus.google.com/<?php echo $siteowner->google; ?>"><?php
@@ -52,6 +60,7 @@
                     <?php } else { ?>
                         <div><small>Theme: <a href='https://github.com/mattrude/wp-theme-gus/#readme'>Gus</a> - Proudly powered by <a href="http://wordpress.org/" title="Semantic Personal Publishing Platform" rel="generator">WordPress</a>.</small></div>
                     <?php } ?>
+                <?php $siteowner=get_userdata(get_option('gus_siteowner')); ?>
 				</div> <!-- closing id copyright -->
 			</div> <!-- closing id lower-footer -->
 			</div> <!-- closing id footer -->

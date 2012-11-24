@@ -20,6 +20,9 @@
 @byline-font-size: 13px;
 @meta-font-size: @byline-font-size;
 
+// Locations
+@fontdir: 'inc/fonts';
+
 // Colors
 @page-color-sub: #272727;
 @page-color-header: #000000;
@@ -56,27 +59,7 @@
   src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
 }
 
-/*
-@font-face {
-  font-family: 'Open Sans';
-  font-style: Normal;
-  font-weight: 400;
-  src: local('Open Sans Regular'), local('Open Sans Regular'), url('fonts/open-sans/OpenSans-Regular.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  font-style: Italic;
-  font-weight: 400;
-  src: local('Open Sans Italic'), local('Open Sans Italic'), url('fonts/open-sans/OpenSans-Italic.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  font-style: Bold;
-  font-weight: 700;
-  src: local('Open Sans Bold'), local('Open Sans Bold'), url('fonts/open-sans/OpenSans-Semibold.ttf') format('truetype');
-}
+@import url( 'inc/fonts/fonts.less' );
 
 /* =============================================================================
    HTML5 element display
@@ -1209,3 +1192,16 @@ content: "";
     border: 1px solid #AAA;
 }
 
+#social-footer {
+    float: right;
+    font-size: 26px;
+}
+
+#social-footer ul {
+    margin: 0;
+    padding: 0;
+}
+
+#social-footer li {
+    display: inline;
+}
