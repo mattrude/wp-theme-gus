@@ -15,31 +15,31 @@
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 700;
-  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzHhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url('inc/fonts/open-sans/OpenSans-Bold.woff') format('woff');
 }
 @font-face {
   font-family: 'Open Sans';
   font-style: italic;
   font-weight: 700;
-  src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/PRmiXeptR36kaC0GEAetxjqR_3kx9_hJXbbyU8S6IN0.woff) format('woff');
+  src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url('inc/fonts/open-sans/OpenSans-BoldItalic.woff') format('woff');
 }
 @font-face {
   font-family: 'Open Sans';
   font-style: italic;
   font-weight: 400;
-  src: local('Open Sans Italic'), local('OpenSans-Italic'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/xjAJXh38I15wypJXxuGMBobN6UDyHWBl620a-IRfuBk.woff) format('woff');
+  src: local('Open Sans Italic'), local('OpenSans-Italic'), url('inc/fonts/open-sans/OpenSans-Italic.woff') format('woff');
 }
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
-  src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+  src: local('Open Sans'), local('OpenSans'), url('inc/fonts/open-sans/OpenSans.woff') format('woff');
 }
 /* Fonts downloaded from: http://icomoon.io/app/ */
 @font-face {
   font-family: 'gus-social';
   src: url('inc/fonts/gus-social/gus-social.eot');
-  src: url('inc/fonts/gus-social/gus-social.eot?#iefix') format('embedded-opentype'), url('inc/fonts/gus-social/gus-social.svg#gus-social') format('svg'), url('inc/fonts/gus-social/gus-social.woff') format('woff'), url('inc/fonts/gus-social/gus-social.ttf') format('truetype');
+  src: url('inc/fonts/gus-social/gus-social.eot?#iefix') format('embedded-opentype'), url('inc/fonts/gus-social/gus-social.woff') format('woff'), url('inc/fonts/gus-social/gus-social.ttf') format('truetype'), url('inc/fonts/gus-social/gus-social.svg#gus-social') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -154,6 +154,9 @@
 }
 .icon-picture:before {
   content: "\e020";
+}
+.icon-star:before {
+  content: "\e01f";
 }
 /* =============================================================================
    HTML5 element display
