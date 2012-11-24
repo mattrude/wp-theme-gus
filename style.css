@@ -35,10 +35,11 @@
   font-weight: 400;
   src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
 }
+/* Fonts downloaded from: http://icomoon.io/app/ */
 @font-face {
   font-family: 'gus-social';
-  src: url('inc/fonts/gus-social.eot');
-  src: url('inc/fonts/gus-social.eot?#iefix') format('embedded-opentype'), url('inc/fonts/gus-social.svg#gus-social') format('svg'), url('inc/fonts/gus-social.woff') format('woff'), url('inc/fonts/gus-social.ttf') format('truetype');
+  src: url('inc/fonts/gus-social/gus-social.eot');
+  src: url('inc/fonts/gus-social/gus-social.eot?#iefix') format('embedded-opentype'), url('inc/fonts/gus-social/gus-social.svg#gus-social') format('svg'), url('inc/fonts/gus-social/gus-social.woff') format('woff'), url('inc/fonts/gus-social/gus-social.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -147,6 +148,12 @@
 }
 .icon-github-6:before {
   content: "\e01d";
+}
+.icon-pictures:before {
+  content: "\e01e";
+}
+.icon-picture:before {
+  content: "\e020";
 }
 /* =============================================================================
    HTML5 element display
