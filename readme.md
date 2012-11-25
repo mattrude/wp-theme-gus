@@ -12,8 +12,8 @@ Also, please see the avalable [Screen Shots](https://github.com/mattrude/wp-them
 
 ## Features
 
-* [Open Sans](http://www.google.com/webfonts/specimen/Open+Sans) font from [Google](http://www.google.com/webfonts)
 * [Photo Gallery](https://github.com/mattrude/wp-theme-gus/wiki/Photo-gallery-support#head) Support
+* [Custom Fonts](https://github.com/mattrude/wp-theme-gus/wiki/Fonts#head) - Open Sans & Gus Social
 * [Gallery index](https://github.com/mattrude/wp-theme-gus/wiki/Gallery-index-page#head) page
 * [EXIF Support](https://github.com/mattrude/wp-theme-gus/wiki/Exif-support-for-images#head) for images
 * Table of Content generator
