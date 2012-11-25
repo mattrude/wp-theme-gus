@@ -158,9 +158,9 @@
 .icon-type-status:before {
   content: "\e01c";
 }
-.icon-type-standard:before {
+.icon-type-standard:before, .icon-type-:before {
   content: "\e01b";
-  padding: 0 1.5px 0 1.5px;
+  padding: 0 2px 0 2px;
 }
 /* =============================================================================
    HTML5 element display
@@ -204,7 +204,7 @@ html {
 }
 body {
   margin: 0;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.61;
   font-weight: 400;
   color: #fff;
@@ -631,10 +631,6 @@ ul.posts {
 }
 .recent ul {
   padding-left: 20px;
-}
-ul.posts span {
-  color: #4a4a4a;
-  font-size: 12px;
 }
 kbd {
   padding: 2px 4px;
@@ -1544,4 +1540,7 @@ a i.icon-feed-2:hover {
 }
 #social-footer li {
   display: inline;
+}
+.icon-post-title {
+  margin-right: 5px;
 }

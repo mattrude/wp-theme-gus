@@ -59,23 +59,11 @@
 						<div id=home-recent-posts>
 							<h3 style=padding-top:0.75em>Recent Posts <a href="/archives" class=more>view all posts</a></h3>
 							<ul class=posts>
+								<!--Starting "The Loop"-->
 								<?php while (have_posts()) : the_post(); ?>
-									<!--Starting "The Loop"-->
 									<li>
-                                        <?php $format = get_post_format();
-                                        if ( $format == "gallery" ) {
-                                            echo "<span class='icon-type-gallery'></span>";
-                                        } elseif ( $format == "image" ) {
-                                            echo "<span class='icon-type-image'></span>";
-                                        } elseif ( $format == "video" ) {
-                                            echo "<span class='icon-type-video'></span>";
-                                        } elseif ( $format == "aside" ) {
-                                            echo "<span class='icon-type-aside'></span>";
-                                        } elseif ( $format == "status" ) {
-                                            echo "<span class='icon-type-status'></span>";
-                                        } elseif ( $format == "" ) {
-                                            echo "<span class='icon-type-standard'></span>";
-                                        } ?>
+                                        <?php $format = get_post_format(); ?>
+                                        <span class=icon-type-<?php echo $format; ?>></span>
 										<a href="<?php the_permalink() ?>" rel="bookmark" title="Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
 										<time datetime="<?php the_time('c'); ?>" pubdate="pubdate"><?php the_date('Y M d'); ?></time>
 									</li>

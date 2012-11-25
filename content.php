@@ -9,7 +9,8 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<h1 itemprop=name><span class="entry-title"><?php single_post_title(); ?></span></h1>
+    <?php $format = get_post_format(); ?>
+	<h1 itemprop=name><span class="icon-type-<?php echo $format; ?> icon-post-title"></span><span class="entry-title"><?php single_post_title(); ?></span></h1>
 	<div class="vcard">
 		<p class="byline">
 			By <span itemprop="name"><a href="/" rel="author" class="url fn" itemprop="author"><?php the_author_meta( 'display_name' ) ?></a></span>

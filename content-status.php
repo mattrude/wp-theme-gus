@@ -11,6 +11,8 @@
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<div class="entry-content">
+            <?php $format = get_post_format(); ?>
+	        <h1 itemprop=name><span class="icon-type-<?php echo $format; ?> icon-post-title"></span><span class="entry-title">Status Update: <?php single_post_title(); ?></span></h1>
 			<div class="avatar"><?php echo get_avatar( get_the_author_meta( 'ID' ), apply_filters( 'twentyeleven_status_avatar', '65' ) ); ?></div>
 
 			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentyeleven' ) ); ?>
