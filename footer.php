@@ -35,10 +35,10 @@
 				} ?>
                 <div id='social-footer' >
                     <ul>
-                        <li><a rel=me target="_blank" href="http://twitter.com/<?php echo $siteowner->twitter; ?>"><i class="icon-twitter"></i></a></li>
-                        <li><a rel=me target="_blank" href="http://facebook.com/<?php echo $siteowner->facebook; ?>"><i class="icon-facebook"></i></a></li>
-                        <li><a rel=me target="_blank" href="https://plus.google.com/<?php echo $siteowner->google; ?>"><i class="icon-google-plus"></i></a></li>
-                        <li><a rel=me target="_blank" href="https://github.com/<?php echo $siteowner->github; ?>"><i class="icon-github"></i></a></li>
+                        <li><a rel=me target="_blank" href="http://twitter.com/<?php echo $siteowner->twitter; ?>"><i class="icon-twitter-2"></i></a></li>
+                        <li><a rel=me target="_blank" href="http://facebook.com/<?php echo $siteowner->facebook; ?>"><i class="icon-facebook-2"></i></a></li>
+                        <li><a rel=me target="_blank" href="https://plus.google.com/<?php echo $siteowner->google; ?>"><i class="icon-google-plus-2"></i></a></li>
+                        <li><a rel=me target="_blank" href="https://github.com/<?php echo $siteowner->github; ?>"><i class="icon-github-2"></i></a></li>
                     </ul>
                 </div> <!-- closing id social -->
 					<span>Copyright &copy; <?php echo get_option('gus_copy_year'); ?> - <?php echo date("Y") ?> by <?php

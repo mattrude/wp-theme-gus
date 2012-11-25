@@ -155,8 +155,11 @@
 .icon-picture:before {
   content: "\e020";
 }
-.icon-star:before {
+.icon-camera:before {
   content: "\e01f";
+}
+.icon-camera-2:before {
+  content: "\e022";
 }
 /* =============================================================================
    HTML5 element display

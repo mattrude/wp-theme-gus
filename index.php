@@ -62,7 +62,14 @@
 								<?php while (have_posts()) : the_post(); ?>
 									<!--Starting "The Loop"-->
 									<li>
-										<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+										<a href="<?php the_permalink() ?>" rel="bookmark" title="Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+                                        <?php if ( $format == "gallery" ) {
+                                            echo "<span class='icon-pictures'></span>";
+                                        } elseif ( $format == "image" ) {
+                                            echo "<span class='icon-camera-2'></span>";
+                                        } elseif ( $format == "video" ) {
+                                            echo "<span class='icon-camera'></span>";
+                                        } ?>
 										<time datetime="<?php the_time('c'); ?>" pubdate="pubdate"><?php the_date('Y M d'); ?></time>
 									</li>
 								<?php endwhile; ?>

@@ -20,15 +20,15 @@ Template Name: Archive Page
 								<li>
 									<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
 									<?php if ( $format == "gallery" ) {
-										echo "<span class='gus-postformat-gallery'>Gallery</span>";
+										echo "<span class='icon-pictures'></span>";
 									} elseif ( $format == "image" ) {
-										echo "<span class='gus-postformat-image'>Single Image</span>";
+										echo "<span class='icon-camera-2'></span>";
 									} elseif ( $format == "status" ) {
 										echo "<span class='gus-postformat-aside'>Status Update</span>";
 									} elseif ( $format == "aside" ) {
 										echo "<span class='gus-postformat-aside'>Aside</span>";
 									} elseif ( $format == "video" ) {
-										echo "<span class='gus-postformat-aside'>Video</span>";
+										echo "<span class='icon-camera'></span>";
 									} ?>
 									<time datetime="<?php the_time('c'); ?>" pubdate="pubdate"><?php the_date('Y M d'); ?></time>
 								</li>
