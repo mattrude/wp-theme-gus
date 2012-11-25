@@ -140,26 +140,27 @@
 .icon-feed-3:before {
   content: "\e01a";
 }
-.icon-github-4:before {
-  content: "\e01b";
-}
-.icon-github-5:before {
-  content: "\e01c";
-}
-.icon-github-6:before {
-  content: "\e01d";
-}
 .icon-pictures:before {
   content: "\e01e";
 }
-.icon-picture:before {
+.icon-type-gallery:before {
   content: "\e020";
 }
-.icon-camera:before {
+.icon-type-video:before {
   content: "\e01f";
 }
-.icon-camera-2:before {
+.icon-type-image:before {
   content: "\e022";
+}
+.icon-type-aside:before {
+  content: "\e023";
+}
+.icon-type-status:before {
+  content: "\e01c";
+}
+.icon-type-standard:before {
+  content: "\e01b";
+  padding: 0 1.5px 0 1.5px;
 }
 /* =============================================================================
    HTML5 element display
