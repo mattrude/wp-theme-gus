@@ -63,7 +63,8 @@
 									<!--Starting "The Loop"-->
 									<li>
 										<a href="<?php the_permalink() ?>" rel="bookmark" title="Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-                                        <?php if ( $format == "gallery" ) {
+                                        <?php $format = get_post_format();
+                                        if ( $format == "gallery" ) {
                                             echo "<span class='icon-pictures'></span>";
                                         } elseif ( $format == "image" ) {
                                             echo "<span class='icon-camera-2'></span>";
