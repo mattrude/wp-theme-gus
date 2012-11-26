@@ -521,18 +521,6 @@ a, a:visited {
   width: 60%;
   padding: 0 60px 0 0;
 }
-#home-gallery {
-  float: right;
-  width: 30%;
-}
-#home-gallery-text {
-  text-align: right;
-  font-size: 0.8em;
-  margin-right: 16px;
-}
-#home-gallery-text p {
-  margin-top: 0;
-}
 #dsq-global-toolbar, .dsq-trackback-url {
   display: none;
 }
@@ -583,10 +571,22 @@ a, a:visited {
 #home h3 {
   margin: 0.5em 0;
 }
+#home-gallery {
+  float: right;
+  width: 30%;
+}
 #home-gallery img {
   margin-bottom: 10px;
   vertical-align: middle;
   text-align: center;
+}
+#home-gallery-text {
+  text-align: right;
+  font-size: 0.8em;
+  margin-right: 16px;
+}
+#home-gallery-text p {
+  margin-top: 0;
 }
 ul.posts {
   list-style-type: circle;
