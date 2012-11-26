@@ -32,6 +32,9 @@
 @link-color: #12C;
 @link-color-visited: #61C;
 @link-color-hover: #c00;
+@list-color-odd: #fff;
+@list-color-even: #e7e7de;
+@border-color: #e2e2e2;
 
 // Fonts
 @font-family: 'Open Sans', sans-serif;
@@ -873,25 +876,25 @@ p.comments-closed {
 	    overflow: hidden;
 	    margin: 20px 0;
 	    padding: 0 0 20px 0;
-	    border-bottom: 1px solid #e2e2e2;
+	    border-bottom: 1px solid @border-color;
 	    list-style: none outside none;
 	}
     li.depth-2 {
         margin: 15px 0 0 40px;
         padding: 5px;
-        background: #e7e7de;
+        background: @list-color-even;
 	    list-style: none outside none;
 	}
     li.depth-3, li.depth-5, li.depth-7, li.depth-9 {
 	    margin: 15px 0 0 15px;
 	    padding: 5px;
-	    background: #fff;
+	    background: @list-color-odd;
 	    list-style: none outside none;
 	}
     li.depth-4, li.depth-6, li.depth-8, li.depth-10 {
 	    margin: 15px 0 0 15px;
 	    padding: 5px;
-	    background: #e7e7de;
+	    background: @list-color-even;
 	    list-style: none outside none;
 	}
 }
@@ -903,42 +906,13 @@ p.comments-closed {
 	float: left;
 	margin: 0 10px 0 0;
 	padding: 4px;
-	border: 1px solid #e2e2e2;
+	border: 1px solid @border-color;
 	}
-li.depth-1 img {
-	background: #e7e7de;
+li.depth-1 img, li.depth-3 img, li.depth-5 img, li.depth-7 img, li.depth-9 img {
+	background: @list-color-even;
 	}
-li.depth-2 img {
-	background: #FFF;
-	}
-li.depth-3 img {
-	background: #e7e7de;
-	background: #e7e7de;
-	}
-li.depth-4 img {
-	background: #FFF;
-	}
-li.depth-5 img {
-	background: #e7e7de;
-	}
-li.depth-6 img {
-	background: #FFF;
-	}
-li.depth-7 img {
-	background: #e7e7de;
-	}
-li.depth-8 img {
-	background: #FFF;
-	}
-li.depth-9 img {
-	background: #e7e7de;
-	}
-li.depth-10 img {
-	background: #FFF;
-	}
-
-.rsswidget img {
-	background: #FFF !important;
+li.depth-2 img, li.depth-4 img, li.depth-6 img, li.depth-8 img, li.depth-10 img {
+	background: @list-color-odd;
 	}
 
 /* Comment meta data */
@@ -1007,7 +981,7 @@ a.comment-link:hover {
 	margin: 0 0 10px 0;
 	padding: 0 6px 9px 6px;
 	font: normal normal bold;
-	border-bottom: 1px solid #e2e2e2;
+	border-bottom: 1px solid @border-color;
 	}
 .trackback {
 	-moz-background-clip:border;
@@ -1031,7 +1005,7 @@ a.comment-link:hover {
 	}
 .related-entries h3 {
 	padding: 15px 0 0 0;
-	border-bottom: 1px solid #e2e2e2
+	border-bottom: 1px solid @border-color 
 	}
 .related-entries p {
 	margin: 0;

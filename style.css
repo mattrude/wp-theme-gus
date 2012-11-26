@@ -1179,7 +1179,7 @@ p.comments-closed {
 #comments li.depth-9 {
   margin: 15px 0 0 15px;
   padding: 5px;
-  background: #fff;
+  background: #ffffff;
   list-style: none outside none;
 }
 #comments li.depth-4,
@@ -1201,39 +1201,19 @@ p.comments-closed {
   padding: 4px;
   border: 1px solid #e2e2e2;
 }
-li.depth-1 img {
-  background: #e7e7de;
-}
-li.depth-2 img {
-  background: #FFF;
-}
-li.depth-3 img {
-  background: #e7e7de;
-  background: #e7e7de;
-}
-li.depth-4 img {
-  background: #FFF;
-}
-li.depth-5 img {
-  background: #e7e7de;
-}
-li.depth-6 img {
-  background: #FFF;
-}
-li.depth-7 img {
-  background: #e7e7de;
-}
-li.depth-8 img {
-  background: #FFF;
-}
+li.depth-1 img,
+li.depth-3 img,
+li.depth-5 img,
+li.depth-7 img,
 li.depth-9 img {
   background: #e7e7de;
 }
+li.depth-2 img,
+li.depth-4 img,
+li.depth-6 img,
+li.depth-8 img,
 li.depth-10 img {
-  background: #FFF;
-}
-.rsswidget img {
-  background: #FFF !important;
+  background: #ffffff;
 }
 /* Comment meta data */
 #comments .comment-meta {
