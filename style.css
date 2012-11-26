@@ -466,10 +466,7 @@ header a:visited,
   color: #fff;
   text-decoration: none;
 }
-header a:hover,
-footer a:hover,
-#about a:hover,
-#about a:active {
+header a:hover, #about a:hover, #about a:active {
   color: #bfbfbf;
   text-decoration: none;
 }
@@ -697,36 +694,36 @@ blockquote footer a, blockquote footer a:visited, blockquote footer a:hover {
 .sharing {
   margin: 0 0 10px;
 }
-#footer ul, #footer ol {
-  padding: 0 0 0 20px;
+#footer {
+  background-color: #272727;
 }
-#page-footer h3 {
+#page-footer h3, #page-footer-index h3 {
   margin-top: 0;
   padding-top: 20px;
 }
 #page-footer a,
-#page-footer a:visited,
 #page-footer-index a,
+#page-footer a:visited,
 #page-footer-index a:visited {
   color: #ffffff;
   text-decoration: none;
 }
 #page-footer a:hover, #page-footer-index a:hover {
-  color: #ffffff;
   text-decoration: underline;
 }
-#footer {
-  background-color: #272727;
+#page-footer ul,
+#page-footer-index ul,
+#page-footer ol,
+#page-footer-index ol {
+  padding: 0 0 0 20px;
 }
 #footer-top {
   display: block;
   color: #bfbfbf;
-  font-size: 11px;
+  font-size: 0.8em;
   min-width: 500px;
-  font-size: 11px;
   max-width: 770px;
   margin: auto;
-  padding: 20px auto;
 }
 .footer-widget {
   float: left;

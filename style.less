@@ -251,7 +251,7 @@ header a, header a:visited, #about a, #about a:visited {
   color: #fff; text-decoration: none;
 }
 
-header a:hover, footer a:hover, #about a:hover, #about a:active { color: @font-color-header; text-decoration: none; }
+header a:hover, #about a:hover, #about a:active { color: @font-color-header; text-decoration: none; }
 
 #header-image { float: right; margin: 10px 0; width: 60%;}
 #main {
@@ -494,30 +494,33 @@ blockquote footer a, blockquote footer a:visited, blockquote footer a:hover {
 	margin: 0 0 10px;
 }
 
-#footer ul, #footer ol {
-    padding: 0 0 0 20px;
-}
-#page-footer h3 { margin-top: 0; padding-top: 20px; }
-
-#page-footer a, #page-footer a:visited, #page-footer-index a, #page-footer-index a:visited {
-	color: @page-footer-link; text-decoration: none;
-}
-#page-footer a:hover, #page-footer-index a:hover {
-	color: @page-footer-link; text-decoration: underline;
-}
 #footer {
 	background-color: @page-color-sub;
+}
+#page-footer, #page-footer-index {
+    h3 { 
+        margin-top: 0; 
+        padding-top: 20px;
+    }
+    a, a:visited {
+	    color: @page-footer-link; 
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    ul, ol {
+        padding: 0 0 0 20px;
+    }
 }
 
 #footer-top {
 	display: block;
 	color: @font-color-header;
-    font-size: 11px;
+    font-size: 0.8em;
     min-width: 500px;
-    font-size: 11px;
 	max-width: @page-width;
 	margin: auto;
-	padding: 20px auto;
 }
 
 .footer-widget {
