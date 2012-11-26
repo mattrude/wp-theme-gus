@@ -1,4 +1,4 @@
-		<footer id=page-footer-index>
+		<footer id=page-footer>
 			<div id=lower-footer>
 				<div id=copyright>
                 <div id='social-footer' >
