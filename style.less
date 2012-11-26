@@ -697,30 +697,46 @@ nav#nav-single {
 /* Post Formats */
 .format-status {
 	min-height: 80px;
-}
-.format-status img.avatar {
-	border-radius: 3px 3px 3px 3px;
-	box-shadow: 0 1px 2px #CCCCCC;
-	float: left;
-	margin: 4px 10px 2px 0;
-    padding: 0;
-}
-.format-status .entry-content {
-	min-height: 69px;
-}
-.format-status hr {
-	margin-bottom: 0.4em;
+    img.avatar {
+	    border-radius: 3px 3px 3px 3px;
+	    box-shadow: 0 1px 2px #CCCCCC;
+	    float: left;
+	    margin: 4px 10px 2px 0;
+        padding: 0;
+    }
+    .entry-content {
+	    min-height: 69px;
+    }
+    hr {
+	    margin-bottom: 0.4em;
+    }
 }
 
 /* Image Pages */
 #image-left { overflow: hidden; text-align: left; }
 #image-right { overflow: hidden; float: right; border-left: 1px solid #CCC; padding-left: 15px;}
-#exif { overflow: hidden; max-width: 450px; text-align: left; }
-#exif-lable { margin: 0 0 0 15px; max-width: 110px; }
-#exif-lable p { margin: 0; }
-#exif-lable span { font-weight:bold; }
-#exif-data { overflow: hidden; margin: 0; float: right; width: 300px; }
-#exif-data p { margin: 0 10px; }
+#exif { 
+    overflow: hidden;
+    max-width: 450px;
+    text-align: left;
+    &-lable {
+        margin: 0 0 0 15px;
+        max-width: 110px;
+        p { margin: 0; }
+        span { 
+            font-weight:bold;
+        }
+    }
+    &-data {
+        overflow: hidden;
+        margin: 0;
+        float: right;
+        width: 300px;
+        p {
+            margin: 0 10px;
+        }
+    }
+}
 .ac_results {
 	border: 1px solid gray;
 	background-color: white;
@@ -730,12 +746,12 @@ nav#nav-single {
 	position: absolute;
 	z-index: 10000;
 	display: none;
-}
-.ac_results li {
-	padding: 2px 5px;
-	white-space: nowrap;
-	color: #101010;
-	text-align: left;
+    li {
+	    padding: 2px 5px;
+	    white-space: nowrap;
+	    color: #101010;
+	    text-align: left;
+    }
 }
 .ac_over {
 	cursor: pointer;
@@ -747,19 +763,62 @@ nav#nav-single {
 }
 
 /* Gallery Items */
-.gallery-item {margin: auto;float: left;margin-top: 10px;text-align: center;width: 33%;}
-.gallery-caption {margin-left: 0;}
-.gallerypost {display: block;border-bottom:1px solid #CCC;margin: 0px 0px 20px 0px;padding: 20px 10px 10px 10px;overflow: hidden;}
-.gallerypost h1 {padding: 0;}
-.gallerypost_body .entry p {margin: 0px 0px 0px 0px;}
-.gallerypost_body .entry {margin: 0px 0px 0px 0px;}
-.gallerypost_main {overflow: hidden;}
-.gallerypost_sub {overflow: hidden;margin: 20px 0 0 0;padding: 0px 0px 10px 10px;}
-.gallerypost_sub p {margin: 0;}
-.gallerypost_sub_left {float: left;}
-.gallerypost_sub_right {width: 220px;float: right;}
-.gallerypost_thumbnail {float: left;padding-right: 20px;}
-.gallerypost_thumbnail img {margin: 0 0 0 10px;color: #000;}
+.gallery {
+    &-item {
+        margin: auto;
+        float: left;
+        margin-top: 10px;
+        text-align: center;
+        width: 33%;
+    }
+    &-caption {
+        margin-left: 0;
+    }
+    &post {
+        display: block;
+        border-bottom:1px solid #CCC;
+        margin: 0px 0px 20px 0px;
+        padding: 20px 10px 10px 10px;
+        overflow: hidden;
+        h1 {
+            padding: 0;
+        }
+        &_body {
+            .entry {
+                margin: 0px 0px 0px 0px;
+                p {
+                    margin: 0px 0px 0px 0px;
+                }
+            }
+        }
+        &_main {
+            overflow: hidden;
+        }
+        &_sub {
+            overflow: hidden;
+            margin: 20px 0 0 0;
+            padding: 0px 0px 10px 10px;
+            p {
+                margin: 0;
+            }
+        }
+        &_sub_left {
+            float: left;
+        }
+        &_sub_right {
+            width: 220px;
+            float: right;
+        }
+        &_thumbnail {
+            float: left;
+            padding-right: 20px;
+            img {
+                margin: 0 0 0 10px;
+                color: #000;
+            }
+        }
+    }
+}
 .taxonomy-people img {margin: 10px;}
 .taxonomy-people-gallery {width: 700px; margin: 0 auto;}
 

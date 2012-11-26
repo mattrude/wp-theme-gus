@@ -970,10 +970,10 @@ nav#nav-single.status {
 .gallerypost h1 {
   padding: 0;
 }
-.gallerypost_body .entry p {
+.gallerypost_body .entry {
   margin: 0px 0px 0px 0px;
 }
-.gallerypost_body .entry {
+.gallerypost_body .entry p {
   margin: 0px 0px 0px 0px;
 }
 .gallerypost_main {
