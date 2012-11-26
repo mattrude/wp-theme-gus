@@ -1501,15 +1501,15 @@ div.sharedaddy h3, #content div.sharedaddy h3, #main div.sharedaddy h3 {
   color: #ffffff !important;
   text-decoration: none;
 }
-a i.icon-feed-2:hover {
-  color: orange !important;
-}
 #social-footer ul {
   margin: 0;
   padding: 0;
 }
 #social-footer li {
   display: inline;
+}
+a i.icon-feed-2:hover {
+  color: orange !important;
 }
 .icon-post-title {
   margin-right: 5px;
