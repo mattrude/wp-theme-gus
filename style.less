@@ -990,42 +990,46 @@ a.comment-link:hover {
 	background:#FFFFFF none repeat scroll 0 0;
 	margin:0 0 20px;
 	overflow:hidden;
+}
+#trackback {
+    ol {
+	    list-style: none;
+	    list-style-type: clear;
 	}
-#trackback ol {
-	list-style: none;
-	list-style-type: clear;
+     li {
+	    -moz-background-clip:border;
+	    -moz-background-inline-policy:continuous;
+	    -moz-background-origin:padding;
 	}
-#trackback li {
-	-moz-background-clip:border;
-	-moz-background-inline-policy:continuous;
-	-moz-background-origin:padding;
-	}
+}
 .attr {
-        margin: -5px 0 10px 0;
+    margin: -5px 0 10px 0;
+}
+.related-entries {
+    h3 {
+	    padding: 15px 0 0 0;
+	    border-bottom: 1px solid @border-color 
 	}
-.related-entries h3 {
-	padding: 15px 0 0 0;
-	border-bottom: 1px solid @border-color 
+    p {
+	    margin: 0;
 	}
-.related-entries p {
-	margin: 0;
+    li {
+	    -moz-background-clip:border;
+	    -moz-background-inline-policy:continuous;
+	    -moz-background-origin:padding;
+	    background:transparent url(images/bullet.png) no-repeat scroll 5px 6px;
+	    padding:0 0 6px 20px;
+	    list-style-type: none;
 	}
-.related-entries li {
-	-moz-background-clip:border;
-	-moz-background-inline-policy:continuous;
-	-moz-background-origin:padding;
-	background:transparent url(images/bullet.png) no-repeat scroll 5px 6px;
-	padding:0 0 6px 20px;
-	list-style-type: none;
-	}
+}
 .txtalignleft {
 	float: left;
-        text-align: left;
-	}
+    text-align: left;
+}
 .txtalignright {
 	float: right; 
-        text-align: right;
-	}
+    text-align: right;
+}
 
 .entry-content img,
 .comment-content img,
