@@ -798,6 +798,7 @@ a.about {
 nav#nav-single {
   margin-top: -60px;
   float: right;
+  font-size: 0.8em;
 }
 nav#nav-single h3 {
   margin: 0px;
