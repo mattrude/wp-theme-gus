@@ -1339,7 +1339,18 @@ img[class*="align"], img[class*="wp-image-"], img[class*="attachment-"] {
     padding: 0;
   }
 }
+@media (max-width: 700px) {
+  dl.gallery-item {
+    width: 50%;
+  }
+}
 @media (max-width: 685px) {
+  .content,
+  #copyright .group,
+  #meta .group,
+  #about .group {
+    margin: 0 5px;
+  }
   #header-image, #home-gallery {
     display: none;
   }
@@ -1349,6 +1360,12 @@ img[class*="align"], img[class*="wp-image-"], img[class*="attachment-"] {
 }
 /* Smartphones (portrait) */
 @media only screen and (max-width: 480px) and (min-width: 0px) {
+  .content,
+  #copyright .group,
+  #meta .group,
+  #about .group {
+    margin: 0 5px;
+  }
   header span, header b, footer .rss {
     display: none;
   }
@@ -1364,9 +1381,9 @@ img[class*="align"], img[class*="wp-image-"], img[class*="attachment-"] {
   #home ul.posts li span.featured, #home ul.posts li .extra {
     font-size: 10px;
   }
-  .gallery-item {
+  dl.gallery-item {
     float: none;
-    width: auto;
+    width: 100%;
   }
 }
 /* =============================================================================

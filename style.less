@@ -1122,7 +1122,16 @@ img[class*="attachment-"] {
 	}
 }
 
+@media ( max-width: 700px ) {
+    dl.gallery-item {
+        width: 50%;
+    }
+}
+
 @media ( max-width: 685px ) {
+    .content, #copyright .group, #meta .group, #about .group {
+        margin: 0 5px;
+    }
 	#header-image, #home-gallery {
 		display: none;
 	}
@@ -1130,8 +1139,12 @@ img[class*="attachment-"] {
 		width: 100%
 	}
 }
+
 /* Smartphones (portrait) */
 @media only screen and (max-width: 480px) and (min-width: 0px) {
+    .content, #copyright .group, #meta .group, #about .group {
+        margin: 0 5px;
+    }
     header span, header b, footer .rss { display: none; }
     footer #footer {
         display: none;
@@ -1143,9 +1156,9 @@ img[class*="attachment-"] {
         span.featured, .extra { font-size: 10px; }
     }
 
-    .gallery-item {
+    dl.gallery-item {
         float: none;
-        width: auto;
+        width: 100%;
     }
 }
 
