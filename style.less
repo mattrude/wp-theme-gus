@@ -263,11 +263,9 @@ header a:hover, #about a:hover, #about a:active { color: @font-color-header; tex
 h1 {
   margin-top: 0;
   padding-top: 0.5em;
-}
-
-h1 a,h1 a:visited {
-  color: #333;
-  text-decoration: none;
+  a, a:visited {
+    color: #333;
+  }
 }
 
 a:hover {
@@ -355,45 +353,41 @@ a, a:visited {
   padding: 1em 2em;
 }
 
-#home ul.posts {
-  list-style-type: none;
-  padding-left: 0;
+#home {
+  ul.posts {
+    list-style-type: none;
+    padding-left: 0;
+    li {
+      border-bottom: 1px solid #DDD;
+      padding: 3px 0 2px 0;
+    }
+    li time, li .extra, li span.featured {
+      color: #999;
+      display: inline-block;
+      font-family: 'Lucida Sans Typewriter', Monaco, 'Courier', 'Courier New', monospace;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    li .extra, li time { float:right; }
+  }
+  .featured {
+    padding: 1px 1em;
+    background: #eee;
+    border-radius: 5px;
+    margin-left: 1em;
+  }
+  ul li a {
+    text-decoration: none;
+  }
+  .more {
+    float:right;
+    font-size: 13px;
+  }
+  h3 {
+    margin: 0.5em 0;
+  }
 }
 
-#home ul.posts li {
-  border-bottom: 1px solid #DDD;
-  padding: 3px 0 2px 0;
-}
-
-#home ul.posts li time, #home ul.posts li .extra, #home ul.posts li span.featured {
-  color: #999;
-  display: inline-block;
-  font-family: 'Lucida Sans Typewriter', Monaco, 'Courier', 'Courier New', monospace;
-  font-size: 12px;
-  white-space: nowrap;
-}
-
-#home ul.posts li .extra, #home ul.posts li time { float:right; }
-
-#home .featured {
-  padding: 1px 1em;
-  background: #eee;
-  border-radius: 5px;
-  margin-left: 1em;
-}
-
-#home ul li a {
-  text-decoration: none;
-}
-
-#home .more {
-  float:right;
-  font-size: 13px;
-}
-
-#home h3 {
-  margin: 0.5em 0;
-}
 #home-gallery img {
 	margin-bottom: 10px;
 	vertical-align: middle;
