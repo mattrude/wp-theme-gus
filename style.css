@@ -536,28 +536,6 @@ a, a:visited {
 #dsq-global-toolbar, .dsq-trackback-url {
   display: none;
 }
-#meta {
-  background: #272727;
-  color: #858585;
-  max-height: 275px;
-}
-#meta a {
-  color: #bfbfbf;
-}
-#meta a.postlink {
-  font-size: 13px;
-}
-#meta a:hover {
-  color: #fff;
-  text-decoration: underline;
-}
-#meta a.archive {
-  font-size: 13px;
-  text-decoration: none;
-}
-#meta h3 {
-  margin: 0;
-}
 #personal {
   font-size: 15px;
   font-weight: 400;
