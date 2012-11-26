@@ -18,7 +18,6 @@
 @about-box-height: 275px;
 @body-font-size: 16px;
 @byline-font-size: 13px;
-@meta-font-size: @byline-font-size;
 
 // Locations
 @fontdir: 'inc/fonts';
@@ -329,56 +328,58 @@ a, a:visited {
 
 #home {
   ul.posts {
-    list-style-type: none;
-    padding-left: 0;
-    li {
-      border-bottom: 1px solid #DDD;
-      padding: 3px 0 2px 0;
+        list-style-type: none;
+        padding-left: 0;
+        li {
+            border-bottom: 1px solid #DDD;
+            padding: 3px 0 2px 0;
+        }
+        li time, li .extra, li span.featured {
+            color: #999;
+            display: inline-block;
+            font-family: 'Lucida Sans Typewriter', Monaco, 'Courier', 'Courier New', monospace;
+            font-size: 12px;
+            white-space: nowrap;
+        }
+        li .extra, li time {
+            float:right;
+        }
     }
-    li time, li .extra, li span.featured {
-      color: #999;
-      display: inline-block;
-      font-family: 'Lucida Sans Typewriter', Monaco, 'Courier', 'Courier New', monospace;
-      font-size: 12px;
-      white-space: nowrap;
+    .featured {
+        padding: 1px 1em;
+        background: #eee;
+        border-radius: 5px;
+        margin-left: 1em;
     }
-    li .extra, li time { float:right; }
-  }
-  .featured {
-    padding: 1px 1em;
-    background: #eee;
-    border-radius: 5px;
-    margin-left: 1em;
-  }
-  ul li a {
-    text-decoration: none;
-  }
-  .more {
-    float:right;
-    font-size: 13px;
-  }
-  h3 {
-    margin: 0.5em 0;
-  }
+    ul li a {
+        text-decoration: none;
+    }
+    .more {
+        float:right;
+        font-size: 13px;
+    }
+    h3 {
+        margin: 0.5em 0;
+    }
+    &-gallery {
+        float: right;
+        width: 30%;
+        img {
+	        margin-bottom: 10px;
+	        vertical-align: middle;
+	        text-align: center;
+        }
+    }
+    &-gallery-text {
+        text-align: right;
+        font-size: 0.8em;
+        margin-right: 16px;
+        p {
+            margin-top: 0;
+        }
+    }
 }
 
-#home-gallery {
-    float: right;
-    width: 30%;
-    img {
-	    margin-bottom: 10px;
-	    vertical-align: middle;
-	    text-align: center;
-    }
-}
-#home-gallery-text {
-    text-align: right;
-    font-size: 0.8em;
-    margin-right: 16px;
-    p {
-        margin-top: 0;
-    }
-}
 ul.posts {
   list-style-type:circle;
 }
