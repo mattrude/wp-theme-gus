@@ -1126,9 +1126,11 @@ nav#nav-single.status {
  *********************/
 header .content {
   width: 770px;
+  line-height: 1.5em;
 }
 .menu-header {
   float: right;
+  font-size: 0.8em;
 }
 .menu-header ul {
   margin: 0px;
