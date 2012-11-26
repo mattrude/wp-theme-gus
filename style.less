@@ -766,14 +766,16 @@ nav#nav-single.status {
   margin-right: 0.5em;
 }
 
-#icons a.facebook {background-position:0px 0px}
-#icons a.linkedin {background-position:0px -32px}
-#icons a.twitter  {background-position:0px -64px}
-#icons a.google   {background-position:0px -96px}
-#icons a.github   {background-position:0px -128px}
-#icons a.flickr   {background-position:0px -160px}
-#icons a.email    {background-position:0px -192px}
-#icons a.vimeo    {background-position:0px -224px}
+#icons {
+  a.facebook {background-position:0px 0px}
+  a.linkedin {background-position:0px -32px}
+  a.twitter  {background-position:0px -64px}
+  a.google   {background-position:0px -96px}
+  a.github   {background-position:0px -128px}
+  a.flickr   {background-position:0px -160px}
+  a.email    {background-position:0px -192px}
+  a.vimeo    {background-position:0px -224px}
+}
 
 /* =============================================================================
    Non-semantic helper classes
@@ -832,17 +834,15 @@ header .content {
 .menu-header {
 	float: right;
     font-size: 0.8em;
-}
-
-.menu-header ul {
-	margin: 0px;
-	list-style: none;
-}
-
-.menu-header li {
-	position: relative;
-	float: left;
-	margin: 0 5px;
+    ul {
+	  margin: 0px;
+	  list-style: none;
+    }
+    li {
+	  position: relative;
+	  float: left;
+	  margin: 0 5px;
+    }
 }
 
 /**
@@ -856,11 +856,6 @@ header .content {
 	border: 1px solid #e7e7e7;
 	font: normal normal bold arial, verdana, sans-serif;
 	}
-#comments ol {
-	list-style: none;
-	margin-left: 0;
-	padding: 0;
-	}
 p.comments-closed {
 	padding: 19px;
 	}
@@ -868,31 +863,38 @@ p.comments-closed {
 	border: none;
 	padding: 0;
 	}
-#comments li.depth-1 {
-	overflow: hidden;
-	margin: 20px 0;
-	padding: 0 0 20px 0;
-	border-bottom: 1px solid #e2e2e2;
-	list-style: none outside none;
+#comments {
+    ol {
+	    list-style: none;
+	    margin-left: 0;
+	    padding: 0;
 	}
-#comments li.depth-2 {
-    margin: 15px 0 0 40px;
-    padding: 5px;
-    background: #e7e7de;
-	list-style: none outside none;
+    li.depth-1 {
+	    overflow: hidden;
+	    margin: 20px 0;
+	    padding: 0 0 20px 0;
+	    border-bottom: 1px solid #e2e2e2;
+	    list-style: none outside none;
 	}
-#comments li.depth-3, li.depth-5, li.depth-7, li.depth-9 {
-	margin: 15px 0 0 15px;
-	padding: 5px;
-	background: #fff;
-	list-style: none outside none;
+    li.depth-2 {
+        margin: 15px 0 0 40px;
+        padding: 5px;
+        background: #e7e7de;
+	    list-style: none outside none;
 	}
-#comments li.depth-4, li.depth-6, li.depth-8, li.depth-10 {
-	margin: 15px 0 0 15px;
-	padding: 5px;
-	background: #e7e7de;
-	list-style: none outside none;
+    li.depth-3, li.depth-5, li.depth-7, li.depth-9 {
+	    margin: 15px 0 0 15px;
+	    padding: 5px;
+	    background: #fff;
+	    list-style: none outside none;
 	}
+    li.depth-4, li.depth-6, li.depth-8, li.depth-10 {
+	    margin: 15px 0 0 15px;
+	    padding: 5px;
+	    background: #e7e7de;
+	    list-style: none outside none;
+	}
+}
 .comment ul {
 	padding: 0px;
 }

@@ -1148,16 +1148,16 @@ header .content {
   border: 1px solid #e7e7e7;
   font: normal normal bold arial, verdana, sans-serif;
 }
-#comments ol {
-  list-style: none;
-  margin-left: 0;
-  padding: 0;
-}
 p.comments-closed {
   padding: 19px;
 }
 #comments-template p.comments-closed {
   border: none;
+  padding: 0;
+}
+#comments ol {
+  list-style: none;
+  margin-left: 0;
   padding: 0;
 }
 #comments li.depth-1 {
@@ -1174,18 +1174,18 @@ p.comments-closed {
   list-style: none outside none;
 }
 #comments li.depth-3,
-li.depth-5,
-li.depth-7,
-li.depth-9 {
+#comments li.depth-5,
+#comments li.depth-7,
+#comments li.depth-9 {
   margin: 15px 0 0 15px;
   padding: 5px;
   background: #fff;
   list-style: none outside none;
 }
 #comments li.depth-4,
-li.depth-6,
-li.depth-8,
-li.depth-10 {
+#comments li.depth-6,
+#comments li.depth-8,
+#comments li.depth-10 {
   margin: 15px 0 0 15px;
   padding: 5px;
   background: #e7e7de;
