@@ -718,6 +718,7 @@ blockquote footer a, blockquote footer a:visited, blockquote footer a:hover {
 }
 #lower-footer {
   background-color: #000000;
+  font-size: 0.8em;
 }
 #copyright {
   color: #bfbfbf;
