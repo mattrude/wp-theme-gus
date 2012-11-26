@@ -1190,8 +1190,13 @@ div.sharedaddy .sd-content {
   width: 780px !important;
   float: center !important;
 }
-div.sharedaddy h3, #content div.sharedaddy h3, #main div.sharedaddy h3, #primary div.sharedaddy h3 {
-  width: 0px !important;
+
+// Hide the shardaddy sharing icons when the screen shreaks
+div.sharedaddy, #content div.sharedaddy, #main div.sharedaddy {
+    overflow: hidden;
+    h3 {
+        width: 0px !important;
+    }
 }
 
 /*
