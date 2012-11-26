@@ -1508,9 +1508,6 @@ div.sharedaddy h3, #content div.sharedaddy h3, #main div.sharedaddy h3 {
 #social-footer li {
   display: inline;
 }
-a i.icon-feed-2:hover {
-  color: orange !important;
-}
 .icon-post-title {
   margin-right: 5px;
 }
