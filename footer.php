@@ -1,6 +1,6 @@
 		<footer id=page-footer>
-			<div id=footer>
-			<div id=footer-top>
+			<div id='footer-top'>
+			<div class='content'>
 				<?php if ( is_active_sidebar( 'top-widget-area' ) ) {
 					echo "<div id=top-widget class=footer-widget>";
 						dynamic_sidebar( 'top-widget-area' );
@@ -17,23 +17,24 @@
 					echo "</div>";
 				}
 				if ( is_active_sidebar( 'right-widget-area' ) ) {
-					echo "<div id=right-widget class=footer-widget>";
+					echo "<div id=right-widget class='footer-widget right-footer'>";
 						dynamic_sidebar( 'right-widget-area' );
 					echo "</div>";
 				}
 				if ( is_active_sidebar( 'bottom-widget-area' ) ) {
-					echo "<div id=bottom-widget class=top-footer-widget>";
+					echo "<div id=bottom-widget class=bottom-footer-widget>";
 						dynamic_sidebar( 'bottom-widget-area' );
 					echo "</div>";
 				} ?>
+			</div> <!-- closing id footer top content -->
 			</div>
 			<div id=lower-footer>
-				<div id=copyright >
+				<div class=content >
 				<?php $siteowner=get_userdata(get_option('gus_siteowner'));
 				if ( $siteowner == NULL ) {
 					$siteowner=get_userdata( "1" );
 				} ?>
-                <div id='social-footer' >
+                <div class='social-icons' >
                     <ul>
                         <li><a rel=me target="_blank" href="http://twitter.com/<?php echo $siteowner->twitter; ?>"><i class="icon-twitter-2"></i></a></li>
                         <li><a rel=me target="_blank" href="http://facebook.com/<?php echo $siteowner->facebook; ?>"><i class="icon-facebook-2"></i></a></li>
@@ -61,7 +62,6 @@
                         <div><small>Theme: <a href='https://github.com/mattrude/wp-theme-gus/#readme'>Gus</a> - Proudly powered by <a href="http://wordpress.org/" title="Semantic Personal Publishing Platform" rel="generator">WordPress</a>.</small></div>
                     <?php } ?>
                 <?php $siteowner=get_userdata(get_option('gus_siteowner')); ?>
-				</div> <!-- closing id copyright -->
 			</div> <!-- closing id lower-footer -->
 			</div> <!-- closing id footer -->
 		<?php wp_footer(); ?>

@@ -441,10 +441,7 @@ table {
   /*min-width: 40em;*/
 
 }
-.content,
-#copyright .group,
-#meta .group,
-#about .group {
+.content, #meta .group, #about .group {
   max-width: 770px;
   margin: 0 auto;
 }
@@ -671,9 +668,6 @@ blockquote footer a, blockquote footer a:visited, blockquote footer a:hover {
 .sharing {
   margin: 0 0 10px;
 }
-#footer {
-  background-color: #272727;
-}
 #page-footer h3 {
   margin-top: 0;
   padding-top: 20px;
@@ -689,43 +683,66 @@ blockquote footer a, blockquote footer a:visited, blockquote footer a:hover {
   padding: 0 0 0 20px;
 }
 #footer-top {
+  background-color: #272727;
+}
+#footer-top .content {
   display: block;
   color: #bfbfbf;
   font-size: 0.8em;
   min-width: 500px;
   max-width: 770px;
   margin: auto;
+  padding: 0 0 5px 0;
 }
-.footer-widget {
+#footer-top .tagcloud {
+  line-height: 2em;
+  margin-bottom: 0;
+}
+#footer-top .right-widget {
+  float: right;
+}
+#footer-top .footer-widget {
   float: left;
   width: 32%;
+  height: 300px;
 }
-#right-widget {
-  float: right;
-  margin-bottom: 35px;
-}
-.random-image p {
-  margin: 0;
-}
-.footer-index {
+#footer-top .footer-index {
   margin: 20px 0;
+}
+#footer-top .random-image {
+  line-height: 1.5em;
+}
+#footer-top .random-image p {
+  margin: 0;
 }
 #lower-footer {
   background-color: #000000;
   font-size: 0.8em;
 }
-#copyright {
+#lower-footer .content {
   color: #bfbfbf;
   margin: auto;
   padding: 10px 0;
   max-width: 770px;
 }
-.random-image {
-  line-height: 1.5em;
+#lower-footer .social-icons {
+  float: right;
+  font-size: 26px;
 }
-.tagcloud {
-  line-height: 2em;
-  margin-bottom: 20px;
+#lower-footer .social-icons a {
+  color: #bfbfbf !important;
+  display: inline-block;
+}
+#lower-footer .social-icons a:hover {
+  color: #ffffff !important;
+  text-decoration: none;
+}
+#lower-footer .social-icons ul {
+  margin: 0;
+  padding: 0;
+}
+#lower-footer .social-icons li {
+  display: inline;
 }
 img.left {
   float: left;
@@ -1471,27 +1488,6 @@ div.sharedaddy h3, #content div.sharedaddy h3, #main div.sharedaddy h3 {
   margin: 0 0 15px 15px;
   padding: 5px;
   border: 1px solid #AAA;
-}
-/* Social footer */
-#social-footer {
-  color: #bfbfbf;
-  float: right;
-  font-size: 26px;
-}
-#social-footer a {
-  color: #bfbfbf !important;
-  display: inline-block;
-}
-#social-footer a:hover {
-  color: #ffffff !important;
-  text-decoration: none;
-}
-#social-footer ul {
-  margin: 0;
-  padding: 0;
-}
-#social-footer li {
-  display: inline;
 }
 .icon-post-title {
   margin-right: 5px;

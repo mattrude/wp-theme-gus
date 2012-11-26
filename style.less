@@ -230,7 +230,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 #container {
     /*min-width: 40em;*/
 }
-.content, #copyright .group, #meta .group, #about .group {
+.content, #meta .group, #about .group {
   max-width: @page-width;
   margin: 0 auto;
 }
@@ -475,9 +475,6 @@ blockquote footer a, blockquote footer a:visited, blockquote footer a:hover {
 	margin: 0 0 10px;
 }
 
-#footer {
-	background-color: @page-color-sub;
-}
 #page-footer {
     h3 { 
         margin-top: 0; 
@@ -496,52 +493,67 @@ blockquote footer a, blockquote footer a:visited, blockquote footer a:hover {
 }
 
 #footer-top {
-	display: block;
-	color: @font-color-header;
-    font-size: 0.8em;
-    min-width: 500px;
-	max-width: @page-width;
-	margin: auto;
-}
-
-.footer-widget {
-	float: left;
-	width: 32%;
-}
-
-#right-widget {
-	float: right;
-    margin-bottom: 35px;
-}
-
-.random-image p {
-	margin: 0;
-}
-
-.footer-index {
-	margin: 20px 0;
+	background-color: @page-color-sub;
+    .content {
+	    display: block;
+	    color: @font-color-header;
+        font-size: 0.8em;
+        min-width: 500px;
+	    max-width: @page-width;
+	    margin: auto;
+        padding: 0 0 5px 0;
+    }
+    .tagcloud {
+	    line-height: 2em;
+        margin-bottom: 0;
+    }
+    .right-widget {
+	    float: right;
+    }
+    .footer-widget {
+	    float: left;
+	    width: 32%;
+        height: 300px;
+    }
+    .footer-index {
+	    margin: 20px 0;
+    }
+    .random-image {
+	    line-height: 1.5em;
+        p { margin: 0; }
+    }
 }
 
 #lower-footer {
 	background-color: @page-color-header;
     font-size: 0.8em;
+    .content {
+	    color: @font-color-header;
+	    margin: auto;
+	    padding: 10px 0;
+	    max-width: @page-width;
+    }
+    .social-icons {
+        float: right;
+        font-size: 26px;
+        a {
+            color: @font-color-footer !important;
+            display: inline-block;
+        }
+        a:hover {
+            color: @page-footer-link !important;
+            text-decoration: none;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            display: inline;
+        }
+    }
 }
 
-#copyright {
-	color: @font-color-header;
-	margin: auto;
-	padding: 10px 0;
-	max-width: @page-width;
-}
-
-.random-image {
-	line-height: 1.5em;
-}
-
-.tagcloud {
-	line-height: 2em;
-	margin-bottom: 20px;
-}
 
 img.left {
   float: left;
@@ -1221,28 +1233,6 @@ content: "";
     margin: 0 0 15px 15px;
     padding: 5px;
     border: 1px solid #AAA;
-}
-
-/* Social footer */
-#social-footer {
-    color: @font-color-footer;
-    float: right;
-    font-size: 26px;
-    a {
-        color: @font-color-footer !important;
-        display: inline-block;
-    }
-    a:hover {
-        color: @page-footer-link !important;
-        text-decoration: none;
-    }
-    ul {
-        margin: 0;
-        padding: 0;
-    }
-    li {
-        display: inline;
-    }
 }
 
 .icon-post-title {

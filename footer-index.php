@@ -1,11 +1,11 @@
 		<footer id=page-footer>
 			<div id=lower-footer>
-				<div id=copyright>
-                <div id='social-footer' >
-                    <ul>
-                        <li><a href="/feed"><span class="icon-feed-2"></span></a></li>
-                    </ul>
-                </div> <!-- closing id social -->
+				<div class='content'>
+                    <div class='social-icons' >
+                        <ul>
+                            <li><a href="/feed"><span class="icon-feed-2"></span></a></li>
+                        </ul>
+                    </div> <!-- closing id social -->
 					<span>Copyright &copy; <?php echo get_option('gus_copy_year'); ?> - <?php echo date("Y") ?> by <?php
 						$siteowner=get_userdata(get_option('gus_siteowner'));
 						if ( $siteowner == NULL ) {
@@ -27,8 +27,8 @@
                     <?php } ?>
 				</div>
 			</div>
-		<?php wp_footer(); ?>
 		</footer>
 	</div><!-- closing id container -->
+	<?php wp_footer(); ?>
 </body><!-- closing body -->
 </html>
