@@ -1355,23 +1355,18 @@ img[class*="align"], img[class*="wp-image-"], img[class*="attachment-"] {
   footer #footer {
     display: none;
   }
-  #meta .group, #about .group {
-    background: #272727;
-  }
-  #meta {
-    max-height: none;
-  }
-  #meta a.postlink {
+  #home ul.posts li {
     font-size: 12px;
   }
   #home ul.posts li time {
     display: none;
   }
-  #home ul.posts li {
-    font-size: 12px;
-  }
   #home ul.posts li span.featured, #home ul.posts li .extra {
     font-size: 10px;
+  }
+  .gallery-item {
+    float: none;
+    width: auto;
   }
 }
 /* =============================================================================

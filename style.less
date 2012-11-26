@@ -1132,17 +1132,21 @@ img[class*="attachment-"] {
 }
 /* Smartphones (portrait) */
 @media only screen and (max-width: 480px) and (min-width: 0px) {
-  header span, header b, footer .rss { display: none; }
-  footer #footer {
-	  display: none;
-  }
-  #meta .group, #about .group { background: @page-color-sub; }
-  #meta { max-height:none; }
-  #meta a.postlink { font-size:12px; }
+    header span, header b, footer .rss { display: none; }
+    footer #footer {
+        display: none;
+    }
 
-  #home ul.posts li time { display:none; }
-  #home ul.posts li { font-size: 12px; }
-  #home ul.posts li span.featured, #home ul.posts li .extra { font-size: 10px; }
+    #home ul.posts li {
+        font-size: 12px;
+        time { display:none; }
+        span.featured, .extra { font-size: 10px; }
+    }
+
+    .gallery-item {
+        float: none;
+        width: auto;
+    }
 }
 
 /* =============================================================================
