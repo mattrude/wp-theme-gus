@@ -58,6 +58,8 @@ function gus_setup() {
 	  )
 	);
 
+    // Fix removal of oEmbed width options in 3.5
+    if ( ! isset( $content_width ) ) $content_width = 770;
 }
 
 // Add Matt's Community Tags plugin to theme
@@ -120,7 +122,6 @@ function tableofcontents_init() {
  * Tell WordPress to run milly_setup() when the 'after_setup_theme' hook is run.
  */
 add_action( 'after_setup_theme', 'gus_setup' );
-
 
 // Deregister the JetPack Widgets css
 add_action( 'wp_print_styles', 'jetpack_deregister_styles', 100 );
