@@ -14,6 +14,12 @@
                             echo single_cat_title();
                             echo "</h3>";
                             echo category_description();
+                        } elseif ( is_tax() ) {
+                            $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
+                            echo "<h3 style=padding-top:0.75em>Posts of the type: ";
+                            echo $term->name;
+                            echo "</h3>";
+                            echo "<p>$term->description</p>";
 						} else {
 							 _e( 'Blog Archives', 'twentyeleven' );
 						    echo "<h3 style=padding-top:0.75em>Archive Posts</a></h3>";
