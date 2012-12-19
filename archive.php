@@ -10,7 +10,7 @@
 						} elseif ( is_year() ) {
 							printf( __( 'Yearly Archives: %s', 'twentyeleven' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'twentyeleven' ) ) . '</span>' );
                         } elseif ( is_category() ) {
-                            echo "<h3 style=padding-top:0.75em>Category ";
+                            echo "<h3 style=padding-top:0.75em>Posts in the category: ";
                             echo single_cat_title();
                             echo "</h3>";
                             echo category_description();
