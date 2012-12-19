@@ -26,13 +26,19 @@
 						} ?>
 
 						<ul class=posts>
-							<!--Starting "The Loop"-->
-							<?php while (have_posts()) : the_post(); ?>
-								<li>
-									<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-									<time datetime="<?php the_time('c'); ?>" pubdate="pubdate"><?php the_date('Y M d'); ?></time>
-								</li>
-							<?php endwhile; ?>
+                            <?php $home_gallery_id = get_option('gus_gallery_cat');
+                            if ( is_category($home_gallery_id) ) {
+                                while (have_posts()) : the_post();
+                                    get_template_part( 'content', 'galleryindex' );
+                                endwhile;
+                            } else {
+							    while (have_posts()) : the_post(); ?>
+								    <li>
+									    <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+				    					<time datetime="<?php the_time('c'); ?>" pubdate="pubdate"><?php the_date('Y M d'); ?></time>
+					    			</li>
+						    	<?php endwhile;
+                            } ?>
 						</ul>
 					<?php endif; ?>
 					<?php gus_content_nav( 'nav-below' ); ?>
