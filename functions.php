@@ -57,10 +57,10 @@ function gus_setup() {
 	    'return preg_replace("#<style type=\'text/css\'>(.*?)</style>#s", "", $css);'
 	  )
 	);
-
-    // Fix removal of oEmbed width options in 3.5
-    if ( ! isset( $content_width ) ) $content_width = 770;
 }
+
+// Fix removal of oEmbed width options in 3.5
+if ( ! isset( $content_width ) ) $content_width = 770;
 
 // Add Matt's Community Tags plugin to theme
 add_action('after_setup_theme', 'community_tags_init');
