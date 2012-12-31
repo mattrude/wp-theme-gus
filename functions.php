@@ -118,6 +118,14 @@ function tableofcontents_init() {
     }
 }
 
+
+// Add the Post Link Plus plugin to theme
+add_action('after_setup_theme', 'postlinkplus_init');
+function postlinkplus_init() {
+    if (!function_exists('get_adjacent_post_plus')) {
+        include_once(TEMPLATEPATH.'/inc/plugins/post-link-plus.php');
+    }
+}
 /**
  * Tell WordPress to run milly_setup() when the 'after_setup_theme' hook is run.
  */
