@@ -34,14 +34,15 @@ Please read this themes full documentation from within it's [Wiki Pages](https:/
 ## Download
 Download the zip version to be uploaded into your WordPress site.
 
-* Current Stable version - 0.1.2: [zip](https://github.com/mattrude/wp-theme-gus/zipball/0.1.2) [tar.gz](https://github.com/mattrude/wp-theme-gus/tarball/0.1.2)
-* Old Stable version - 0.1.1: [zip](https://github.com/mattrude/wp-theme-gus/zipball/0.1.1) [tar.gz](https://github.com/mattrude/wp-theme-gus/tarball/0.1.1)
+* Current Stable version - 0.2.0: [zip](https://github.com/mattrude/wp-theme-gus/zipball/0.2.0) [tar.gz](https://github.com/mattrude/wp-theme-gus/tarball/0.2.0)
+* Old Stable version - 0.1.2: [zip](https://github.com/mattrude/wp-theme-gus/zipball/0.1.2) [tar.gz](https://github.com/mattrude/wp-theme-gus/tarball/0.1.2)
 * [Development version](https://github.com/mattrude/wp-theme-gus/zipball/master)
 
 You may also download the theme directly via git:
 
     git clone https://github.com/mattrude/wp-theme-gus.git gus
 
+The project is also mirrored at: [http://code.mattrude.com/mirror/wp-theme-gus.git](http://code.mattrude.com/mirror/wp-theme-gus.git)
 ## Installing
 For a more indepth walk threw of the install, see the [installation page](https://github.com/mattrude/wp-theme-gus/wiki/Installing).
 
