@@ -19,6 +19,9 @@ $term_slug = $term->slug;
                 } elseif ( is_tax( 'places' ) ) {
                     echo "<h3 style=padding-top:0.75em>Posts at: $term->name</h3>";
                     echo "<p>$term->description</p>";
+                } elseif ( is_tax() ) {
+                    echo "<h3 style=padding-top:0.75em>Posts of the type: $term->name</h3>";
+                    echo "<p>$term->description</p>";
                 } ?>
 				<ul class=posts>
 					<!--Starting "The Loop"-->
