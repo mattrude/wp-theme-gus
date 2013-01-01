@@ -12,24 +12,15 @@ Template Name: Archive Page
 				foreach($years as $year) : ?>
 					<?php query_posts("posts_per_page=500&year=$year"); ?>
 					<?php if (have_posts()) : ?>
-						<h3><?php echo $year; ?>
+						<h3><?php echo "Posts from the year $year"; ?>
 						<ul class=posts>
 							<?php while (have_posts()) : the_post(); ?>
 								<!--Starting "The Loop"-->
 								<?php $format = get_post_format(); ?>
 								<li>
-									<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-									<?php if ( $format == "gallery" ) {
-										echo "<span class='icon-pictures'></span>";
-									} elseif ( $format == "image" ) {
-										echo "<span class='icon-camera-2'></span>";
-									} elseif ( $format == "status" ) {
-										echo "<span class='gus-postformat-aside'>Status Update</span>";
-									} elseif ( $format == "aside" ) {
-										echo "<span class='gus-postformat-aside'>Aside</span>";
-									} elseif ( $format == "video" ) {
-										echo "<span class='icon-camera'></span>";
-									} ?>
+                                    <?php $format = get_post_format(); ?>
+                                    <span class="icon-type-<?php echo $format; ?>"></span>
+									<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
 									<time datetime="<?php the_time('c'); ?>" pubdate="pubdate"><?php the_date('Y M d'); ?></time>
 								</li>
 							<?php endwhile; ?>

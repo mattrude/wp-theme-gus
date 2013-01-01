@@ -14,12 +14,6 @@
                             echo single_cat_title();
                             echo "</h3>";
                             echo category_description();
-                        } elseif ( is_tax() ) {
-                            $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
-                            echo "<h3 style=padding-top:0.75em>Posts of the type: ";
-                            echo $term->name;
-                            echo "</h3>";
-                            echo "<p>$term->description</p>";
 						} else {
 							 _e( 'Blog Archives', 'twentyeleven' );
 						    echo "<h3 style=padding-top:0.75em>Archive Posts</a></h3>";
@@ -34,6 +28,8 @@
                             } else {
 							    while (have_posts()) : the_post(); ?>
 								    <li>
+                                        <?php $format = get_post_format(); ?>
+                                        <span class="icon-type-<?php echo $format; ?>"></span>
 									    <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
 				    					<time datetime="<?php the_time('c'); ?>" pubdate="pubdate"><?php the_date('Y M d'); ?></time>
 					    			</li>
