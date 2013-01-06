@@ -257,12 +257,12 @@ hr {
 }
 ins {
   background: #ff9;
-  color: #000;
+  color: #333333;
   text-decoration: none;
 }
 mark {
   background: #ff0;
-  color: #000;
+  color: #333333;
   font-style: italic;
   font-weight: bold;
 }
@@ -473,7 +473,7 @@ header a:hover, #about a:hover, #about a:active {
   width: 60%;
 }
 #main {
-  background: #fff;
+  background: #ffffff;
   padding-top: 1em;
   color: #000000;
 }
@@ -482,7 +482,7 @@ h1 {
   padding-top: 0.5em;
 }
 h1 a, h1 a:visited {
-  color: #333;
+  color: #333333;
 }
 a:hover {
   text-decoration: underline;
@@ -528,7 +528,7 @@ a, a:visited {
   width: 33%;
 }
 #about {
-  background: none repeat scroll 0 0 #272727;
+  background: #272727;
   min-height: 275px;
 }
 #meta .recent {
@@ -665,7 +665,7 @@ blockquote[cite]::after, blockquote footer {
   content: attr(cite);
   font-size: 13px;
   padding-top: 0.75em;
-  color: #333;
+  color: #333333;
 }
 blockquote pre {
   font-family: Verdana, sans-serif;
@@ -673,7 +673,7 @@ blockquote pre {
   margin-top: -1.5em;
 }
 blockquote footer a, blockquote footer a:visited, blockquote footer a:hover {
-  color: #000;
+  color: #333333;
   text-decoration: underline;
 }
 .sharing {
@@ -992,7 +992,6 @@ nav#nav-single.status {
   float: left;
 }
 .gallerypost_sub_right {
-  width: 220px;
   float: right;
 }
 .gallerypost_thumbnail {
@@ -1001,14 +1000,17 @@ nav#nav-single.status {
 }
 .gallerypost_thumbnail img {
   margin: 0 0 0 10px;
-  color: #000;
+  color: #333333;
 }
-.taxonomy-people img {
-  margin: 10px;
-}
-.taxonomy-people-gallery {
+.taxonomy-index-gallery {
   width: 700px;
   margin: 0 auto;
+}
+.taxonomy-index {
+  font-size: 0.8em;
+}
+.taxonomy-index img {
+  margin: 10px;
 }
 /* social sprites */
 #icons a {

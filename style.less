@@ -23,11 +23,14 @@
 @fontdir: 'inc/fonts';
 
 // Colors
-@page-color-sub: #272727;
-@page-color-header: #000000;
-@font-color-header: #bfbfbf;
-@font-color-footer: @font-color-header; 
-@page-footer-link: #fff;
+@page-color-background: #fff;
+@page-color-text: #333;
+@page-color-header: #000;
+@font-about-color: #bfbfbf;
+@font-color-footer: @font-about-color; 
+@home-about-background: #272727;
+@footer-link: #fff;
+@footer-background: @home-about-background;
 @link-color: #12C;
 @link-color-visited: #61C;
 @link-color-hover: #c00;
@@ -97,9 +100,9 @@ dfn { font-style: italic; }
 
 hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
 
-ins { background: #ff9; color: #000; text-decoration: none; }
+ins { background: #ff9; color: @page-color-text; text-decoration: none; }
 
-mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+mark { background: #ff0; color: @page-color-text; font-style: italic; font-weight: bold; }
 
 /* Redeclare monospace font family: en.wikipedia.org/wiki/User:Davidgothberg/Test59 */
 pre, code, kbd, samp { font-family: @font-family-mono; font-size: 1em; }
@@ -237,7 +240,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 header {
   background: @page-color-header;
-  color: @font-color-header;
+  color: @font-about-color;
 }
 
 header, #main {
@@ -246,18 +249,18 @@ header, #main {
 
 header span {
   font-size: @byline-font-size;
-  color: @font-color-header;
+  color: @font-about-color;
 }
 
 header a, header a:visited, #about a, #about a:visited {
   color: #fff; text-decoration: none;
 }
 
-header a:hover, #about a:hover, #about a:active { color: @font-color-header; text-decoration: none; }
+header a:hover, #about a:hover, #about a:active { color: @font-about-color; text-decoration: none; }
 
 #header-image { float: right; margin: 10px 0; width: 60%;}
 #main {
-  background: #fff;
+  background: @page-color-background;
   padding-top: 1em;
   color: @page-color-header;
 }
@@ -266,7 +269,7 @@ h1 {
   margin-top: 0;
   padding-top: 0.5em;
   a, a:visited {
-    color: #333;
+    color: @page-color-text;
   }
 }
 
@@ -313,12 +316,12 @@ a, a:visited {
 #personal {
   font-size: 15px;
   font-weight: 400;
-  color: @font-color-header;
+  color: @font-about-color;
   width: 33%;
 }
 
 #about {
-  background: none repeat scroll 0 0 @page-color-sub;
+  background: @home-about-background;
   min-height: @about-box-height;
 }
 
@@ -398,7 +401,7 @@ kbd {
 }
 
 pre {
-	background:none repeat scroll 0 0 #333333;
+	background: none repeat scroll 0 0 @page-color-text;
 	color:#FFFFFF;
 	font-family: @font-family-mono;
 	line-height:1.5em;
@@ -469,7 +472,7 @@ blockquote[cite]::after, blockquote footer {
   content: attr(cite);
   font-size: 13px;
   padding-top:0.75em;
-  color: #333;
+  color: @page-color-text;
 }
 
 blockquote pre {
@@ -479,7 +482,7 @@ blockquote pre {
 }
 
 blockquote footer a, blockquote footer a:visited, blockquote footer a:hover {
-  color: #000;
+  color: @page-color-text;
   text-decoration: underline;
 }
 
@@ -493,7 +496,7 @@ blockquote footer a, blockquote footer a:visited, blockquote footer a:hover {
         padding-top: 20px;
     }
     a, a:visited {
-	    color: @page-footer-link; 
+	    color: @footer-link; 
         text-decoration: none;
     }
     a:hover {
@@ -505,10 +508,10 @@ blockquote footer a, blockquote footer a:visited, blockquote footer a:hover {
 }
 
 #footer-top {
-	background-color: @page-color-sub;
+	background-color: @footer-background;
     .content {
 	    display: block;
-	    color: @font-color-header;
+	    color: @font-about-color;
         font-size: 0.8em;
         min-width: 500px;
 	    max-width: @page-width;
@@ -540,7 +543,7 @@ blockquote footer a, blockquote footer a:visited, blockquote footer a:hover {
 	background-color: @page-color-header;
     font-size: 0.8em;
     .content {
-	    color: @font-color-header;
+	    color: @font-about-color;
 	    margin: auto;
 	    padding: 10px 0;
 	    max-width: @page-width;
@@ -553,7 +556,7 @@ blockquote footer a, blockquote footer a:visited, blockquote footer a:hover {
             display: inline-block;
         }
         a:hover {
-            color: @page-footer-link !important;
+            color: @footer-link !important;
             text-decoration: none;
         }
         ul {
@@ -810,26 +813,30 @@ nav#nav-single {
             p {
                 margin: 0;
             }
-        }
-        &_sub_left {
-            float: left;
-        }
-        &_sub_right {
-            width: 220px;
-            float: right;
+            &_left {
+                float: left;
+            }
+            &_right {
+                float: right;
+            }
         }
         &_thumbnail {
             float: left;
             padding-right: 20px;
             img {
                 margin: 0 0 0 10px;
-                color: #000;
+                color: @page-color-text;
             }
         }
     }
 }
-.taxonomy-people img {margin: 10px;}
-.taxonomy-people-gallery {width: 700px; margin: 0 auto;}
+.taxonomy-index-gallery {width: 700px; margin: 0 auto;}
+.taxonomy-index {
+    font-size: 0.8em;
+    img {
+        margin: 10px;
+    }
+}
 
 /* social sprites */
 #icons {
