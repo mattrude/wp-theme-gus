@@ -2,6 +2,7 @@
 
 global $blog_id; 
 $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
+$tax = $term->taxonomy;
 $term_name = $term->name;
 $term_slug = $term->slug;
 $gallery_id = get_option('gus_gallery_cat'); ?>
@@ -19,7 +20,7 @@ $gallery_id = get_option('gus_gallery_cat'); ?>
                     'orderby' => 'post_date',
                     'order' => 'DESC',
                     'tax_query' => array( array(
-                        'taxonomy' => 'people',
+                        'taxonomy' => $tax,
                         'field' => 'slug',
                         'terms' => $term_slug
                     ) )
@@ -50,13 +51,13 @@ $gallery_id = get_option('gus_gallery_cat'); ?>
                 } ?>
                 </center></div>
                 <br />
+                <hr>
             <?php }
 
             global $wp_query;
             $args = array_merge( $wp_query->query_vars, array( 'cat' => $gallery_id ) );
             query_posts( $args );
             if (have_posts()) :
-                echo "<hr>";
                 if ( is_tax( 'people' ) ) {
                     if ( $term->description != "" ) { $term_name = $term->description; }
 				    echo "<h1>Galleries with $term_name in them:</h1>";
@@ -81,7 +82,6 @@ $gallery_id = get_option('gus_gallery_cat'); ?>
             $args = array_merge( $wp_query->query_vars, array( 'cat' => "-$gallery_id" ) );
             query_posts( $args );
             if (have_posts()) :
-                echo "<hr>";
                 if ( is_tax( 'people' ) ) {
                     if ( $term->description != "" ) { $term_name = $term->description; }
                     echo "<h1>Posts about $term_name:</h1>";

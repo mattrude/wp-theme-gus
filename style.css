@@ -475,7 +475,7 @@ header a:hover, #about a:hover, #about a:active {
 #main {
   background: #ffffff;
   padding-top: 1em;
-  color: #000000;
+  color: #333333;
 }
 h1 {
   margin-top: 0;
@@ -909,7 +909,7 @@ nav#nav-single.status {
 }
 #exif-lable {
   margin: 0 0 0 15px;
-  max-width: 110px;
+  max-width: 120px;
 }
 #exif-lable p {
   margin: 0;

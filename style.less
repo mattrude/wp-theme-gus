@@ -26,6 +26,7 @@
 @page-color-background: #fff;
 @page-color-text: #333;
 @page-color-header: #000;
+@page-color-title: @page-color-text;
 @font-about-color: #bfbfbf;
 @font-color-footer: @font-about-color; 
 @home-about-background: #272727;
@@ -262,7 +263,7 @@ header a:hover, #about a:hover, #about a:active { color: @font-about-color; text
 #main {
   background: @page-color-background;
   padding-top: 1em;
-  color: @page-color-header;
+  color: @page-color-title;
 }
 
 h1 {
@@ -733,7 +734,7 @@ nav#nav-single {
     text-align: left;
     &-lable {
         margin: 0 0 0 15px;
-        max-width: 110px;
+        max-width: 120px;
         p { margin: 0; }
         span { 
             font-weight:bold;
