@@ -711,11 +711,12 @@ blockquote footer a, blockquote footer a:visited, blockquote footer a:hover {
 }
 #footer-top .right-widget {
   float: right;
+  overflow: hidden;
 }
 #footer-top .footer-widget {
   float: left;
   width: 32%;
-  height: 330px;
+  height: 324px;
 }
 #footer-top .footer-index {
   margin: 20px 0;
