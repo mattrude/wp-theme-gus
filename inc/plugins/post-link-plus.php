@@ -1,12 +1,21 @@
 <?php
-/*
-Plugin Name: Ambrosite Next/Previous Post Link Plus
-Plugin URI: http://www.ambrosite.com/plugins
-Description: Upgrades the next/previous post link template tags to reorder or loop adjacent post navigation links, return multiple links, truncate link titles, and display post thumbnails. IMPORTANT: If you are upgrading from plugin version 1.1, you will need to update your templates (refer to the <a href="http://www.ambrosite.com/plugins/next-previous-post-link-plus-for-wordpress">documentation</a> on configuring parameters).
-Version: 2.4
-Author: J. Michael Ambrosio
-Author URI: http://www.ambrosite.com
-License: GPL2
+/**
+ * Ambrosite Next/Previous Post Link Plus Plugin
+ *
+ * Plugin URI: http://www.ambrosite.com/plugins
+ * Upgrades the next/previous post link template tags to reorder or
+ * loop adjacent post navigation links, return multiple links, truncate
+ * link titles, and display post thumbnails. IMPORTANT: If you are
+ * upgrading from plugin version 1.1, you will need to update your
+ * templates (refer to the <a href="http://www.ambrosite.com/plugins/next-previous-post-link-plus-for-wordpress">documentation</a>
+ * on configuring parameters).
+ *
+ * Version: 2.4
+ *
+ * @author J. Michael Ambrosio
+ * @license GPL2
+ * @package Gus Theme
+ * @subpackage Next/Previous Plus Plugin
 */
 
 /**
@@ -243,6 +252,7 @@ function next_post_link_plus($args = '') {
  * Based on adjacent_post_link() from wp-includes/link-template.php
  *
  * @param array|string $args Optional. Override default arguments.
+ * @param array|string $format Optional. Override default format.
  * @param bool $previous Optional, default is true. Whether display link to previous post.
  * @return bool True if next/previous post is found, otherwise false.
  */
