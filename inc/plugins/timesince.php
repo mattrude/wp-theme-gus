@@ -20,10 +20,9 @@ if ( !function_exists('mdr_timesince') ) {
    * This shortcode displays the years since the date provided.
    * To use this shortcode, add some text to a post or page simmiler to:
    *
-   *    [ts date='1983-09-02']
+   *<samp>[ts date='1983-09-02']</samp>
    *
    * The date format is YYYY-MM-DD
-   *
    *
    * @param string $atts the date from the shortcode
    * @param string $content The content of the shortcode but be null
