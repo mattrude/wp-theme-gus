@@ -17,6 +17,13 @@ if(!empty($currentLocale)) {
    if(@file_exists($moFile) && is_readable($moFile)) load_textdomain('mdr-network', $moFile);
 }
 
+/**
+ * Webmaster Tools INIT
+ *
+ * @author Matt Rude <matt@mattrude.com>
+ * @package Gus Theme
+ * @subpackage Webmaster Tools
+ */
 function add_mdr_webmaster_tools() {
    global $mdr_webmaster_tools_hook;
    $mdr_webmaster_tools_hook = add_submenu_page( 'tools.php', 'Site Verification Sittings', __('Webmaster Tools', WEBMASTER_TOOLS_TEXTDOMAIN), 'administrator', 'site_webmaster_tools', 'mdr_webmaster_tools_page' );
@@ -27,6 +34,13 @@ function add_mdr_webmaster_tools() {
 }
 
 
+/**
+ * Register needed options
+ *
+ * @author Matt Rude <matt@mattrude.com>
+ * @package Gus Theme
+ * @subpackage Webmaster Tools
+ */
 function register_mdr_webmaster_tools() {
   add_option('site_verification_google_id');
   add_option('site_verification_yahoo_id');
@@ -37,7 +51,13 @@ function register_mdr_webmaster_tools() {
 }
 
 
-// Adding the Help fucntions
+/**
+ * Adding the Help fucntions
+ *
+ * @author Matt Rude <matt@mattrude.com>
+ * @package Gus Theme
+ * @subpackage Webmaster Tools
+ */
 function webmastertools_help_overview() {
     $screen = get_current_screen();
     $screen->add_help_tab( array(
@@ -47,6 +67,13 @@ function webmastertools_help_overview() {
     ) );
 }
 
+/**
+ * Top Help section
+ *
+ * @author Matt Rude <matt@mattrude.com>
+ * @package Gus Theme
+ * @subpackage Webmaster Tools
+ */
 function webmastertools_help_tools() {
     $screen = get_current_screen();
     $screen->add_help_tab( array(
@@ -222,6 +249,13 @@ function head_mdr_webmaster_tools() {
    ";
 }
 
+/**
+ * Add Default robots.txt file
+ *
+ * @author Matt Rude <matt@mattrude.com>
+ * @package Gus Theme
+ * @subpackage Webmaster Tools
+ */
 function add_default_robots_txt() {
 	// Adds default robots.txt file
 	$site_url = get_option('siteurl');
@@ -254,6 +288,13 @@ if ( (get_bloginfo('url').'/robots.txt' != 'http://'.$_SERVER['HTTP_HOST'].$_SER
   }
 die;
 
+/**
+ * The Webmaster Tools Admin page
+ *
+ * @author Matt Rude <matt@mattrude.com>
+ * @package Gus Theme
+ * @subpackage Webmaster Tools
+ */
 function mdr_webmaster_tools_page() {
 
   // Update Settings
