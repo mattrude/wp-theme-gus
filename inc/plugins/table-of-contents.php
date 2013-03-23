@@ -1,11 +1,16 @@
 <?php
 /**
- * Plugin Name: Table of Contents
+ * This is the Table of Contents Plugin
+ *
  * Plugin URI: https://gist.github.com/4109124
  * Description: This plugin will create a Table of Contents on a page or post with the use of the shortcode of [table_of_contents].  There is no styling in the output from within the plugin.
  * Version: 0.1.0
  * Author: Matt Rude
  * Author URI: http://mattrude.com/
+ *
+ * @package Gus Theme
+ * @subpackage Table of Contents
+ * @since 0.2
  */
 
 /*-----------------------------------------------------------------------------------*/
@@ -13,6 +18,18 @@
 /*-----------------------------------------------------------------------------------*/
 
 if ( ! function_exists( 'mdr_shortcode_table_of_contents' ) ) {
+        /**
+         * The main table of contents function
+         *
+         * @param string $atts Combines user shortcode attributes with known attributes and 
+         * fills in defaults when needed. The result will contain every key from
+         * the known attributes, merged with values from shortcode attributes.
+         * @param string $content The content of the table must be null
+         *
+         * @package Gus Theme
+         * @subpackage Table of Contents
+         * @since 0.2
+         */
         function mdr_shortcode_table_of_contents ( $atts, $content = null ) {
                 global $post;
                 $defaults = array();
@@ -34,13 +51,18 @@ if ( ! function_exists( 'mdr_shortcode_table_of_contents' ) ) {
 
 add_shortcode( 'table_of_contents', 'mdr_shortcode_table_of_contents' );
 
-/*-----------------------------------------------------------------------------------*/
-/* Table of Contents - Content Filter */
-/*-----------------------------------------------------------------------------------*/
-
 add_filter( 'the_content', 'mdr_table_of_contents_section_anchors', 10 );
 
 if ( ! function_exists( 'mdr_table_of_contents_section_anchors' ) ) {
+        /**
+         * Table of Contents - Content Filter 
+         *
+         * @param string $content The content of the post/page
+         *
+         * @package Gus Theme
+         * @subpackage Table of Contents
+         * @since 0.2
+         */
         function mdr_table_of_contents_section_anchors ( $content ) {
                 $data = mdr_get_table_of_contents( $content );
 
@@ -61,6 +83,15 @@ if ( isset( $mdr_options['mdr_auto_tableofcontents'] ) && ( apply_filters( 'mdr_
 }
 
 if ( ! function_exists( 'mdr_table_of_contents_automation' ) ) {
+        /**
+         * The shortcut needed for Table of Contents
+         *
+         * @param string $content The content of the post/page
+         *
+         * @package Gus Theme
+         * @subpackage Table of Contents
+         * @since 0.2
+         */
         function mdr_table_of_contents_automation ( $content ) {
                 if ( is_singular() && in_the_loop() ) {
                         $content = '[table_of_contents] ' . $content;
@@ -75,6 +106,15 @@ if ( ! function_exists( 'mdr_table_of_contents_automation' ) ) {
 /*-----------------------------------------------------------------------------------*/
 
 if ( ! function_exists( 'mdr_get_table_of_contents' ) ) {
+        /**
+         * Build the Table of Contents
+         *
+         * @param string $content The content of the post/page
+         *
+         * @package Gus Theme
+         * @subpackage Table of Contents
+         * @since 0.2
+         */
         function mdr_get_table_of_contents ( $content ) {
           preg_match_all( "/(<h([0-6]{1})[^<>]*>)([^<>]+)(<\/h[0-6]{1}>)/", $content, $matches, PREG_SET_ORDER );
           $count = 0; // List Item Count
