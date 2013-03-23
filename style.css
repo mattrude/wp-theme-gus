@@ -692,6 +692,8 @@ blockquote footer a, blockquote footer a:visited, blockquote footer a:hover {
 }
 #page-footer ul, #page-footer ol {
   padding: 0 0 0 20px;
+  max-height: 20.2em;
+  overflow: hidden;
 }
 #footer-top {
   background-color: #272727;
@@ -700,6 +702,7 @@ blockquote footer a, blockquote footer a:visited, blockquote footer a:hover {
   display: block;
   color: #bfbfbf;
   font-size: 0.8em;
+  min-height: 330px;
   min-width: 500px;
   max-width: 770px;
   margin: auto;
