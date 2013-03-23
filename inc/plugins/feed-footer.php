@@ -1,15 +1,25 @@
 <?php
+/**
+ * Plugin Feed Footer
+ *
+ * Adds a link back to the origninal page on all RSS & ATOM feeds.  This does not affect your normal posts & pages.
+ * 
+ * @author Matt Rude <matt@mattrude.com>
+ * @package Gus Theme
+ * @subpackage Feed Footer
+ * @since 0.2
+ */
 
-/*
-Plugin Name: Feed Footer
-Plugin URI: http://github.com/mattrude/mdr-network
-Description: Adds a link back to the origninal page on all RSS & ATOM feeds.  This does not affect your normal posts & pages.
-Version: 1.0
-Author: Matt Rude
-Author URI: http://mattrude.com
-
-*/
-
+/**
+ * Filter to added content to the bottom of rss feeds
+ *
+ * @param string $content The content of the page/post in the rrs feed.
+ *
+ * @author Matt Rude <matt@mattrude.com>
+ * @package Gus Theme
+ * @subpackage Feed Footer
+ * @since 0.2
+ */ 
 function mdr_postrss($content) {
     if(is_feed()){
         $site_name = get_bloginfo_rss('name');
