@@ -66,7 +66,7 @@ $gallery_id = get_option('gus_gallery_cat'); ?>
                     echo "<p>$term->description</p>";
                 } elseif ( is_tax( 'places' ) ) {
                     echo "<h1>Galleries at: $term->name</h1>";
-                    echo "<p>$term->description</p>";
+#                    echo "<p>$term->description</p>";
                 } elseif ( is_tax() ) {
                     echo "<h1>Galleries of the type: $term->name</h1>";
                     echo "<p>$term->description</p>";
