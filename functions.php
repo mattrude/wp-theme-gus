@@ -2,6 +2,10 @@
 
 /**
  * Random Settings Changes
+ * 
+ * @since 0.1
+ * @package Gus Theme
+ * @author Matt Rude <matt@mattrude.com>
  */
 function gus_setup() {
 	// Start out by added the Theme's Options page
@@ -62,7 +66,13 @@ function gus_setup() {
 // Fix removal of oEmbed width options in 3.5
 if ( ! isset( $content_width ) ) $content_width = 770;
 
-// Add Matt's Community Tags plugin to theme
+/**
+ * Add Matt's Community Tags plugin to theme
+ * 
+ * @since 0.1
+ * @package Gus Theme
+ * @author Matt Rude <matt@mattrude.com>
+ */
 add_action('after_setup_theme', 'community_tags_init');
 function community_tags_init() {
 	if (!function_exists('mct_admin_init')) {
@@ -70,7 +80,13 @@ function community_tags_init() {
 	}
 }
 
-// Add Random Image Block plugin to theme
+/**
+ * Add Random Image Block plugin to theme
+ * 
+ * @since 0.1
+ * @package Gus Theme
+ * @author Matt Rude <matt@mattrude.com>
+ */
 add_action('after_setup_theme', 'random_image_block_init');
 function random_image_block_init() {
 	if (!class_exists('random_image_widget')) {
@@ -78,7 +94,13 @@ function random_image_block_init() {
 	}
 }
 
-// Add Webmaster Tools plugin to theme
+/**
+ * Add Webmaster Tools plugin to theme
+ * 
+ * @since 0.1
+ * @package Gus Theme
+ * @author Matt Rude <matt@mattrude.com>
+ */
 add_action('after_setup_theme', 'webmaster_tools_init');
 function webmaster_tools_init() {
 	if (!function_exists('add_mdr_webmaster_tools')) {
@@ -86,7 +108,13 @@ function webmaster_tools_init() {
 	}
 }
 
-// Add the Foot Notes plugin to theme
+/**
+ * Add the Foot Notes plugin to theme
+ * 
+ * @since 0.1
+ * @package Gus Theme
+ * @author Matt Rude <matt@mattrude.com>
+ */
 add_action('after_setup_theme', 'footnotes_init');
 function footnotes_init() {
 	if (!class_exists('gus_footnotes')) {
@@ -94,7 +122,13 @@ function footnotes_init() {
 	}
 }
 
-// Add the Time Since plugin to theme
+/**
+ * Add the Time Since plugin to theme
+ * 
+ * @since 0.1
+ * @package Gus Theme
+ * @author Matt Rude <matt@mattrude.com>
+ */
 add_action('after_setup_theme', 'timesince_init');
 function timesince_init() {
 	if (!function_exists('mdr_timesince')) {
@@ -102,7 +136,13 @@ function timesince_init() {
 	}
 }
 
-// Add the Time Since plugin to theme
+/**
+ * Add the Time Since plugin to theme
+ * 
+ * @since 0.1
+ * @package Gus Theme
+ * @author Matt Rude <matt@mattrude.com>
+ */
 add_action('after_setup_theme', 'feed_footer_init');
 function feed_footer_init() {
 	if (!function_exists('mdr_postrss')) {
@@ -110,7 +150,13 @@ function feed_footer_init() {
 	}
 }
 
-// Add the Table of Contents plugin to theme
+/**
+ * Add the Table of Contents plugin to theme
+ * 
+ * @since 0.1
+ * @package Gus Theme
+ * @author Matt Rude <matt@mattrude.com>
+ */
 add_action('after_setup_theme', 'tableofcontents_init');
 function tableofcontents_init() {
     if (!function_exists('mdr_table_of_contents')) {
@@ -119,7 +165,13 @@ function tableofcontents_init() {
 }
 
 
-// Add the Post Link Plus plugin to theme
+/**
+ * Add the Post Link Plus plugin to theme
+ * 
+ * @since 0.1
+ * @package Gus Theme
+ * @author Matt Rude <matt@mattrude.com>
+ */
 add_action('after_setup_theme', 'postlinkplus_init');
 function postlinkplus_init() {
     if (!function_exists('get_adjacent_post_plus')) {
@@ -128,6 +180,10 @@ function postlinkplus_init() {
 }
 /**
  * Tell WordPress to run milly_setup() when the 'after_setup_theme' hook is run.
+ *
+ * @since 0.1
+ * @package Gus Theme
+ * @author Matt Rude <matt@mattrude.com>
  */
 add_action( 'after_setup_theme', 'gus_setup' );
 
@@ -140,6 +196,10 @@ function jetpack_deregister_styles() {
 
 /**
  * Add Custom Taxonomiesi: people, places, & events
+ *
+ * @since 0.1
+ * @package Gus Theme
+ * @author Matt Rude <matt@mattrude.com>
  */
 function create_gus_taxonomies() {
 	register_taxonomy( 'people', array( 'post', 'attachment' ), array( 'hierarchical' => false, 'label' => __('People'), 'query_var' => true, 'rewrite' => true ) );
@@ -152,6 +212,8 @@ add_action( 'init', 'create_gus_taxonomies', 0 );
  * Add Widgets to Theme
  *
  * @since 0.1
+ * @package Gus Theme
+ * @author Matt Rude <matt@mattrude.com>
  */
 add_action( 'widgets_init', 'gus_register_widgets' );
 function gus_register_widgets() {
@@ -219,6 +281,8 @@ function gus_register_widgets() {
  * to the users profile page, and removes: aim, jabber, & yahoo IM
  * 
  * @since 0.1
+ * @package Gus Theme
+ * @author Matt Rude <matt@mattrude.com>
  */
 function gus_contactmethod( $contactmethods ) {
 	// Adds facebook, linkedin, twitter, google, github, & flickr
@@ -242,6 +306,10 @@ add_filter('user_contactmethods','gus_contactmethod',10,1);
 if ( ! function_exists( 'gus_content_nav' ) ) :
 /**
  * Display navigation to next/previous pages when applicable
+ *
+ * @since 0.1
+ * @package Gus Theme
+ * @author Matt Rude <matt@mattrude.com>
  */
 function gus_content_nav( $nav_id ) {
     global $wp_query;
@@ -260,7 +328,9 @@ if ( ! function_exists( 'gus_posted_on' ) ) :
  * Prints HTML with meta information for the current post-date/time and author.
  * Create your own gus_posted_on to override in a child theme
  *
- * @since Twenty Eleven 1.0
+ * @since 0.1
+ * @package Gus Theme
+ * @author Matt Rude <matt@mattrude.com>
  */
 function gus_posted_on() {
     printf( __( '<span class="sep">Posted on </span><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', 'gus' ),
@@ -284,7 +354,9 @@ if ( ! function_exists( 'twentyeleven_comment' ) ) :
  *
  * Used as a callback by wp_list_comments() for displaying the comments.
  *
- * @since Twenty Eleven 1.0
+ * @since 0.1
+ * @package Gus Theme
+ * @author Matt Rude <matt@mattrude.com>
  */
 function gus_comment( $comment, $args, $depth ) {
     $GLOBALS['comment'] = $comment;
@@ -344,10 +416,14 @@ function gus_comment( $comment, $args, $depth ) {
 }
 endif; // ends check for twentyeleven_comment()
 
-/*********************************************************************************
-  Using WordPress functions to retrieve the extracted EXIF 
-  information from database
-*/
+/**
+ * Using WordPress functions to retrieve the extracted EXIF 
+ * information from database
+ *
+ * @since 0.1
+ * @package Gus Theme
+ * @author Matt Rude <matt@mattrude.com>
+ */
 function mdr_exif() { ?>
   <div id="exif">
     <h3 class='comment-title exif-title'><?php _e('Images EXIF Data', 'millytheme'); ?></h3>
