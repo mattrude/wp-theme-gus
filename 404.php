@@ -2,11 +2,9 @@
 /**
  * The template for displaying 404 pages (Not Found).
  *
- * @package WordPress
- * @subpackage Twenty_Eleven
- * @since Twenty Eleven 1.0
+ * @package Gus Theme
+ * @since 0.1
  */
-
 get_header(); ?>
 	<div id=main role=main>
 		<div id=page class=content>

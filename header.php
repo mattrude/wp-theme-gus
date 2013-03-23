@@ -2,11 +2,7 @@
 /**
  * The Header for our theme.
  *
- * Displays all of the <head> section and everything up till <div id="main">
- *
- * @package WordPress
- * @subpackage Twenty_Eleven
- * @since Twenty Eleven 1.0
+ * @package Gus Theme
  */
 ?><!DOCTYPE html>
 <!--[if IE 6]>
@@ -81,6 +77,13 @@
 	if ( is_home() ) {
 		add_action( 'wp_print_styles', 'sharedaddy_deregister_style', 100 );
 
+        /**
+         * Deregister the sharedaddy style sheet.
+         *
+         * @since 0.1
+         * @package Gus Theme
+         * @author Matt Rude <matt@mattrude.com>
+         */
 		function sharedaddy_deregister_style() {
 				wp_deregister_style( 'sharedaddy' );
 		}
