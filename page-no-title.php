@@ -1,9 +1,8 @@
 <?php
-/*
-Template Name: No Title Page
-*/
-?>
-<?php get_header(); ?>
+/**
+ * Template Name: No Title Page
+ */
+get_header(); ?>
 	<div id=main role=main>
 		<div id=post class=content itemscope itemtype="http://schema.org/Article">
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>

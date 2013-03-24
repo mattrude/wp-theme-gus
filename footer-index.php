@@ -1,3 +1,9 @@
+<?php
+/**
+ * The footer Index file
+ */
+namespace dochead;
+?>
 		<footer id=page-footer>
 			<div id=lower-footer>
 				<div class='content'>

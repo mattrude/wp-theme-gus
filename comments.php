@@ -10,6 +10,7 @@
  * @package Gus Theme
  * @since Version 0.1
  */
+namespace dochead;
 ?>
 	<div id="comments">
 	<?php if ( post_password_required() ) : ?>

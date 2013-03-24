@@ -5,6 +5,7 @@
  * @package Gus Theme
  * @since 0.1
  */
+namespace dochead;
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
