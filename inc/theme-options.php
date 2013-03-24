@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * The Main Theme Options Admin Page
+ * @package Gus Theme
+ */
 /** 
  * Create the Theme Options menus on the WordPress Dashboard
  *
@@ -87,6 +90,9 @@ function register_gus_settings() {
 	register_setting( 'gus-settings-group', 'gus_email' );
 }
 
+/**
+ * The Gus Settings Page
+ */
 function gus_settings_page() {
 ?>
 <div class="wrap">
