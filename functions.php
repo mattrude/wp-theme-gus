@@ -190,9 +190,27 @@ add_action( 'after_setup_theme', 'gus_setup' );
 // Deregister the JetPack Widgets css
 add_action( 'wp_print_styles', 'jetpack_deregister_styles', 100 );
 
+/**
+ * Deregister the jetpack-widgets style sheet.
+ *
+ * @since 0.1
+ * @package Gus Theme
+ * @author Matt Rude <matt@mattrude.com>
+ */
 function jetpack_deregister_styles() {
     wp_deregister_style( 'jetpack-widgets' );
 }
+
+/**
+ * Deregister the sharedaddy style sheet.
+ *
+ * @since 0.1
+ * @package Gus Theme
+ * @author Matt Rude <matt@mattrude.com>
+ */
+ function sharedaddy_deregister_style() {
+    wp_deregister_style( 'sharedaddy' );
+ }
 
 /**
  * Add Custom Taxonomiesi: people, places, & events

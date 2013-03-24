@@ -77,17 +77,6 @@ namespace dochead;
 
 	if ( is_home() ) {
 		add_action( 'wp_print_styles', 'sharedaddy_deregister_style', 100 );
-
-        /**
-         * Deregister the sharedaddy style sheet.
-         *
-         * @since 0.1
-         * @package Gus Theme
-         * @author Matt Rude <matt@mattrude.com>
-         */
-		function sharedaddy_deregister_style() {
-				wp_deregister_style( 'sharedaddy' );
-		}
 	}
 
 	wp_head();
