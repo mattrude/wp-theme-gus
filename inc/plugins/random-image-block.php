@@ -1,14 +1,21 @@
 <?php
-/*
-Plugin Name: Random Image Block
-Plugin URI: http://mattrude.com/projects/random-image-block/
-Description: Display a random image from your native WordPress photo galley or in-beaded images.
-Version: 0.10
-Author: Matt Rude
-Author URI: http://mattrude.com/
-*/
+/**
+ * Random Image Block
+ *
+ * Display a random image from your native WordPress photo galley or in-beaded images.
+ *
+ * @author Matt Rude <matt@mattrude.com>
+ * @package Gus Theme
+ * @subpackage Random Image Block
+ */
 
-
+/**
+ * The main Random Image Block Class
+ *
+ * @author Matt Rude <matt@mattrude.com>
+ * @package Gus Theme
+ * @subpackage Random Image Block
+ */
 class random_image_widget extends WP_Widget {
   function random_image_widget() {
     $currentLocale = get_locale();
