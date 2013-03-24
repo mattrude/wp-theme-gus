@@ -4,8 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Post_Formats
  *
- * @package WordPress
- * @subpackage Twenty_Eleven
+ * @package Gus Theme
  */
 namespace dochead;
 ?>
