@@ -188,9 +188,18 @@ line-height: 10px;
   }
 }
 
-add_action('widgets_init', 'random_image_widget_init');
+/**
+ * Random Image Widget INIT
+ *
+ * This is the main INIT function for the Random Image Block Widget
+ *
+ * @author Matt Rude <matt@mattrude.com>
+ * @package Gus Theme
+ * @subpackage Random Image Block
+ */
 function random_image_widget_init() {
         register_widget('random_image_widget');
 }
+add_action('widgets_init', 'random_image_widget_init');
 
 ?>
