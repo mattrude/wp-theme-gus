@@ -1,13 +1,14 @@
 <?php
 
-/*
-Plugin Name: MDR Webmaster Tools
-Plugin URI: https://github.com/mattrude/wp-plugin-webmaster-tools
-Description: Provides Webmaster site verification scripts for Google, Yahoo, & Bing. Plugin also provides Google Analytics Tracking Script for registered sites. See Tools -> Webmaster Tools
-Version: 1.1
-Author: Matt Rude
-Author URI: http://mattrude.com
-*/
+/**
+ * MDR Webmaster Tools
+ *
+ * Provides Webmaster site verification scripts for Google, Yahoo, & Bing. Plugin also provides Google Analytics Tracking Script for registered sites. See Tools -> Webmaster Tools
+ *
+ * @author Matt Rude <matt@mattrude.com>
+ * @package Gus Theme
+ * @subpackage Webmaster Tools
+ */
 
 define( 'WEBMASTER_TOOLS_TEXTDOMAIN' , 'mdr-network');
 
@@ -123,6 +124,13 @@ function webmastertools_help_tools() {
     ) );
 }
 
+/**
+ * print the Analytics Help section
+ *
+ * @author Matt Rude <matt@mattrude.com>
+ * @package Gus Theme
+ * @subpackage Webmaster Tools
+ */
 function webmastertools_help_analytics() {
     $screen = get_current_screen();
     $screen->add_help_tab( array(
@@ -133,6 +141,13 @@ function webmastertools_help_analytics() {
     ) );
 }
 
+/**
+ * print the robots help section
+ *
+ * @author Matt Rude <matt@mattrude.com>
+ * @package Gus Theme
+ * @subpackage Webmaster Tools
+ */
 function webmastertools_help_robots() {
     $screen = get_current_screen();
     $screen->add_help_tab( array(
@@ -150,8 +165,12 @@ function webmastertools_help_robots() {
     ) );
 }
 
-/*
- * Sitemap
+/**
+ * Flush all sitemap rules
+ *
+ * @author Matt Rude <matt@mattrude.com>
+ * @package Gus Theme
+ * @subpackage Webmaster Tools
  */
 function sitemap_flush_rules() {
     global $wp_rewrite;
@@ -160,6 +179,13 @@ function sitemap_flush_rules() {
 
 add_action('init', 'sitemap_flush_rules');
 
+/**
+ * Change the sitemap URI
+ *
+ * @author Matt Rude <matt@mattrude.com>
+ * @package Gus Theme
+ * @subpackage Webmaster Tools
+ */
 function xml_feed_rewrite($wp_rewrite) {
     $feed_rules = array(
         '.*sitemap.xml$' => 'index.php?feed=sitemap'
@@ -171,7 +197,13 @@ function xml_feed_rewrite($wp_rewrite) {
 add_filter('generate_rewrite_rules', 'xml_feed_rewrite');
 
 
-// Remove the trailing slash from URI sitemap.xml
+/**
+ * Remove the trailing slash from URI sitemap.xml
+ *
+ * @author Matt Rude <matt@mattrude.com>
+ * @package Gus Theme
+ * @subpackage Webmaster Tools
+ */
 function sitemap_no_trailing_slash( $redirect_url ) {
     if ( is_feed() && strpos( $redirect_url, 'sitemap.xml/' ) !== FALSE )
         return;
@@ -181,7 +213,13 @@ function sitemap_no_trailing_slash( $redirect_url ) {
 
 add_filter( 'redirect_canonical', 'sitemap_no_trailing_slash' );
 
-
+/**
+ * Load the feed sitemap template
+ *
+ * @author Matt Rude <matt@mattrude.com>
+ * @package Gus Theme
+ * @subpackage Webmaster Tools
+ */
 function do_feed_sitemap() {
     $template_dir = dirname(__FILE__);
     load_template( $template_dir . '/feed-sitemap.php' );
@@ -194,6 +232,13 @@ add_action( 'admin_menu', 'add_mdr_webmaster_tools' );
 add_action( 'admin_init', 'register_mdr_webmaster_tools' );
 add_action( 'wp_head', 'head_mdr_webmaster_tools' );
 
+/**
+ * Create the verification links in the header
+ *
+ * @author Matt Rude <matt@mattrude.com>
+ * @package Gus Theme
+ * @subpackage Webmaster Tools
+ */
 function head_mdr_webmaster_tools() {
   $site_verification_google_id = get_option( 'site_verification_google_id' );
   $site_verification_yahoo_id = get_option( 'site_verification_yahoo_id' );
