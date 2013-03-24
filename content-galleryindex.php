@@ -1,3 +1,9 @@
+<?php
+/**
+ * The gallery Index Content
+ */
+namespace dochead;
+?>
                         <div id="gallerypost-<?php the_ID(); ?>" class="gallerypost post">
                             <div id="gallerypost_main-<?php the_ID(); ?>" class="gallerypost_main">
                                 <div id="gallerypost_thumbnail-<?php the_ID(); ?>" class="gallerypost_thumbnail">

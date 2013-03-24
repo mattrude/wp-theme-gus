@@ -1,3 +1,9 @@
+<?php
+/**
+ * The default footer template
+ */
+namespace dochead;
+?>
 		<footer id=page-footer>
 			<div id='footer-top'>
 			<div class='content'>

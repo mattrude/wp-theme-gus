@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<?php
+/**
+ * The default Archive template
+ */
+get_header(); ?>
 		<div id=main role=main>
 	    	<div id=page class=content>
 				<div id=home>

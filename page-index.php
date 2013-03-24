@@ -1,9 +1,8 @@
 <?php
-/*
-Template Name: Archive Page
-*/
-?>
-<?php get_header(); ?>
+/**
+ * Template Name: Archive Page
+ */
+get_header(); ?>
 		<div id=main role=main>
 	    	<div id=page class=content>
 				<div id=home>

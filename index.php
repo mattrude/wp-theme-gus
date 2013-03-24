@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<?php
+/**
+ * The Default template for the site
+ */
+get_header(); ?>
 <div id=about>
 	<div class=group>
 		<div id=header-image>
