@@ -182,6 +182,7 @@ add_action('init', 'sitemap_flush_rules');
 /**
  * Change the sitemap URI
  *
+ * @param array $wp_rewrite to add our own rules to the rewrite rules
  * @author Matt Rude <matt@mattrude.com>
  * @package Gus Theme
  * @subpackage Webmaster Tools
@@ -200,6 +201,7 @@ add_filter('generate_rewrite_rules', 'xml_feed_rewrite');
 /**
  * Remove the trailing slash from URI sitemap.xml
  *
+ * @param $redirect_url The url to redirect traffic to
  * @author Matt Rude <matt@mattrude.com>
  * @package Gus Theme
  * @subpackage Webmaster Tools
