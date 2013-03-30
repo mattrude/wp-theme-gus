@@ -328,6 +328,8 @@ nav ul, nav ol {
 img {
   border: 0;
   -ms-interpolation-mode: bicubic;
+  height: auto;
+  max-width: 100%;
 }
 /*
  * Correct overflow displayed oddly in IE9

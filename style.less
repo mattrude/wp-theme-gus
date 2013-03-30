@@ -140,7 +140,12 @@ nav ul, nav ol { list-style: none; margin: 0; padding: 0; }
  * code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
  */
 
-img { border: 0; -ms-interpolation-mode: bicubic; }
+img {
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+    height: auto;
+    max-width: 100%
+}
 
 /*
  * Correct overflow displayed oddly in IE9
