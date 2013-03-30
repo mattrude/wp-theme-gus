@@ -70,8 +70,8 @@ namespace dochead;
                 <?php $siteowner=get_userdata(get_option('gus_siteowner')); ?>
 			</div> <!-- closing id lower-footer -->
 			</div> <!-- closing id footer -->
-		<?php wp_footer(); ?>
 		</footer>
 	</div><!-- closing id container -->
+	<?php wp_footer(); ?>
 </body><!-- closing body -->
 </html>
