@@ -1385,6 +1385,9 @@ img[class*="align"], img[class*="wp-image-"], img[class*="attachment-"] {
   #home-recent-posts {
     width: 100%;
   }
+  #footer-top {
+    display: none;
+  }
 }
 /* Smartphones (portrait) */
 @media only screen and (max-width: 480px) and (min-width: 0px) {
@@ -1395,9 +1398,6 @@ img[class*="align"], img[class*="wp-image-"], img[class*="attachment-"] {
     margin: 0 5px;
   }
   header span, header b, footer .rss {
-    display: none;
-  }
-  footer #footer {
     display: none;
   }
   #home ul.posts li {
