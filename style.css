@@ -1368,6 +1368,9 @@ img[class*="align"], img[class*="wp-image-"], img[class*="attachment-"] {
   #home-recent-posts {
     padding: 0;
   }
+  nav#nav-single {
+    padding-top: 20px;
+  }
 }
 @media (max-width: 700px) {
   dl.gallery-item {
