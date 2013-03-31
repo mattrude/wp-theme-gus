@@ -1365,6 +1365,9 @@ img[class*="align"], img[class*="wp-image-"], img[class*="attachment-"] {
   footer {
     width: 100%;
   }
+  footer #lower-footer {
+    padding: 0 5px;
+  }
   #home-recent-posts {
     padding: 0;
   }
