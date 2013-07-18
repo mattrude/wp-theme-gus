@@ -19,14 +19,28 @@ namespace dochead;
 			<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
 		</div><!-- .entry-content -->
 		<hr>
-		<div class="entry-meta">
+		<div class="entry-meta"><small>
 			<?php gus_posted_on(); ?>
-			<?php if ( comments_open() ) : ?>
 			<span class="sep"> | </span>
-			<span class="comments-link"><?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a reply', 'twentyeleven' ) . '</span>', __( '<b>1</b> Reply', 'twentyeleven' ), __( '<b>%</b> Replies', 'twentyeleven' ) ); ?></span>
-			<?php endif; ?>
+            <?php $categories_list = get_the_category_list( __( ', ', 'twentyeleven' ) );
+            if ( $categories_list ): ?>
+                <span class="cat-links">
+                    <?php printf( __( '<span class="%1$s">Categorized as:</span> %2$s', 'twentyeleven' ), 'entry-utility-prep entry-utility-prep-cat-links', $categories_list );
+                    $show_sep = true; ?>
+                </span>
+			    <span class="sep"> | </span>
+            <?php endif; // End if categories
+            $tags_list = get_the_tag_list( '', __( ', ', 'twentyeleven' ) );
+            if ( $tags_list ): ?>
+                <span class="tag-links">
+                    <?php printf( __( '<span class="%1$s">Tagged as:</span> %2$s', 'twentyeleven' ), 'entry-utility-prep entry-utility-prep-tag-links', $tags_list );
+                    $show_sep = true; ?>
+                </span>
+			    <span class="sep"> | </span>
+            <?php endif; // End if $tags_list ?>
 			<?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
-		</div><!-- #entry-meta -->
+		</div><!-- #entry-meta --></small>
+
 	</article><!-- #post-<?php the_ID(); ?> -->
 	<nav id="nav-single" class="status">
 		<span class="nav-previous"><?php previous_post_link( '%link', __( '<span class="meta-nav">&larr;</span> Previous', 'twentyeleven' ) ); ?></span>
