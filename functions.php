@@ -11,6 +11,9 @@ function gus_setup() {
 	// Start out by added the Theme's Options page
 	require_once('inc/theme-options.php');
 
+    // Add the Flight post_type
+    require_once('inc/postype-flight.php');
+
 	// This theme allows users to set a custom background
 	add_theme_support( 'custom-background' );
 
