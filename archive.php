@@ -24,6 +24,12 @@ get_header(); ?>
                             echo "<h2>$page_object->post_title</h2>";
                             echo $page_object->post_content;
 						    echo "<h3 style=padding-top:0.75em>Flight Post Archives</a></h3>";
+                        } elseif ( is_post_type_archive('5speed') ) {
+                            $page_id = 6625;
+                            $page_object = get_page( $page_id );
+                            echo "<h2>$page_object->post_title</h2>";
+                            echo $page_object->post_content;
+                            echo "<h3 style=padding-top:0.75em>Reasons why I drive a manual transmission car</a></h3>";
 						} else {
 							 _e( 'Blog Archives', 'twentyeleven' );
 						    echo "<h3 style=padding-top:0.75em>Archive Posts</a></h3>";
