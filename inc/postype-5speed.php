@@ -22,14 +22,14 @@ function post_type_5speed() {
         'update_item'         => __( 'Update Reason', 'gus' ),
         'search_items'        => __( 'Search Reasons', 'gus' ),
         'not_found'           => __( 'No Reasons found', 'gus' ),
-        'not_found_in_trash'  => __( 'No Reasons found in Trash', 'gus' ),
+        'not_found_in_trash'  => __( 'No Reasons found in Trash', 'gus' )
     );
 
     $rewrite = array(
         'slug'                => '5speed',
         'with_front'          => '/',
         'pages'               => false,
-        'feeds'               => true,
+        'feeds'               => true
     );
 
     $args = array(
