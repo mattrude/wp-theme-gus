@@ -37,7 +37,7 @@ function post_type_5speed() {
         'description'         => __( 'Why I drive a 5 Speed Car Posts', 'gus' ),
         'labels'              => $labels,
         'supports'            => array( 'title', 'editor', 'comments', 'trackbacks', 'revisions', 'custom-fields' ),
-        'taxonomies'          => false,
+        //'taxonomies'          => false,
         'hierarchical'        => false,
         'public'              => true,
         'show_ui'             => true,
