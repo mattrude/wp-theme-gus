@@ -12,7 +12,7 @@ function gus_setup() {
 	require_once('inc/theme-options.php');
 
     // Add the Flight post_type
-    //require_once('inc/postype-flight.php');
+    require_once('inc/postype-flight.php');
 
     // Add the 5 Speed post_type
     require_once('inc/postype-5speed.php');
