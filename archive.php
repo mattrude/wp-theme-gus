@@ -29,7 +29,6 @@ get_header(); ?>
                             $page_object = get_page( $page_id );
                             echo "<h2>$page_object->post_title</h2>";
                             echo $page_object->post_content;
-                            echo "<h3 style=padding-top:0.75em>Reasons why I drive a manual transmission car</a></h3>";
 						} else {
 							 _e( 'Blog Archives', 'twentyeleven' );
 						    echo "<h3 style=padding-top:0.75em>Archive Posts</a></h3>";
@@ -41,6 +40,8 @@ get_header(); ?>
                                 while (have_posts()) : the_post();
                                     get_template_part( 'content', 'galleryindex' );
                                 endwhile;
+                            } elseif (is_post_type_archive('5speed') && function_exists('load_5speed_archive')) {
+                                load_5speed_archive();
                             } else {
 							    while (have_posts()) : the_post(); ?>
 								    <li>

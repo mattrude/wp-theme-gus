@@ -1505,6 +1505,17 @@ div.sharedaddy h3, #content div.sharedaddy h3, #main div.sharedaddy h3 {
   display: table;
   content: "";
 }
+/* Post_type 5speed */
+.post-type-archive-5speed h3 {
+  margin-bottom: 0px;
+}
+.post-type-archive-5speed h3 .list-title {
+  padding-top: 0.75em;
+  border-bottom: 1px solid #DDD;
+}
+.post-type-archive-5speed p {
+  margin-top: 0px;
+}
 /* Table of Contents plugin
  * https://gist.github.com/4109124 */
 .table_of_contents.fl {

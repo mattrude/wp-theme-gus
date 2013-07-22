@@ -32,7 +32,7 @@ function post_type_5speed() {
         'feeds'               => true
     );
 
-    $args = array(
+    $options = array(
         'label'               => __( '5speed', 'gus' ),
         'description'         => __( 'Why I drive a 5 Speed Car Posts', 'gus' ),
         'labels'              => $labels,
@@ -53,7 +53,7 @@ function post_type_5speed() {
         'capability_type'     => 'post'
     );
 
-    register_post_type( '5speed', $args );
+    register_post_type( '5speed', $options );
 }
 
 // Hook into the 'init' action
