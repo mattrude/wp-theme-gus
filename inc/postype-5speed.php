@@ -50,7 +50,7 @@ function post_type_5speed() {
         'exclude_from_search' => false,
         'publicly_queryable'  => true,
         'rewrite'             => $rewrite,
-        'capability_type'     => 'post',
+        'capability_type'     => 'post'
     );
 
     register_post_type( '5speed', $args );
@@ -58,5 +58,17 @@ function post_type_5speed() {
 
 // Hook into the 'init' action
 add_action( 'init', 'post_type_5speed', 0 );
+
+function load_5speed_archive() {
+    echo "<h3 class=\"list-title\">My list of reasons why I drive a manual transmission car:</h3>";
+    echo "<div class=\"5speed\">";
+    while (have_posts()) : the_post(); ?>
+        <li>
+            <h3 style="margin-bottom:0px;"># <a href="<?php the_permalink() ?>" rel="bookmark" title="Reason <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+            <?php the_content(); ?>
+        </li>
+    <?php endwhile;
+    echo "</div>";
+}
 
 ?>
