@@ -39,7 +39,7 @@ This is a git repoistory, there is several ways to download and use it's content
 
 Download the zip version to be uploaded into your WordPress site.
 
-* Current Stable version - 0.2.1: [zip](https://github.com/mattrude/wp-theme-gus/zipball/0.2.1) - [tar.gz](https://github.com/mattrude/wp-theme-gus/tarball/0.2.1)
+* Current Stable version - 0.2.2: [zip](https://github.com/mattrude/wp-theme-gus/zipball/0.2.2) - [tar.gz](https://github.com/mattrude/wp-theme-gus/tarball/0.2.2)
 * Old Stable version - 0.1.2: [zip](https://github.com/mattrude/wp-theme-gus/zipball/0.1.2) - [tar.gz](https://github.com/mattrude/wp-theme-gus/tarball/0.1.2)
 * [Development version](https://github.com/mattrude/wp-theme-gus/zipball/master)
 
