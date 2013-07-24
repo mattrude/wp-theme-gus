@@ -966,7 +966,6 @@ header .content {
             float: left;
             margin: 0;
             position: absolute;
-            top: 3.333em;
             left: 0;
             width: 188px;
             z-index: 99999;
@@ -977,7 +976,7 @@ header .content {
             display: list-item;
             text-align: -webkit-match-parent;
         }
-        li:hover>a, a:focus {
+        li:hover > a, li:active > a, a:focus {
             background: #f9f9f9;
             background: -moz-linear-gradient(#f9f9f9,#e5e5e5);
             background: -o-linear-gradient(#f9f9f9,#e5e5e5);
@@ -985,7 +984,7 @@ header .content {
             background: -webkit-linear-gradient(#f9f9f9,#e5e5e5);
             color: #373737;
         }
-        ul li.has-sub:hover > a { 
+        ul li.has-sub:hover > a, ul li.has-sub:active > a { 
             background:#3f3f3f;
             border-color:#3f3f3f;
             top:-1px;
@@ -993,7 +992,7 @@ header .content {
             float: left;
             position: absolute;
         }
-        ul li:hover>ul {
+        ul li:hover > ul, ul li:active > ul {
             display: block;
         }
         ul.page-sub-menu a:hover {
