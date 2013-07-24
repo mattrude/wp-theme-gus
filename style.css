@@ -446,7 +446,7 @@ table {
 .content,
 #meta .group,
 #about .group,
-#page-menu .sub-menu {
+#page-menu .page-sub-menu {
   max-width: 770px;
   margin: 0 auto;
 }
@@ -1159,29 +1159,58 @@ header .content {
   color: #bfbfbf;
   text-decoration: none;
 }
-#page-menu .sub-menu {
+#page-menu .page-sub-menu {
   font-size: 0.8em;
   min-height: 30px;
 }
-#page-menu .sub-menu ul {
+#page-menu .page-sub-menu ul {
   margin: 0;
+  position: absolute;
   padding: 5px 0;
   list-style: none;
   list-style-type: none;
   list-style-image: none;
 }
-#page-menu .sub-menu li {
-  position: relative;
+#page-menu .page-sub-menu ul ul {
+  -moz-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  display: none;
+  float: left;
+  margin: 0;
+  position: absolute;
+  top: 3.333em;
+  left: 0;
+  width: 188px;
+  z-index: 99999;
+}
+#page-menu .page-sub-menu li {
   float: left;
   margin: 0 5px;
+  display: list-item;
+  text-align: -webkit-match-parent;
 }
-#page-menu .sub-menu ul li.has-sub:hover > a {
+#page-menu .page-sub-menu li:hover > a, #page-menu .page-sub-menu a:focus {
+  background: #f9f9f9;
+  background: -moz-linear-gradient(#f9f9f9, #e5e5e5);
+  background: -o-linear-gradient(#f9f9f9, #e5e5e5);
+  background: -webkit-gradient(linear, 0% 0, 0% 100%, from(#f9f9f9), to(#e5e5e5));
+  background: -webkit-linear-gradient(#f9f9f9, #e5e5e5);
+  color: #373737;
+}
+#page-menu .page-sub-menu ul li.has-sub:hover > a {
   background: #3f3f3f;
   border-color: #3f3f3f;
   top: -1px;
   z-index: 999;
+  float: left;
+  position: absolute;
 }
-#page-menu .sub-menu ul.sub-menu a:hover {
+#page-menu .page-sub-menu ul li:hover > ul {
+  display: block;
+}
+#page-menu .page-sub-menu ul.page-sub-menu a:hover {
+  margin: 5px;
   background: -moz-linear-gradient(top, #333333 0%, #222222 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #333333), color-stop(100%, #222222));
   background: -webkit-linear-gradient(top, #333333 0%, #222222 100%);

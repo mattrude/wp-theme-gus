@@ -100,7 +100,7 @@ namespace dochead;
         <?php //if (is_post_type_archive('flight') && function_exists('load_flight_menu')) { ?>
         <?php if (is_post_type_archive('flight')) { ?>
             <div id=page-menu>
-                <div class=sub-menu>
+                <div class=page-sub-menu>
                     <?php wp_nav_menu( array( 'sort_column' => 'menu_order', 'container_class' => 'menu-sub', 'theme_location' => 'submenu', 'fallback_cb' => 'gus_nav_fallback' ) ); ?>
                 </div>
             </div>
