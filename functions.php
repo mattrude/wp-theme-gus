@@ -23,7 +23,8 @@ function gus_setup() {
 	// Add a top Menu to the page
 	add_theme_support( 'nav-menus' );
 	register_nav_menus( array(
-    	'header' => __( 'The Header Navigation Menu', 'millytheme' ),
+    	'header' => __( 'The Header Navigation Menu', 'gus' ),
+    	'submenu' => __( 'The Sub Navigation Menu', 'gus' ),
 	) );
 	function gus_nav_fallback() {
 		echo "<!--No Header Navigation Menu selected-->";
