@@ -29,13 +29,15 @@
 @page-color-title: @page-color-text;
 @font-about-color: #bfbfbf;
 @font-color-footer: @font-about-color; 
-@home-about-background: #272727;
+@home-about-background: #222;
 @footer-link: #fff;
 @footer-background: @home-about-background;
 @submenu-background: @home-about-background;
+@submenu-background-select: #333;
+@submenu-link-color-hover: #2ea2cc;
 @link-color: #12C;
 @link-color-visited: #61C;
-@link-color-hover: #c00;
+@link-color-hover: #2ea2cc;
 @list-color-odd: #fff;
 @list-color-even: #e7e7de;
 @border-color: #e2e2e2;
@@ -944,44 +946,42 @@ header .content {
         color: #fff;
     }
     a:hover, a:active {
-        color: @font-about-color;
+        color: @submenu-link-color-hover;
         text-decoration: none;
     }
     .page-sub-menu {
         font-size: 0.8em;
         min-height: 30px;
         ul {
-            margin: 0;
+            margin: 0 0 0 -10px;
             position: absolute;
-            padding: 5px 0;
+            padding: 0;
             list-style: none;
             list-style-type: none;
             list-style-image: none;
         }
         ul ul {
-            background: @submenu-background;
+            background: @submenu-background-select;
             -moz-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
             -webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
             box-shadow: 0 3px 3px rgba(0,0,0,0.2);
             display: none;
             float: left;
-            margin: 0;
+            margin: 0 0 0 -10px;
             position: absolute;
-            width: 188px;
+            width: 210px;
             z-index: 99999;
         }
         li {
             float: left;
-            margin: 0 5px;
+            padding: 5px 10px;
             display: list-item;
             text-align: -webkit-match-parent;
         }
-        li:hover > a, li:active > a, a:focus {
-            background: @submenu-background;
+        li:hover, li:active, a:focus {
+            background: @submenu-background-select;
         }
         ul li.has-sub:hover > a, ul li.has-sub:active > a { 
-            background:@submenu-background;
-            border-color:#3f3f3f;
             top:-1px;
             z-index:999;
             float: left;
@@ -992,13 +992,6 @@ header .content {
         }
         ul.page-sub-menu a:hover {
             margin: 5px;
-            background:-moz-linear-gradient(top, #333333 0%, #222222 100%);
-            background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#333333), color-stop(100%,#222222));
-            background:-webkit-linear-gradient(top, #333333 0%,#222222 100%);
-            background:-o-linear-gradient(top, #333333 0%,#222222 100%);
-            background:-ms-linear-gradient(top, #333333 0%,#222222 100%);
-            background:linear-gradient(top, #333333 0%,#222222 100%);
-            filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#222222',GradientType=0 );
         }
     }
 }
