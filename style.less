@@ -449,50 +449,45 @@ code.bash .nv {
 }
 
 blockquote {
-  color: #888;
-  font-style:italic;
-}
-
-blockquote:before {
-    font-family: Helvetica;
-    display: block;
-    content: '\201C';
-    font-size: 100px;
-    position: relative;
-    left: -50px;
-    top: 50px;
-    line-height: 0;
-}
-
-blockquote:after {
-    font-family: Helvetica;
-    display: block;
-    content: '\201D';
-    font-size: 100px;
-    position: relative;
-    right: -50px;
-    float: right;
-    line-height: 0;
-}
-
-blockquote[cite]::after, blockquote footer {
-  display: block;
-  text-align: right;
-  content: attr(cite);
-  font-size: 13px;
-  padding-top:0.75em;
-  color: @page-color-text;
-}
-
-blockquote pre {
-  font-family: Verdana, sans-serif;
-  font-size: 12px;
-  margin-top: -1.5em;
-}
-
-blockquote footer a, blockquote footer a:visited, blockquote footer a:hover {
-  color: @page-color-text;
-  text-decoration: underline;
+    color: #888;
+    font-style:italic;
+    &:before {
+        font-family: Helvetica;
+        display: block;
+        content: '\201C';
+        font-size: 100px;
+        position: relative;
+        left: -50px;
+        top: 50px;
+        line-height: 0;
+    }
+    &:after {
+        font-family: Helvetica;
+        display: block;
+        content: '\201D';
+        font-size: 100px;
+        position: relative;
+        right: -50px;
+        float: right;
+        line-height: 0;
+    }
+    pre {
+        font-family: Verdana, sans-serif;
+        font-size: 12px;
+        margin-top: -1.5em;
+    }
+    footer a, footer a:visited, footer a:hover {
+        color: @page-color-text;
+        text-decoration: underline;
+    }
+    &[cite]::after, footer {
+        display: block;
+        text-align: right;
+        content: attr(cite);
+        font-size: 13px;
+        padding-top:0.75em;
+        color: @page-color-text;
+    }
 }
 
 .sharing {

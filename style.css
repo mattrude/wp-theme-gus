@@ -664,14 +664,6 @@ blockquote:after {
   float: right;
   line-height: 0;
 }
-blockquote[cite]::after, blockquote footer {
-  display: block;
-  text-align: right;
-  content: attr(cite);
-  font-size: 13px;
-  padding-top: 0.75em;
-  color: #333333;
-}
 blockquote pre {
   font-family: Verdana, sans-serif;
   font-size: 12px;
@@ -680,6 +672,14 @@ blockquote pre {
 blockquote footer a, blockquote footer a:visited, blockquote footer a:hover {
   color: #333333;
   text-decoration: underline;
+}
+blockquote[cite]::after, blockquote footer {
+  display: block;
+  text-align: right;
+  content: attr(cite);
+  font-size: 13px;
+  padding-top: 0.75em;
+  color: #333333;
 }
 .sharing {
   margin: 0 0 10px;
