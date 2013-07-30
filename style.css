@@ -1179,6 +1179,7 @@ header .content {
   float: left;
   margin: 0;
   position: absolute;
+  top: 3.333em;
   left: 0;
   width: 188px;
   z-index: 99999;
@@ -1189,7 +1190,7 @@ header .content {
   display: list-item;
   text-align: -webkit-match-parent;
 }
-#page-menu .page-sub-menu li:hover > a, #page-menu .page-sub-menu li:active > a, #page-menu .page-sub-menu a:focus {
+#page-menu .page-sub-menu li:hover > a, #page-menu .page-sub-menu a:focus {
   background: #f9f9f9;
   background: -moz-linear-gradient(#f9f9f9, #e5e5e5);
   background: -o-linear-gradient(#f9f9f9, #e5e5e5);
@@ -1197,7 +1198,7 @@ header .content {
   background: -webkit-linear-gradient(#f9f9f9, #e5e5e5);
   color: #373737;
 }
-#page-menu .page-sub-menu ul li.has-sub:hover > a, #page-menu .page-sub-menu ul li.has-sub:active > a {
+#page-menu .page-sub-menu ul li.has-sub:hover > a {
   background: #3f3f3f;
   border-color: #3f3f3f;
   top: -1px;
@@ -1205,7 +1206,7 @@ header .content {
   float: left;
   position: absolute;
 }
-#page-menu .page-sub-menu ul li:hover > ul, #page-menu .page-sub-menu ul li:active > ul {
+#page-menu .page-sub-menu ul li:hover > ul {
   display: block;
 }
 #page-menu .page-sub-menu ul.page-sub-menu a:hover {
