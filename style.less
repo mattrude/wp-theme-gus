@@ -959,7 +959,6 @@ header .content {
             list-style-image: none;
         }
         ul ul {
-            background: @submenu-background;
             -moz-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
             -webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
             box-shadow: 0 3px 3px rgba(0,0,0,0.2);
@@ -967,6 +966,7 @@ header .content {
             float: left;
             margin: 0;
             position: absolute;
+            left: 0;
             width: 188px;
             z-index: 99999;
         }
@@ -977,10 +977,15 @@ header .content {
             text-align: -webkit-match-parent;
         }
         li:hover > a, li:active > a, a:focus {
-            background: @submenu-background;
+            background: #f9f9f9;
+            background: -moz-linear-gradient(#f9f9f9,#e5e5e5);
+            background: -o-linear-gradient(#f9f9f9,#e5e5e5);
+            background: -webkit-gradient(linear,0% 0,0% 100%,from(#f9f9f9),to(#e5e5e5));
+            background: -webkit-linear-gradient(#f9f9f9,#e5e5e5);
+            color: #373737;
         }
         ul li.has-sub:hover > a, ul li.has-sub:active > a { 
-            background:@submenu-background;
+            background:#3f3f3f;
             border-color:#3f3f3f;
             top:-1px;
             z-index:999;
