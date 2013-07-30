@@ -24,9 +24,7 @@ function gus_setup() {
 	add_theme_support( 'nav-menus' );
 	register_nav_menus( array(
     	'header' => __( 'The Header Navigation Menu', 'gus' ),
-    	'page-submenu' => __( 'The Page Sub Navigation Menu', 'gus' ),
-    	'flight-submenu' => __( 'The Flight Sub Navigation Menu', 'gus' ),
-    	'5speed-submenu' => __( 'The 5 Speed Sub Navigation Menu', 'gus' ),
+    	'submenu' => __( 'The Page Sub Navigation Menu', 'gus' ),
 	) );
 	function gus_nav_fallback() {
 		echo "<!--No Header Navigation Menu selected-->";
@@ -439,26 +437,6 @@ function gus_comment( $comment, $args, $depth ) {
     endswitch;
 }
 endif; // ends check for twentyeleven_comment()
-
-/**
- * Check for the ID of the parent page, if there is one.
- *
- * See: http://codex.wordpress.org/Conditional_Tags#Testing_for_sub-Pages
- *
- * @since 0.2.1
- * @package Gus Theme
- * @author Matt Rude <matt@mattrude.com>
- */
-function is_subpage() {
-    global $post;                              // load details about this page
-
-    if ( is_page() && $post->post_parent ) {   // test to see if the page has a parent
-        return $post->post_parent;             // return the ID of the parent post
-
-    } else {                                   // there is no parent so ...
-        return false;                          // ... the answer to the question is false
-    }
-}
 
 /**
  * Using WordPress functions to retrieve the extracted EXIF 
