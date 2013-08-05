@@ -43,6 +43,50 @@ echo '<?xml version="1.0" encoding="'.get_option('blog_charset').'"?'.'>'; ?>
  } }
 ?>
 
+        <!-- Site Flight -->
+
+<?php
+        $args = array(
+                'post_type' => 'flight',
+                'numberposts' => 100,
+                'post_status' => 'publish',
+                'orderby' => 'date',
+                'order' => 'DESC'
+        );
+        $flight_ids = get_posts($args);
+
+        if ($flight_ids) {
+                foreach ($flight_ids as $post) { ?>
+        <url>
+                <loc><?php the_permalink_rss() ?></loc>
+                <lastmod><?php echo mysql2date('Y-m-d\TH:i:s\Z', get_post_modified_time('Y-m-d H:i:s', true), false); ?></lastmod>
+                <changefreq>monthly</changefreq>
+                <priority>0.5</priority>
+<?php
+        $args2 = array(
+                'post_type' => 'attachment',
+                'numberposts' => 200,
+                'post_parent' => $post->ID,
+                'post_mime_type' => 'image',
+                'orderby' => 'date',
+                'order' => 'DESC'
+        );
+        $images = get_posts($args2);
+        if ($images) {
+                foreach ($images as $post) { ?>
+                <image:image>
+                        <image:loc><?php echo wp_get_attachment_url(); ?></image:loc>
+<?php if ( !empty($post->post_excerpt) ) echo '                 <image:caption>' . esc_html($post->post_excerpt, 1) . '</image:caption>
+'; ?>
+                        <image:title><?php echo esc_html($post->post_title, 1) ?></image:title>
+                </image:image>
+<?php } } ?>
+        </url>
+<?php
+                }
+        }
+?>
+
         <!-- Site Posts -->
 
 <?php
@@ -86,4 +130,5 @@ echo '<?xml version="1.0" encoding="'.get_option('blog_charset').'"?'.'>'; ?>
                 }
         }
 ?>
+
 </urlset>
