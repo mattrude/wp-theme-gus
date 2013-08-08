@@ -60,6 +60,16 @@ function post_type_flight() {
 // Hook into the 'init' action
 add_action( 'init', 'post_type_flight', 0 );
 
+function flight_tag_init() {
+    // create a new taxonomy
+    register_taxonomy( 'tag', 'flight', array(
+            'label' => __( 'Tag' ),
+            'rewrite' => array( 'slug' => 'flight/tag' ),
+        )
+    );
+}
+add_action( 'init', 'flight_tag_init' );
+
 function my_rewrite_flush() {
     flush_rewrite_rules();
 }
