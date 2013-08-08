@@ -38,7 +38,7 @@ function post_type_flight() {
         'description'         => __( 'Flight posts', 'gus' ),
         'labels'              => $labels,
         'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'trackbacks', 'revisions', 'custom-fields', 'page-attributes', 'post-formats', ),
-        'taxonomies'          => array( 'category', 'post_tag' ),
+        'taxonomies'          => array( 'flight_tag' ),
         'hierarchical'        => false,
         'public'              => true,
         'show_ui'             => true,
@@ -62,8 +62,8 @@ add_action( 'init', 'post_type_flight', 0 );
 
 function flight_tag_init() {
     // create a new taxonomy
-    register_taxonomy( 'tag', 'flight', array(
-            'label' => __( 'Tag' ),
+    register_taxonomy( 'flight_tag', 'flight', array(
+            'label' => __( 'Flight Tags' ),
             'rewrite' => array( 'slug' => 'flight/tag' ),
         )
     );
