@@ -81,6 +81,18 @@ namespace dochead;
             </span>
         <?php endif; // End if $tags_list ?>
 	<?php endif; // End if 'post' == get_post_type() ?>
-	<?php gus_content_nav('nav-bottom'); ?>
+    <?php if ( 'flight' == get_post_type() ) :
+        $tags_list = get_the_term_list( $id, 'flight_tag','', __( ', ', 'twentyeleven' ) );
+		if ( $tags_list ):
+			if ( $show_sep ) : ?>
+				<span class="sep"> | </span>
+			<?php endif; // End if $show_sep ?>
+			<span class="tag-links">
+                <?php printf( __( '<span class="%1$s">Tagged:</span> %2$s', 'twentyeleven' ), 'entry-utility-prep entry-utility-prep-tag-links', $tags_list );
+                $show_sep = true; ?>
+            </span>
+		<?php endif; // End if $tags_list
+	endif; // End if flight
+	gus_content_nav('nav-bottom'); ?>
 	<hr>
 </article><!-- #post-<?php the_ID(); ?> -->

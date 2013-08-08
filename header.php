@@ -102,8 +102,4 @@ namespace dochead;
             <div id=page-menu><div class=page-sub-menu>
                     <?php wp_nav_menu( array( 'sort_column' => 'menu_order', 'container_class' => 'menu-sub', 'theme_location' => 'flight-submenu', 'fallback_cb' => 'gus_nav_fallback' ) ); ?>
             </div></div>
-        <?php } elseif (is_page) { ?>
-            <div id=page-menu><div class=page-sub-menu>
-                    <?php wp_nav_menu( array( 'sort_column' => 'menu_order', 'container_class' => 'menu-sub', 'theme_location' => 'page-submenu', 'fallback_cb' => 'gus_nav_fallback' ) ); ?>
-            </div></div>
         <?php } ?>
