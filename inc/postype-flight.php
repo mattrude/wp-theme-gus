@@ -1,6 +1,5 @@
 <?php
 
-    flush_rewrite_rules();
 /**
  * Custom Post Type: Flight 
  * 
@@ -8,7 +7,24 @@
  * @package Gus Theme
  * @author Matt Rude <matt@mattrude.com>
  */
-// Register Custom Post Type
+
+/**
+ * Hook Flight into the 'init' action
+ *
+ * @since 2.1
+ * @package Gus Theme
+ * @author Matt Rude <matt@mattrude.com>
+ */
+add_action( 'init', 'flight_tag_init', 1 );
+add_action( 'init', 'post_type_flight', 2 );
+
+/**
+ * Register Custom Post Type: Flight
+ *
+ * @since 2.1
+ * @package Gus Theme
+ * @author Matt Rude <matt@mattrude.com>
+ */
 function post_type_flight() {
     $labels = array(
         'name'                => _x( 'Flights', 'Post Type General Name', 'gus' ),
@@ -57,19 +73,31 @@ function post_type_flight() {
     register_post_type( 'flight', $args );
 }
 
-// Hook into the 'init' action
-add_action( 'init', 'post_type_flight', 0 );
-
+/**
+ * Register Taxonomy Tag for Custom Post Type Flight
+ *
+ * @since 2.1
+ * @package Gus Theme
+ * @author Matt Rude <matt@mattrude.com>
+ */
 function flight_tag_init() {
     // create a new taxonomy
     register_taxonomy( 'flight_tag', 'flight', array(
-            'label' => __( 'Flight Tags' ),
-            'rewrite' => array( 'slug' => 'flight/tag' ),
+            'label' 	=> __( 'Flight Tags' ),
+	    'show_ui'   => true,
+	    'show_admin_column'     => true,
+            'rewrite' => array( 'slug' => 'tag' ),
         )
     );
 }
-add_action( 'init', 'flight_tag_init' );
 
+/**
+ * Flush rewrite cache when theme is switched to
+ *
+ * @since 2.1
+ * @package Gus Theme
+ * @author Matt Rude <matt@mattrude.com>
+ */
 function my_rewrite_flush() {
     flush_rewrite_rules();
 }
