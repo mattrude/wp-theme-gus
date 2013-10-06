@@ -3,8 +3,8 @@
  * The default Archive template
  */
 get_header(); ?>
-    <div id=main role=main>
-        <div id=page class=content>
+<div id=main role=main>
+    <div id=page class=content>
         <div id=home>
             <?php if (have_posts()) :
                 if ( is_day() ) {
@@ -23,18 +23,18 @@ get_header(); ?>
                     $page_object = get_page( $page_id );
                     echo "<h2>$page_object->post_title</h2>";
                     echo $page_object->post_content;
-					echo "<h3 style=padding-top:0.75em>Flight Post Archives</a></h3>";
+                    echo "<h3 style=padding-top:0.75em>Flight Post Archives</a></h3>";
                 } elseif ( is_post_type_archive('5speed') ) {
                     $page_id = 6625;
                     $page_object = get_page( $page_id );
                     echo "<h2>$page_object->post_title</h2>";
                     echo $page_object->post_content;
-				} else {
-				    _e( 'Blog Archives', 'twentyeleven' );
-				    echo "<h3 style=padding-top:0.75em>Archive Posts</a></h3>";
-				} ?>
+                } else {
+                    _e( 'Blog Archives', 'twentyeleven' );
+                    echo "<h3 style=padding-top:0.75em>Archive Posts</a></h3>";
+                } ?>
 
-				<ul class=posts>
+                <ul class=posts>
                     <?php $home_gallery_id = get_option('gus_gallery_cat');
                     if ( is_category($home_gallery_id) ) {
                         while (have_posts()) : the_post();
@@ -43,19 +43,19 @@ get_header(); ?>
                     } elseif (is_post_type_archive('5speed') && function_exists('load_5speed_archive')) {
                         load_5speed_archive();
                     } else {
-					    while (have_posts()) : the_post(); ?>
-					        <li>
+                        while (have_posts()) : the_post(); ?>
+                            <li>
                                 <?php $format = get_post_format(); ?>
                                 <span class="icon-type-<?php echo $format; ?>"></span>
-							    <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-				    			<time datetime="<?php the_time('c'); ?>" pubdate="pubdate"><?php the_date('Y M d'); ?></time>
-					    	</li>
-					 	<?php endwhile;
+                                <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+                                <time datetime="<?php the_time('c'); ?>" pubdate="pubdate"><?php the_date('Y M d'); ?></time>
+                            </li>
+                        <?php endwhile;
                     } ?>
-				</ul>
-			<?php endif; ?>
-			<?php gus_content_nav( 'nav-below' ); ?>
-		</div>
-	</div>
+                </ul>
+            <?php endif; ?>
+            <?php gus_content_nav( 'nav-below' ); ?>
+        </div>
+    </div>
 </div>
 <?php get_footer(); ?>
