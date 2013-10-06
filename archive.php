@@ -18,6 +18,11 @@ get_header(); ?>
                     echo single_cat_title();
                     echo "</h3>";
                     echo category_description();
+                } elseif ( is_post_type_archive('flight') ) {
+                    $page_id = get_page_by_path('flight'
+                    $page_object = get_page( $page_id );
+                    echo "<h2>$page_object->post_title</h2>";
+                    echo $page_object->post_content;
                 } else {
                     _e( 'Blog Archives', 'twentyeleven' );
                     echo "<h3 style=padding-top:0.75em>Archive Posts</a></h3>";
