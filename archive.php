@@ -19,7 +19,7 @@ get_header(); ?>
                     echo "</h3>";
                     echo category_description();
                 } elseif ( is_post_type_archive('flight') ) {
-                    $page_id = get_page_by_path('flight'
+                    $page_id = get_page_by_path('flight');
                     $page_object = get_page( $page_id );
                     echo "<h2>$page_object->post_title</h2>";
                     echo $page_object->post_content;

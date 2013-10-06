@@ -86,7 +86,7 @@ function flight_tag_init() {
             'label' 	=> __( 'Flight Tags' ),
 	    'show_ui'   => true,
 	    'show_admin_column'     => true,
-            'rewrite' => array( 'slug' => 'tag' ),
+            'rewrite' => array( 'slug' => 'flight/tags' ),
         )
     );
 }
