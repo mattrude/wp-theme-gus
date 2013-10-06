@@ -12,9 +12,9 @@ $term_slug = $term->slug;
 $gallery_id = get_option('gus_gallery_cat'); ?>
 
 <div id=main role=main>
-   	<div id=page class='content index taxonomy-index taxonomy-<?php echo $term_name ?>'>
-		<div id=home>
-			<?php  $attachments = wp_cache_get( "people_tax_$term_slug" );
+    <div id=page class='content index taxonomy-index taxonomy-<?php echo $term_name ?>'>
+        <div id=home>
+            <?php  $attachments = wp_cache_get( "people_tax_$term_slug" );
             if ( false == $attachments ) {
                 $args = array(
                     'post_type' => 'attachment',
@@ -70,17 +70,16 @@ $gallery_id = get_option('gus_gallery_cat'); ?>
                     echo "<p>$term->description</p>";
                 } elseif ( is_tax( 'places' ) ) {
                     echo "<h1>Galleries at: $term->name</h1>";
-#                    echo "<p>$term->description</p>";
                 } elseif ( is_tax() ) {
                     echo "<h1>Galleries of the type: $term->name</h1>";
                     echo "<p>$term->description</p>";
                 } ?>
-				<ul class=posts>
-					<?php while (have_posts()) : the_post();
+                <ul class=posts>
+                    <?php while (have_posts()) : the_post();
                         get_template_part( 'content', 'galleryindex' );
-					endwhile; ?>
-				</ul>
-			<?php endif;
+                    endwhile; ?>
+                </ul>
+            <?php endif;
 
             global $wp_query;
             $args = array_merge( $wp_query->query_vars, array( 'cat' => "-$gallery_id" ) );
@@ -95,7 +94,7 @@ $gallery_id = get_option('gus_gallery_cat'); ?>
                 } elseif ( is_tax( 'places' ) ) {
                     echo "<h1>Posts at: $term->name</h1>";
                     echo "<p>$term->description</p>";
-                } elseif ( is_tax() ) {
+                } else {
                     echo "<h1>Posts of the type: $term->name</h1>";
                     echo "<p>$term->description</p>";
                 } ?>
