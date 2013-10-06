@@ -111,7 +111,7 @@ $gallery_id = get_option('gus_gallery_cat'); ?>
             <?php endif;
             if (is_tax()) :
                 echo "<h1>Posts in tag: $term_name</h1>";
-            endif
+            endif ?>
 		</div>
 	</div>
 </div>
