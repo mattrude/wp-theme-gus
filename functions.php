@@ -1,5 +1,6 @@
 <?php
 
+//flush_rewrite_rules();
 /**
  * Random Settings Changes
  * 
@@ -15,7 +16,7 @@ function gus_setup() {
     require_once('inc/postype-flight.php');
 
     // Add the 5 Speed post_type
-    require_once('inc/postype-5speed.php');
+    //require_once('inc/postype-5speed.php');
 
 	// This theme allows users to set a custom background
 	add_theme_support( 'custom-background' );
