@@ -76,8 +76,13 @@ get_header(); ?>
 						</div>
 					<?php endif;
 
-                    $home_gallery_id = get_option('gus_gallery_cat');
-					query_posts("posts_per_page=2&cat=$home_gallery_id");
+                                        $home_gallery_id = get_option('gus_gallery_cat');
+                                        $query_post_args = array(
+                                                'posts_per_page' => 2,
+                                                'post_type' => 'post',
+                                                'category__in' => $home_gallery_id,
+					);
+					query_posts( $query_post_args );
 					if (have_posts()) { ?>
 						<div id=home-gallery>
 							<h3 style=padding-top:0.75em>Recent Gallery Posts</h3>
@@ -88,7 +93,6 @@ get_header(); ?>
 							</center>
 						    <div id="home-gallery-text"><p><a href="<?php echo get_category_link( $home_gallery_id ); ?>">Site Gallery</a></p></div> 
 						</div>
-					<?php } else { ?>
 					<?php } ?>
 				</div><!-- End home-center -->
 			<?php endif; ?>
