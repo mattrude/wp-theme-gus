@@ -85,7 +85,7 @@ get_header(); ?>
 					query_posts( $query_post_args );
 					if (have_posts()) { ?>
 						<div id=home-gallery>
-							<h3 style=padding-top:0.75em>Recent Gallery Posts</h3>
+							<h3 style=padding-top:0.75em;text-align:center;>Recent Gallery Posts</h3>
 							<center>
 								<?php while (have_posts()) : the_post(); ?>
 									<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_post_thumbnail() ?></a>
