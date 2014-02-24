@@ -66,8 +66,8 @@ get_header(); ?>
 								<!--Starting "The Loop"-->
 								<?php while (have_posts()) : the_post(); ?>
 									<li>
-                                        <?php $format = get_post_format(); ?>
-                                        <span class="icon-type-<?php echo $format; ?>"></span>
+                                        					<?php $format = get_post_format(); ?>
+                                        					<span class="icon-type-<?php echo $format; ?>"></span>
 										<a href="<?php the_permalink() ?>" rel="bookmark" title="Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
 										<time datetime="<?php the_time('c'); ?>" pubdate="pubdate"><?php the_date('Y M d'); ?></time>
 									</li>
