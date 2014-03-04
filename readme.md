@@ -1,12 +1,12 @@
 # The Gus Theme
 
-The Gus theme for [WordPress](http://wordpress.org) was designed to be used as a personal site, not as a site for an origination or group.  Gus a is clean, easy to read theme built to be quick but have all the needed functionality for [mattrude.com](http://mattrude.com).
+The Gus theme for [WordPress](http://wordpress.org) was designed to be used on a personal site, not as a site for an origination or group.  Gus a is clean, easy to read, theme built to be quick but have all the needed functionality for [mattrude.com](http://mattrude.com).
 
 After activating the theme, you must go to the `Theme Options` page from the `Appearance` menu on your Dashboard.  Once there, you must select the `Site Owner` for the page from the drop-down menu at the top of the page.  After selecting the site owner, you may use that persons contact information, or add your own on that page.
 
 ![Screenshot](https://github.com/mattrude/wp-theme-gus/raw/master/screenshot.png)
 
-Besure to read the [Install Guide](https://github.com/mattrude/wp-theme-gus/wiki/Installing) before downloading and installing Gus.  For a more indepth look at the feature withing this theme, there is also a full [PHPDoc](http://phpdoc.mattrude.com/wp-theme-gus/) site available.
+Besure to read the [Install Guide](https://github.com/mattrude/wp-theme-gus/wiki/Installing) before downloading and installing Gus.
 
 Also, please see the avalable [Screen Shots](https://github.com/mattrude/wp-theme-gus/wiki/Screen-Shots) for the Gus theme.
 
@@ -50,7 +50,7 @@ You may also download the theme directly via git:
     git clone https://github.com/mattrude/wp-theme-gus.git gus
 
 * This project's primary loaction is on github at: [http://gh.mattrude.com/wp-theme-gus/](http://gh.mattrude.com/wp-theme-gus/)
-* The project is also mirrored at: [http://code.mattrude.com/mirror/wp-theme-gus.git](http://code.mattrude.com/mirror/wp-theme-gus.git)
+* The project is also mirrored at: [http://git.mattrude.com/summary/WordPress%2FThemes%2Fgus.git](http://git.mattrude.com/summary/WordPress%2FThemes%2Fgus.git)
 
 ## Installing
 For a more indepth walk threw of the install, see the [installation page](https://github.com/mattrude/wp-theme-gus/wiki/Installing).
