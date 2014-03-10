@@ -64,7 +64,7 @@ Gus is free software; you may redistribute it and/or modify it under the terms o
                   GNU GENERAL PUBLIC LICENSE
                      Version 2, June 1991
     
-    Copyright (C) 2012-2013 Matt Rude <matt@mattrude.com>
+    Copyright (C) 2012-2014 Matt Rude <matt@mattrude.com>
     
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
