@@ -50,7 +50,7 @@ You may also download the theme directly via git:
     git clone https://github.com/mattrude/wp-theme-gus.git gus
 
 * This project's primary loaction is on github at: [http://gh.mattrude.com/wp-theme-gus/](http://gh.mattrude.com/wp-theme-gus/)
-* The project is also mirrored at: [http://git.mattrude.com/summary/WordPress%2FThemes%2Fgus.git](http://git.mattrude.com/summary/WordPress%2FThemes%2Fgus.git)
+* The project is also mirrored at: [git.mattrude.com](http://git.mattrude.com/summary/WordPress%2FThemes%2Fgus.git)
 
 ## Installing
 For a more indepth walk threw of the install, see the [installation page](https://github.com/mattrude/wp-theme-gus/wiki/Installing).
