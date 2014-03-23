@@ -53,7 +53,26 @@ You may also download the theme directly via git:
 * The project is also mirrored at: [git.mattrude.com](http://git.mattrude.com/summary/WordPress%2FThemes%2Fgus.git)
 
 ## Installing
-For a more indepth walk threw of the install, see the [installation page](https://github.com/mattrude/wp-theme-gus/wiki/Installing).
+
+After Gus is installed, you must set it up before your site will work correctly.  Start by going to `Appearance` then `Theme Options`.
+
+### Site Owner
+
+The first section is the **Site Owner** section, this section is required for site proper operation.  You must select a _owner_ from the drop down list.
+
+The Owner will be used in the footer and other sections to say who owns the site.  The name and other info will be pubic.
+
+### Opening Bullet Points
+
+The opening bullet points are the main bullet points on the top lefthand side of the home page, left of the header image.
+
+### About Text
+
+The about text is the main text on the home page.
+
+### CDN Options
+
+The CDN Options section allows you to set where the themes images and other files are stored on the internet, if this section is disabled, all images and other files will be downloaded from the local server.
 
 ## Support
 If you are having issues using the Gus theme, please file a bug report by creating a [New Issue](https://github.com/mattrude/wp-theme-gus/issues) on the projects github issues page.
