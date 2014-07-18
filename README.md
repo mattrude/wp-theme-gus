@@ -1,4 +1,5 @@
 # The Gus Theme
+[![Build Status](https://travis-ci.org/mattrude/wp-theme-gus.svg?branch=master)](https://travis-ci.org/mattrude/wp-theme-gus)
 
 The Gus theme for [WordPress](http://wordpress.org) was designed to be used on a personal site, not as a site for an origination or group.  Gus a is clean, easy to read, theme built to be quick but have all the needed functionality for [mattrude.com](http://mattrude.com).
 
