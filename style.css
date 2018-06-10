@@ -1542,8 +1542,8 @@ img[class*="align"], img[class*="wp-image-"], img[class*="attachment-"] {
 }
 /* Sharedaddy css changes */
 div.sharedaddy .sd-content {
-  width: 780px !important;
-  float: center !important;
+  width: 700px;
+  float: right;
 }
 div.sharedaddy, #content div.sharedaddy, #main div.sharedaddy {
   overflow: hidden;

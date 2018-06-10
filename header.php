@@ -81,6 +81,7 @@ namespace dochead;
 
 	wp_head();
 ?>
+<link rel="pgpkey" type="application/pgp-keys" title="Matt Rude's PGP Public Key" href="https://mattrude.com/keys/0xc4909ee495b0761f.asc">
 </head>
 <body <?php body_class(); ?>>
     <div id=container>
