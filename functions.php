@@ -318,10 +318,10 @@ function gus_contactmethod( $contactmethods ) {
 	$contactmethods['github'] = 'Github ID';
 	$contactmethods['flickr'] = 'Flickr ID';
 	$contactmethods['vimeo'] = 'Vimeo ID';
+	$contactmethods['jabber'] = 'Jabber/XMPP ID';
 
 	// Remove AIM, Jabber, & Yahoo IM
 	unset($contactmethods['aim']);
-	unset($contactmethods['jabber']);
 	unset($contactmethods['yim']);
 
 	return $contactmethods;
