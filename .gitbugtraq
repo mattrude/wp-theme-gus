@@ -1,5 +1,0 @@
-[bugtraq "github"]
-    url = "https://github.com/mattrude/wp-theme-gus/pull/%BUGID%"
-    loglinkregex = "(?:pull request|pull|pr)\\s*[-#]?[0-9]+"
-    logregex = "\\d+"
-    loglinktext = "pull request #%BUGID%"

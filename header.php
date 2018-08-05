@@ -49,6 +49,7 @@ namespace dochead;
 
 	?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 <?php if ( get_option('gus_use_cdn') ) { ?>
 	<link rel="stylesheet" type="text/css" media="all" href="<?php echo get_option('gus_cdn_address'); ?>/wp-content/themes/gus/style.css" />
 <?php } else { ?>
@@ -71,7 +72,7 @@ namespace dochead;
 	 * as styles, scripts, and meta tags.
 	 */
 	if ( is_attachment() ) {
-		wp_enqueue_script( 'jquery' );
+		//wp_enqueue_script( 'jquery' );
 		add_action( 'wp_head', 'mct_script' );
 	}
 
@@ -81,6 +82,7 @@ namespace dochead;
 
 	wp_head();
 ?>
+<link rel="pgpkey" type="application/pgp-keys" title="Matt Rude's PGP Public Key" href="https://mattrude.com/keys/0xc4909ee495b0761f.asc">
 </head>
 <body <?php body_class(); ?>>
     <div id=container>

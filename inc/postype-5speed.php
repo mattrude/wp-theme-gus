@@ -44,7 +44,7 @@ function post_type_5speed() {
         'show_in_menu'        => true,
         'show_in_nav_menus'   => true,
         'show_in_admin_bar'   => true,
-        'menu_position'       => 5,
+        'menu_position'       => 7,
         'can_export'          => true,
         'has_archive'         => true,
         'exclude_from_search' => false,
