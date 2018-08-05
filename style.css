@@ -52,7 +52,8 @@
   -webkit-font-smoothing: antialiased;
 }
 /* Use the following CSS code if you want to have a class per icon */
-[class^="icon-"]:before, [class*=" icon-"]:before {
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
   font-family: 'gus-social';
   font-style: normal;
   speak: none;
@@ -158,7 +159,8 @@
 .icon-type-status:before {
   content: "\e01c";
 }
-.icon-type-standard:before, .icon-type-:before {
+.icon-type-standard:before,
+.icon-type-:before {
   content: "\e01b";
   padding: 0 2px 0 2px;
 }
@@ -177,7 +179,9 @@ nav,
 section {
   display: block;
 }
-audio[controls], canvas, video {
+audio[controls],
+canvas,
+video {
   display: inline-block;
   *display: inline;
   *zoom: 1;
@@ -228,7 +232,8 @@ a:focus {
   outline: thin dotted;
 }
 /* Improve readability when focused and hovered in all browsers: people.opera.com/patrickl/experiments/keyboard/test */
-a:hover, a:active {
+a:hover,
+a:active {
   color: #2ea2cc;
   outline: 0;
 }
@@ -238,7 +243,8 @@ a:hover, a:active {
 abbr[title] {
   border-bottom: 1px dotted;
 }
-b, strong {
+b,
+strong {
   font-weight: bold;
 }
 blockquote {
@@ -283,7 +289,8 @@ pre {
 q {
   quotes: none;
 }
-q:before, q:after {
+q:before,
+q:after {
   content: "";
   content: none;
 }
@@ -291,7 +298,8 @@ small {
   font-size: 85%;
 }
 /* Position subscript and superscript content without affecting line-height: gist.github.com/413930 */
-sub, sup {
+sub,
+sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -306,14 +314,16 @@ sub {
 /* =============================================================================
    Lists
    ========================================================================== */
-ul, ol {
+ul,
+ol {
   margin: 1em 0;
   padding: 0 0 0 40px;
 }
 dd {
   margin: 0 0 0 40px;
 }
-nav ul, nav ol {
+nav ul,
+nav ol {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -385,7 +395,8 @@ textarea {
  * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
  * 2. Correct inner spacing displayed oddly in IE6/7
  */
-button, input {
+button,
+input {
   line-height: normal;
   *overflow: visible;
 }
@@ -403,7 +414,8 @@ input[type="submit"] {
 /*
  * Consistent box sizing and appearance
  */
-input[type="checkbox"], input[type="radio"] {
+input[type="checkbox"],
+input[type="radio"] {
   box-sizing: border-box;
 }
 input[type="search"] {
@@ -415,7 +427,8 @@ input[type="search"] {
  * Remove inner padding and border in FF3/4
  * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
  */
-button::-moz-focus-inner, input::-moz-focus-inner {
+button::-moz-focus-inner,
+input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
@@ -425,7 +438,8 @@ textarea {
   vertical-align: top;
 }
 /* Colors for form validity */
-input:invalid, textarea:invalid {
+input:invalid,
+textarea:invalid {
   background-color: #f0dddd;
 }
 /* =============================================================================
@@ -441,7 +455,6 @@ table {
    ========================================================================== */
 #container {
   /*min-width: 40em;*/
-
 }
 .content,
 #meta .group,
@@ -454,7 +467,8 @@ header {
   background: #000000;
   color: #bfbfbf;
 }
-header, #main {
+header,
+#main {
   padding: 1em 2em;
 }
 header span {
@@ -468,7 +482,9 @@ header a:visited,
   color: #fff;
   text-decoration: none;
 }
-header a:hover, #about a:hover, #about a:active {
+header a:hover,
+#about a:hover,
+#about a:active {
   color: #bfbfbf;
   text-decoration: none;
 }
@@ -486,13 +502,15 @@ h1 {
   margin-top: 0;
   padding-top: 0.5em;
 }
-h1 a, h1 a:visited {
+h1 a,
+h1 a:visited {
   color: #333333;
 }
 a:hover {
   text-decoration: underline;
 }
-a, a:visited {
+a,
+a:visited {
   text-decoration: none;
 }
 .byline {
@@ -523,18 +541,9 @@ a, a:visited {
   width: 60%;
   padding: 0 60px 0 0;
 }
-#dsq-global-toolbar, .dsq-trackback-url {
+#dsq-global-toolbar,
+.dsq-trackback-url {
   display: none;
-}
-#personal {
-  font-size: 15px;
-  font-weight: 400;
-  color: #bfbfbf;
-  width: 33%;
-}
-#about {
-  background: #222222;
-  min-height: 275px;
 }
 #meta .recent {
   padding: 1em 2em;
@@ -547,14 +556,17 @@ a, a:visited {
   border-bottom: 1px solid #DDD;
   padding: 3px 0 2px 0;
 }
-#home ul.posts li time, #home ul.posts li .extra, #home ul.posts li span.featured {
+#home ul.posts li time,
+#home ul.posts li .extra,
+#home ul.posts li span.featured {
   color: #999;
   display: inline-block;
   font-family: 'Lucida Sans Typewriter', Monaco, 'Courier', 'Courier New', monospace;
   font-size: 12px;
   white-space: nowrap;
 }
-#home ul.posts li .extra, #home ul.posts li time {
+#home ul.posts li .extra,
+#home ul.posts li time {
   float: right;
 }
 #home .featured {
@@ -624,7 +636,9 @@ code {
   border-radius: 5px;
   color: #666;
 }
-code a, code a:visited, code a:hover {
+code a,
+code a:visited,
+code a:hover {
   color: #E6DB74;
 }
 div.download {
@@ -669,11 +683,14 @@ blockquote pre {
   font-size: 12px;
   margin-top: -1.5em;
 }
-blockquote footer a, blockquote footer a:visited, blockquote footer a:hover {
+blockquote footer a,
+blockquote footer a:visited,
+blockquote footer a:hover {
   color: #333333;
   text-decoration: underline;
 }
-blockquote[cite]::after, blockquote footer {
+blockquote[cite]::after,
+blockquote footer {
   display: block;
   text-align: right;
   content: attr(cite);
@@ -688,14 +705,16 @@ blockquote[cite]::after, blockquote footer {
   margin-top: 0;
   padding-top: 20px;
 }
-#page-footer a, #page-footer a:visited {
+#page-footer a,
+#page-footer a:visited {
   color: #ffffff;
   text-decoration: none;
 }
 #page-footer a:hover {
   text-decoration: underline;
 }
-#page-footer ul, #page-footer ol {
+#page-footer ul,
+#page-footer ol {
   padding: 0 0 0 20px;
   max-height: 20.2em;
   overflow: hidden;
@@ -771,17 +790,26 @@ img.center {
   margin-left: auto;
   display: block;
 }
-#personal {
-  padding: 0.5em 2em;
+#about {
+  background: #222222;
+  min-height: 275px;
 }
-#personal ul {
+#about #personal {
+  font-size: 15px;
+  font-weight: 400;
+  color: #bfbfbf;
+  width: 33%;
+  padding: 0.5em 0 0.5em 2em;
+}
+#about #personal ul {
   list-style-type: circle;
   padding-left: 0;
 }
-#personal h2 {
+#about #personal h2 {
   color: #fff;
 }
-.about a, .about a:visited {
+.about a,
+.about a:visited {
   color: #222;
 }
 .about a:hover {
@@ -1088,7 +1116,8 @@ nav#nav-single.status {
   width: 1px;
 }
 /* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */
-.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
   clip: auto;
   height: auto;
   margin: 0;
@@ -1101,7 +1130,8 @@ nav#nav-single.status {
   visibility: hidden;
 }
 /* Contain floats: nicolasgallagher.com/micro-clearfix-hack/ */
-.clearfix:before, .clearfix:after {
+.clearfix:before,
+.clearfix:after {
   content: "";
   display: table;
 }
@@ -1151,10 +1181,12 @@ header .content {
 #page-menu {
   background: #222222;
 }
-#page-menu a, #page-menu a:visited {
+#page-menu a,
+#page-menu a:visited {
   color: #fff;
 }
-#page-menu a:hover, #page-menu a:active {
+#page-menu a:hover,
+#page-menu a:active {
   color: #2ea2cc;
   text-decoration: none;
 }
@@ -1188,16 +1220,20 @@ header .content {
   display: list-item;
   text-align: -webkit-match-parent;
 }
-#page-menu .page-sub-menu li:hover, #page-menu .page-sub-menu li:active, #page-menu .page-sub-menu a:focus {
+#page-menu .page-sub-menu li:hover,
+#page-menu .page-sub-menu li:active,
+#page-menu .page-sub-menu a:focus {
   background: #333333;
 }
-#page-menu .page-sub-menu ul li.has-sub:hover > a, #page-menu .page-sub-menu ul li.has-sub:active > a {
+#page-menu .page-sub-menu ul li.has-sub:hover > a,
+#page-menu .page-sub-menu ul li.has-sub:active > a {
   top: -1px;
   z-index: 999;
   float: left;
   position: absolute;
 }
-#page-menu .page-sub-menu ul li:hover > ul, #page-menu .page-sub-menu ul li:active > ul {
+#page-menu .page-sub-menu ul li:hover > ul,
+#page-menu .page-sub-menu ul li:active > ul {
   display: block;
 }
 #page-menu .page-sub-menu ul.page-sub-menu a:hover {
@@ -1298,7 +1334,8 @@ li.depth-10 img {
   clear: both;
   margin: 0 15px;
 }
-a.comment-link, a.comment-link:visited {
+a.comment-link,
+a.comment-link:visited {
   color: #222;
   text-decoration: none;
   font-style: italic;
@@ -1308,11 +1345,13 @@ a.comment-link:hover {
   color: #222;
   text-decoration: underline;
 }
-.comment-left, .comment-right {
+.comment-left,
+.comment-right {
   width: 49%;
   float: left;
 }
-.comment-left input, .comment-right textarea {
+.comment-left input,
+.comment-right textarea {
   margin: 0 0 15px 4%;
   padding: 8px;
   width: 90%;
@@ -1385,15 +1424,17 @@ a.comment-link:hover {
   float: right;
   text-align: right;
 }
-.entry-content img, .comment-content img, .widget img {
+.entry-content img,
+.comment-content img,
+.widget img {
   max-width: 97.5%;
   /* Fluid images for posts, comments, and widgets */
-
 }
-img[class*="align"], img[class*="wp-image-"], img[class*="attachment-"] {
+img[class*="align"],
+img[class*="wp-image-"],
+img[class*="attachment-"] {
   height: auto;
   /* Make sure images with WordPress-added height and width attributes are scaled correctly */
-
   max-width: 100%;
 }
 @media (max-width: 800px) {
@@ -1444,7 +1485,8 @@ img[class*="align"], img[class*="wp-image-"], img[class*="attachment-"] {
   #about .group {
     margin: 0 5px;
   }
-  #header-image, #home-gallery {
+  #header-image,
+  #home-gallery {
     display: none;
   }
   #home-recent-posts {
@@ -1462,7 +1504,9 @@ img[class*="align"], img[class*="wp-image-"], img[class*="attachment-"] {
   #about .group {
     margin: 0 5px;
   }
-  header span, header b, footer .rss {
+  header span,
+  header b,
+  footer .rss {
     display: none;
   }
   #home ul.posts li {
@@ -1471,7 +1515,8 @@ img[class*="align"], img[class*="wp-image-"], img[class*="attachment-"] {
   #home ul.posts li time {
     display: none;
   }
-  #home ul.posts li span.featured, #home ul.posts li .extra {
+  #home ul.posts li span.featured,
+  #home ul.posts li .extra {
     font-size: 10px;
   }
   dl.gallery-item {
@@ -1492,7 +1537,8 @@ img[class*="align"], img[class*="wp-image-"], img[class*="attachment-"] {
     -ms-filter: none !important;
   }
   /* Black prints faster: sanbeiji.com/archives/953 */
-  a, a:visited {
+  a,
+  a:visited {
     color: #444 !important;
     text-decoration: underline;
   }
@@ -1502,11 +1548,14 @@ img[class*="align"], img[class*="wp-image-"], img[class*="attachment-"] {
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
-  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
     content: "";
   }
   /* Don't show links for images, or javascript/internal links */
-  pre, blockquote {
+  pre,
+  blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
@@ -1514,20 +1563,24 @@ img[class*="align"], img[class*="wp-image-"], img[class*="attachment-"] {
     display: table-header-group;
   }
   /* css-discuss.incutio.com/wiki/Printing_Tables */
-  tr, img {
+  tr,
+  img {
     page-break-inside: avoid;
   }
   img {
     max-width: 100% !important;
   }
-  @page  {
+  @page {
     margin: 0.5cm;
   }
-  p, h2, h3 {
+  p,
+  h2,
+  h3 {
     orphans: 3;
     widows: 3;
   }
-  h2, h3 {
+  h2,
+  h3 {
     page-break-after: avoid;
   }
   p.social {
@@ -1542,13 +1595,17 @@ img[class*="align"], img[class*="wp-image-"], img[class*="attachment-"] {
 }
 /* Sharedaddy css changes */
 div.sharedaddy .sd-content {
-  width: 700px;
-  float: right;
+  width: 780px !important;
+  float: center !important;
 }
-div.sharedaddy, #content div.sharedaddy, #main div.sharedaddy {
+div.sharedaddy,
+#content div.sharedaddy,
+#main div.sharedaddy {
   overflow: hidden;
 }
-div.sharedaddy h3, #content div.sharedaddy h3, #main div.sharedaddy h3 {
+div.sharedaddy h3,
+#content div.sharedaddy h3,
+#main div.sharedaddy h3 {
   width: 0px !important;
 }
 /*
@@ -1558,7 +1615,8 @@ div.sharedaddy h3, #content div.sharedaddy h3, #main div.sharedaddy h3 {
 .jetpack-image-container:after {
   clear: both;
 }
-.jetpack-image-container:before, .jetpack-image-container:after {
+.jetpack-image-container:before,
+.jetpack-image-container:after {
   display: table;
   content: "";
 }
