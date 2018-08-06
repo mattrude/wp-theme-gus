@@ -12,11 +12,14 @@ function gus_setup() {
 	// Start out by added the Theme's Options page
 	require_once('inc/theme-options.php');
 
-    // Add the Flight post_type
-    require_once('inc/postype-flight.php');
+        // Add the Technical post_type
+        require_once('inc/postype-technical.php');
 
-    // Add the 5 Speed post_type
-    //require_once('inc/postype-5speed.php');
+        // Add the Flight post_type
+        require_once('inc/postype-flight.php');
+
+        // Add the 5 Speed post_type
+        //require_once('inc/postype-5speed.php');
 
 	// This theme allows users to set a custom background
 	add_theme_support( 'custom-background' );
@@ -72,6 +75,34 @@ function gus_setup() {
 
 // Fix removal of oEmbed width options in 3.5
 if ( ! isset( $content_width ) ) $content_width = 770;
+
+/**
+ * Add Bootstrap 4.0 CSS
+ *
+ * @since 0.5
+ * @package Gus Theme
+ * @author Matt Rude <matt@mattrude.com>
+ */
+function theme_styles() {
+	wp_enqueue_style( 'bootstrap_css', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' );
+	wp_enqueue_style( 'main_css', get_template_directory_uri() . '/style.css' );
+}
+add_action( 'wp_enqueue_scripts', 'theme_styles');
+
+/**
+ * Add Bootstrap 4.0 JS
+ *
+ * @since 0.5
+ * @package Gus Theme
+ * @author Matt Rude <matt@mattrude.com>
+ */
+function theme_js() {
+	global $wp_scripts;
+	wp_enqueue_script( 'jquery_js', 'https://code.jquery.com/jquery-3.2.1.slim.min.js');
+	wp_enqueue_script( 'bootstrap_js', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js');
+	wp_enqueue_script( 'my_custom_js', get_template_directory_uri() . '/js/scripts.js');
+}
+add_action( 'wp_enqueue_scripts', 'theme_js');
 
 /**
  * Add Matt's Community Tags plugin to theme
@@ -318,10 +349,10 @@ function gus_contactmethod( $contactmethods ) {
 	$contactmethods['github'] = 'Github ID';
 	$contactmethods['flickr'] = 'Flickr ID';
 	$contactmethods['vimeo'] = 'Vimeo ID';
+	$contactmethods['jabber'] = 'Jabber/XMPP ID';
 
 	// Remove AIM, Jabber, & Yahoo IM
 	unset($contactmethods['aim']);
-	unset($contactmethods['jabber']);
 	unset($contactmethods['yim']);
 
 	return $contactmethods;

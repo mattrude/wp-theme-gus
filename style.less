@@ -6,7 +6,7 @@
  * Author URI: http://mattrude.com
  * License: GNU GENERAL PUBLIC LICENSE, Version 2, June 1991
  * Licence URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
- * Version: 0.2.2
+ * Version: 0.2.3
  */
 
 //  =============================================================================
@@ -322,18 +322,6 @@ a, a:visited {
   display: none;
 }
 
-#personal {
-  font-size: 15px;
-  font-weight: 400;
-  color: @font-about-color;
-  width: 33%;
-}
-
-#about {
-  background: @home-about-background;
-  min-height: @about-box-height;
-}
-
 #meta .recent {
   padding: 1em 2em;
 }
@@ -587,19 +575,24 @@ img.center {
   display: block;
 }
 
-#personal {
-  padding: 0.5em 2em;
+#about {
+  background: @home-about-background;
+  min-height: @about-box-height;
+  #personal {
+    font-size: 15px;
+    font-weight: 400;
+    color: @font-about-color;
+    width: 33%;
+    padding: 0.5em 0 0.5em 2em;
+    ul {
+      list-style-type: circle;
+      padding-left: 0;
+    }
+    h2 {
+      color: #fff;
+    }
+  }
 }
-
-#personal ul {
-  list-style-type: circle;
-  padding-left: 0;
-}
-
-#personal h2 {
-  color: #fff;
-}
-
 .about a, .about a:visited {
   color: #222;
 }

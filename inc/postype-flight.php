@@ -16,7 +16,8 @@
  * @author Matt Rude <matt@mattrude.com>
  */
 add_action( 'init', 'flight_tag_init', 1 );
-add_action( 'init', 'post_type_flight', 2 );
+add_action( 'init', 'flight_category_init', 2 );
+add_action( 'init', 'post_type_flight', 3 );
 
 /**
  * Register Custom Post Type: Flight
@@ -61,7 +62,7 @@ function post_type_flight() {
         'show_in_menu'        => true,
         'show_in_nav_menus'   => true,
         'show_in_admin_bar'   => true,
-        'menu_position'       => 5,
+        'menu_position'       => 4,
         'can_export'          => true,
         'has_archive'         => true,
         'exclude_from_search' => false,
@@ -87,6 +88,40 @@ function flight_tag_init() {
 	    'show_ui'   => true,
 	    'show_admin_column'     => true,
             'rewrite' => array( 'slug' => 'flight/tags' ),
+        )
+    );
+}
+
+/**
+ * Register Taxonomy Category for Custom Post Type Flight
+ *
+ * @since 3.0
+ * @package Gus Theme
+ * @author Matt Rude <matt@mattrude.com>
+ */
+function flight_category_init() {
+    $flight_category_labels = array(
+        'name' => _x( 'Flight Categories', 'taxonomy general name' ),
+        'singular_name' => _x( 'Category', 'taxonomy singular name' ),
+        'search_items' =>  __( 'Search Categories' ),
+        'all_items' => __( 'All Flight Categories' ),
+        'parent_item' => __( 'Parent Category' ),
+        'parent_item_colon' => __( 'Parent Category:' ),
+        'edit_item' => __( 'Edit Category' ),
+        'update_item' => __( 'Update Category' ),
+        'add_new_item' => __( 'Add New Category' ),
+        'new_item_name' => __( 'New Category Name' ),
+        'menu_name' => __( 'Flight Categories' ),
+    );
+
+    // create a new taxonomy
+    register_taxonomy( 'flight_category', 'flight', array(
+        'label' => __( 'Flight Categories' ),
+        'hierarchical' => false,
+        'labels' => $flight_category_labels,
+        'show_ui' => true,
+        'show_admin_column'     => true,
+        'rewrite' => array( 'slug' => 'flight/categories' ),
         )
     );
 }
