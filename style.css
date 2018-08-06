@@ -6,7 +6,7 @@
  * Author URI: http://mattrude.com
  * License: GNU GENERAL PUBLIC LICENSE, Version 2, June 1991
  * Licence URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
- * Version: 0.2.2
+ * Version: 0.2.3
  */
 /* =============================================================================
    Fonts
@@ -1597,6 +1597,8 @@ img[class*="attachment-"] {
 div.sharedaddy .sd-content {
   width: 780px !important;
   float: center !important;
+  width: 700px;
+  float: right;
 }
 div.sharedaddy,
 #content div.sharedaddy,
